@@ -1,0 +1,5 @@
+site,model,changed_2017_2023_pct,changed_2017_2020_pct,changed_2020_2023_pct,flip_flop_pct,monotone_change_pct
+Lingampally,ALL,24.085,17.665,24.09,8.225,22.865
+Lingampally,S2+BLD (no AlphaEarth),31.695,29.307499999999997,28.560000000000002,12.112499999999999,29.7475
+Gachibowli_FinancialDistrict,ALL,32.33,27.925,20.674999999999997,6.7275,29.515
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),37.505,32.555,25.53,9.09,35.105

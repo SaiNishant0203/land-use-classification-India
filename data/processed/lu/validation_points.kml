@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Folder><name>validation_points</name>
+  <Placemark id="validation_points.1">
+	<name>1</name>
+      <Point><coordinates>78.3833362573913,17.0822692879852</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.2">
+	<name>2</name>
+      <Point><coordinates>78.611133181857,17.6651634301082</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.3">
+	<name>3</name>
+      <Point><coordinates>78.7417435098021,17.5120561413256</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.4">
+	<name>4</name>
+      <Point><coordinates>78.2023199868135,17.5524994024671</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.5">
+	<name>5</name>
+      <Point><coordinates>78.3236813652998,17.364617298327</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.6">
+	<name>6</name>
+      <Point><coordinates>78.4428335383715,17.7141674605903</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.7">
+	<name>7</name>
+      <Point><coordinates>78.744680234295,16.9845321388551</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.8">
+	<name>8</name>
+      <Point><coordinates>78.448885808782,17.3288637009825</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.9">
+	<name>9</name>
+      <Point><coordinates>78.8243598092412,17.4287850311834</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.10">
+	<name>10</name>
+      <Point><coordinates>78.0938557900374,17.1183269502347</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.11">
+	<name>11</name>
+      <Point><coordinates>78.7406129643329,17.3285756025159</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.12">
+	<name>12</name>
+      <Point><coordinates>78.3571261894957,17.5237409438989</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.13">
+	<name>13</name>
+      <Point><coordinates>78.6059033825331,17.4683710931706</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.14">
+	<name>14</name>
+      <Point><coordinates>78.3645683484919,17.3201848663807</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.15">
+	<name>15</name>
+      <Point><coordinates>78.2148012628394,17.0558212261995</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.16">
+	<name>16</name>
+      <Point><coordinates>78.1360796392952,17.6342641412602</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.17">
+	<name>17</name>
+      <Point><coordinates>78.7114421833956,17.4583228183035</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.18">
+	<name>18</name>
+      <Point><coordinates>78.2085777898856,17.4818809659326</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.19">
+	<name>19</name>
+      <Point><coordinates>78.6903291841806,17.2203258065304</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.20">
+	<name>20</name>
+      <Point><coordinates>78.3931087435456,17.2431581830516</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.21">
+	<name>21</name>
+      <Point><coordinates>78.5629863631541,17.3549442246715</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.22">
+	<name>22</name>
+      <Point><coordinates>78.2337015294053,17.6244609629275</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.23">
+	<name>23</name>
+      <Point><coordinates>78.3105992008273,17.2813562707877</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.24">
+	<name>24</name>
+      <Point><coordinates>78.7109795826272,17.4802681108002</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.25">
+	<name>25</name>
+      <Point><coordinates>78.3834156005033,17.357009406528</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.26">
+	<name>26</name>
+      <Point><coordinates>78.6821136516764,17.2459759887426</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.27">
+	<name>27</name>
+      <Point><coordinates>78.3377339570502,17.1852645329709</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.28">
+	<name>28</name>
+      <Point><coordinates>78.7191786442099,17.0978901781288</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.29">
+	<name>29</name>
+      <Point><coordinates>78.5797366543286,17.3614705265856</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.30">
+	<name>30</name>
+      <Point><coordinates>78.4949330882575,17.1919760040886</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.31">
+	<name>31</name>
+      <Point><coordinates>78.4146053187515,17.7046761180465</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.32">
+	<name>32</name>
+      <Point><coordinates>78.2604615451273,17.6981619503616</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.33">
+	<name>33</name>
+      <Point><coordinates>78.4460203654723,17.4066812007043</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.34">
+	<name>34</name>
+      <Point><coordinates>78.1697004553798,17.1948050361227</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.35">
+	<name>35</name>
+      <Point><coordinates>78.4959710221315,17.1005826332002</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.36">
+	<name>36</name>
+      <Point><coordinates>78.2451443003395,17.5093927569866</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.37">
+	<name>37</name>
+      <Point><coordinates>78.1245954665879,17.5864204226034</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.38">
+	<name>38</name>
+      <Point><coordinates>78.090272425488,17.4362993254307</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.39">
+	<name>39</name>
+      <Point><coordinates>78.0787858935101,17.312517229005</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.40">
+	<name>40</name>
+      <Point><coordinates>78.1606215961612,17.5342068541002</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.41">
+	<name>41</name>
+      <Point><coordinates>78.5569251981737,17.1654586739371</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.42">
+	<name>42</name>
+      <Point><coordinates>78.6481997954568,17.5531522006889</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.43">
+	<name>43</name>
+      <Point><coordinates>78.4931412809182,17.045270086333</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.44">
+	<name>44</name>
+      <Point><coordinates>78.2530922329986,17.3494810457153</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.45">
+	<name>45</name>
+      <Point><coordinates>78.4480917098137,17.5616920287384</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.46">
+	<name>46</name>
+      <Point><coordinates>78.704470458985,17.4513772718736</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.47">
+	<name>47</name>
+      <Point><coordinates>78.6233874822187,17.6575437647201</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.48">
+	<name>48</name>
+      <Point><coordinates>78.3586739417224,17.4426614653025</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.49">
+	<name>49</name>
+      <Point><coordinates>78.8128380771878,17.2337094416607</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.50">
+	<name>50</name>
+      <Point><coordinates>78.6838033973638,17.7438951708813</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.51">
+	<name>51</name>
+      <Point><coordinates>78.3478268250845,17.7284403762004</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.52">
+	<name>52</name>
+      <Point><coordinates>78.5035167245094,17.31528179426</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.53">
+	<name>53</name>
+      <Point><coordinates>78.2500249822563,17.2332142671846</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.54">
+	<name>54</name>
+      <Point><coordinates>78.7294851873859,17.0223949101015</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.55">
+	<name>55</name>
+      <Point><coordinates>78.4669155300289,17.3032613275488</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.56">
+	<name>56</name>
+      <Point><coordinates>78.5784729476556,17.4573804848215</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.57">
+	<name>57</name>
+      <Point><coordinates>78.5372728551696,17.4209261487678</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.58">
+	<name>58</name>
+      <Point><coordinates>78.4108524084688,17.5915537701972</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.59">
+	<name>59</name>
+      <Point><coordinates>78.4726520603977,17.8319649752032</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.60">
+	<name>60</name>
+      <Point><coordinates>78.6039448580849,17.0890624195046</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.61">
+	<name>61</name>
+      <Point><coordinates>78.3068287407266,17.2885305023593</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.62">
+	<name>62</name>
+      <Point><coordinates>78.47105493233,17.4264189306981</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.63">
+	<name>63</name>
+      <Point><coordinates>78.3226002756433,17.3613516303463</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.64">
+	<name>64</name>
+      <Point><coordinates>78.6036225879721,17.5346427458269</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.65">
+	<name>65</name>
+      <Point><coordinates>78.5238163219965,17.4071207262827</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.66">
+	<name>66</name>
+      <Point><coordinates>78.584906428353,17.0138640585561</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.67">
+	<name>67</name>
+      <Point><coordinates>78.757426826449,17.5917275733569</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.68">
+	<name>68</name>
+      <Point><coordinates>78.2972440142939,17.3717570143407</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.69">
+	<name>69</name>
+      <Point><coordinates>78.392729293778,17.4892610808166</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.70">
+	<name>70</name>
+      <Point><coordinates>78.7705024660305,17.7078636681253</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.71">
+	<name>71</name>
+      <Point><coordinates>78.1503296563939,17.469946887647</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.72">
+	<name>72</name>
+      <Point><coordinates>78.3897529465474,17.8522779211512</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.73">
+	<name>73</name>
+      <Point><coordinates>78.8646719479905,17.2959693323485</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.74">
+	<name>74</name>
+      <Point><coordinates>78.5891146789844,17.2120030328825</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.75">
+	<name>75</name>
+      <Point><coordinates>78.3237922859135,17.2790943027955</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.76">
+	<name>76</name>
+      <Point><coordinates>78.4603420728783,17.2615409042356</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.77">
+	<name>77</name>
+      <Point><coordinates>78.1483381796236,17.6691161959873</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.78">
+	<name>78</name>
+      <Point><coordinates>78.5015372852261,17.5642709581793</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.79">
+	<name>79</name>
+      <Point><coordinates>78.2775562238272,17.1241342381004</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.80">
+	<name>80</name>
+      <Point><coordinates>78.4048534900661,17.0881456497272</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.81">
+	<name>81</name>
+      <Point><coordinates>78.4677954040032,17.3556577314904</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.82">
+	<name>82</name>
+      <Point><coordinates>78.3896301483649,17.2097865789431</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.83">
+	<name>83</name>
+      <Point><coordinates>78.7078087023175,17.3572897317166</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.84">
+	<name>84</name>
+      <Point><coordinates>78.6804697551728,17.2571581688188</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.85">
+	<name>85</name>
+      <Point><coordinates>78.4660045601575,17.1633440584916</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.86">
+	<name>86</name>
+      <Point><coordinates>78.3315723217606,17.4494344212585</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.87">
+	<name>87</name>
+      <Point><coordinates>78.394506570179,17.3175059759381</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.88">
+	<name>88</name>
+      <Point><coordinates>78.4976522447507,17.2552351400765</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.89">
+	<name>89</name>
+      <Point><coordinates>78.4420218576403,17.5982819906453</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.90">
+	<name>90</name>
+      <Point><coordinates>78.4336584344747,17.4699247653409</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.91">
+	<name>91</name>
+      <Point><coordinates>78.4649773991832,17.162879557446</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.92">
+	<name>92</name>
+      <Point><coordinates>78.2179436124614,17.1539364979452</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.93">
+	<name>93</name>
+      <Point><coordinates>78.4577719123197,17.3936449207475</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.94">
+	<name>94</name>
+      <Point><coordinates>78.738866119395,17.2791429297554</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.95">
+	<name>95</name>
+      <Point><coordinates>78.371880926386,17.2222900477121</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.96">
+	<name>96</name>
+      <Point><coordinates>78.332812535699,17.8320913225606</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.97">
+	<name>97</name>
+      <Point><coordinates>78.1358608774789,17.4626053024122</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.98">
+	<name>98</name>
+      <Point><coordinates>78.7340910762038,17.4610211563466</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.99">
+	<name>99</name>
+      <Point><coordinates>78.0937152178772,17.6217251281363</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.100">
+	<name>100</name>
+      <Point><coordinates>78.5341694610788,17.3857522346933</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.101">
+	<name>101</name>
+      <Point><coordinates>78.2200516235736,17.6609317308601</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.102">
+	<name>102</name>
+      <Point><coordinates>78.488224163279,17.7231529281848</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.103">
+	<name>103</name>
+      <Point><coordinates>78.3933616183762,17.7141491017472</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.104">
+	<name>104</name>
+      <Point><coordinates>78.4235068334678,17.3752323417365</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.105">
+	<name>105</name>
+      <Point><coordinates>78.3214095543923,17.1050318091198</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.106">
+	<name>106</name>
+      <Point><coordinates>78.44159848044,17.5279201529954</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.107">
+	<name>107</name>
+      <Point><coordinates>78.1299841231517,17.4833793017818</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.108">
+	<name>108</name>
+      <Point><coordinates>78.6061660281938,17.6275279465873</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.109">
+	<name>109</name>
+      <Point><coordinates>78.1998526983042,17.8030491371434</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.110">
+	<name>110</name>
+      <Point><coordinates>78.5475381949302,17.6024206360099</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.111">
+	<name>111</name>
+      <Point><coordinates>78.4260700194198,17.427287709835</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.112">
+	<name>112</name>
+      <Point><coordinates>78.569257459859,17.199660587429</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.113">
+	<name>113</name>
+      <Point><coordinates>78.5133101926258,17.3700484138633</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.114">
+	<name>114</name>
+      <Point><coordinates>78.5722630990832,17.4288525502812</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.115">
+	<name>115</name>
+      <Point><coordinates>78.3386343502745,17.1945786394028</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.116">
+	<name>116</name>
+      <Point><coordinates>78.1795317372558,17.2712485419891</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.117">
+	<name>117</name>
+      <Point><coordinates>78.5729748460689,17.4603844922339</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.118">
+	<name>118</name>
+      <Point><coordinates>78.1296206786106,17.5005305804925</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.119">
+	<name>119</name>
+      <Point><coordinates>78.5637603297845,17.4739107108201</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.120">
+	<name>120</name>
+      <Point><coordinates>78.3484710742085,17.5363591868132</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.121">
+	<name>121</name>
+      <Point><coordinates>78.5981938063604,17.8159368794438</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.122">
+	<name>122</name>
+      <Point><coordinates>78.6751759339699,17.5864410191374</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.123">
+	<name>123</name>
+      <Point><coordinates>78.3374994500089,17.5913914623439</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.124">
+	<name>124</name>
+      <Point><coordinates>78.9211660541118,17.3149930592248</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.125">
+	<name>125</name>
+      <Point><coordinates>78.3800881632895,17.0526036241642</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.126">
+	<name>126</name>
+      <Point><coordinates>78.548659909534,17.7973479265112</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.127">
+	<name>127</name>
+      <Point><coordinates>78.6964320097018,17.0608668322192</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.128">
+	<name>128</name>
+      <Point><coordinates>78.4764612665795,17.1890359319281</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.129">
+	<name>129</name>
+      <Point><coordinates>78.1552927954607,17.4714627952079</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.130">
+	<name>130</name>
+      <Point><coordinates>78.2841190924327,17.7350642124366</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.131">
+	<name>131</name>
+      <Point><coordinates>78.6094469200761,17.3624604524379</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.132">
+	<name>132</name>
+      <Point><coordinates>78.3595925831638,17.3130748832982</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.133">
+	<name>133</name>
+      <Point><coordinates>78.7956370033661,17.273089596937</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.134">
+	<name>134</name>
+      <Point><coordinates>78.4811808743427,17.7281204318677</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.135">
+	<name>135</name>
+      <Point><coordinates>78.4756905987205,17.4450834811917</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.136">
+	<name>136</name>
+      <Point><coordinates>78.4950035130494,17.2495118704543</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.137">
+	<name>137</name>
+      <Point><coordinates>78.0529626874239,17.6610291537739</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.138">
+	<name>138</name>
+      <Point><coordinates>78.2904369978828,17.5015278331441</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.139">
+	<name>139</name>
+      <Point><coordinates>78.3667529972583,17.4500838653992</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.140">
+	<name>140</name>
+      <Point><coordinates>78.1907412897439,17.2261638870753</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.141">
+	<name>141</name>
+      <Point><coordinates>78.4451172634915,17.4715174852029</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.142">
+	<name>142</name>
+      <Point><coordinates>78.3210286667567,17.7181424191389</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.143">
+	<name>143</name>
+      <Point><coordinates>78.7811355970237,17.3297515760515</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.144">
+	<name>144</name>
+      <Point><coordinates>78.3463343011808,17.5602629113751</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.145">
+	<name>145</name>
+      <Point><coordinates>78.5898645641073,17.4140722834423</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.146">
+	<name>146</name>
+      <Point><coordinates>78.3438403950069,17.8641205591293</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.147">
+	<name>147</name>
+      <Point><coordinates>78.6300789250879,17.2498856796831</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.148">
+	<name>148</name>
+      <Point><coordinates>78.4109766863305,17.2895409001163</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.149">
+	<name>149</name>
+      <Point><coordinates>78.4322630653103,17.3880798353604</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.150">
+	<name>150</name>
+      <Point><coordinates>78.4634600950105,17.7884942316892</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.151">
+	<name>151</name>
+      <Point><coordinates>78.2312561517092,17.1430118078564</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.152">
+	<name>152</name>
+      <Point><coordinates>78.5454156436422,17.3606905973714</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.153">
+	<name>153</name>
+      <Point><coordinates>78.2501154659002,17.1316197152049</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.154">
+	<name>154</name>
+      <Point><coordinates>78.383778743727,17.4833632769415</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.155">
+	<name>155</name>
+      <Point><coordinates>78.534490432245,17.4039110776282</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.156">
+	<name>156</name>
+      <Point><coordinates>78.6361036776591,17.3888825195542</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.157">
+	<name>157</name>
+      <Point><coordinates>78.4801232243944,17.0147606557749</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.158">
+	<name>158</name>
+      <Point><coordinates>78.6801186133167,17.2551668157585</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.159">
+	<name>159</name>
+      <Point><coordinates>78.7210846280168,17.1957441359019</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.160">
+	<name>160</name>
+      <Point><coordinates>78.4541880736317,17.5027031301919</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.161">
+	<name>161</name>
+      <Point><coordinates>78.2219838076418,17.3671120576568</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.162">
+	<name>162</name>
+      <Point><coordinates>78.4341602086993,17.3125989330115</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.163">
+	<name>163</name>
+      <Point><coordinates>78.5248669527879,17.3149145197281</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.164">
+	<name>164</name>
+      <Point><coordinates>78.3840114397411,17.308337681726</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.165">
+	<name>165</name>
+      <Point><coordinates>78.2129723905186,17.3286976705003</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.166">
+	<name>166</name>
+      <Point><coordinates>78.7408697972615,17.3536914303958</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.167">
+	<name>167</name>
+      <Point><coordinates>78.6279803488775,17.1194251450483</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.168">
+	<name>168</name>
+      <Point><coordinates>78.461244748455,17.0502027527745</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.169">
+	<name>169</name>
+      <Point><coordinates>78.0713380895401,17.3730864890648</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.170">
+	<name>170</name>
+      <Point><coordinates>78.3040477314491,17.4592681879156</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.171">
+	<name>171</name>
+      <Point><coordinates>78.6014847844705,17.5968509393931</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.172">
+	<name>172</name>
+      <Point><coordinates>78.6130423290881,17.6704254444478</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.173">
+	<name>173</name>
+      <Point><coordinates>78.2262811088854,17.0604034984534</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.174">
+	<name>174</name>
+      <Point><coordinates>78.3699890991219,17.2960520314989</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.175">
+	<name>175</name>
+      <Point><coordinates>78.2611896478249,17.2917052884034</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.176">
+	<name>176</name>
+      <Point><coordinates>78.3887757285207,17.2972007732857</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.177">
+	<name>177</name>
+      <Point><coordinates>78.2049176038089,17.0827769073886</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.178">
+	<name>178</name>
+      <Point><coordinates>78.6488911878453,17.4848723653194</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.179">
+	<name>179</name>
+      <Point><coordinates>78.170994332335,17.2209205292626</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.180">
+	<name>180</name>
+      <Point><coordinates>78.3727910323738,17.2973531693322</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.181">
+	<name>181</name>
+      <Point><coordinates>78.4555464465675,17.4591874486961</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.182">
+	<name>182</name>
+      <Point><coordinates>78.7601725460594,17.5216598382818</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.183">
+	<name>183</name>
+      <Point><coordinates>78.3899349896199,17.2148482115214</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.184">
+	<name>184</name>
+      <Point><coordinates>78.6173541914548,17.2525353964448</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.185">
+	<name>185</name>
+      <Point><coordinates>78.1036433461252,17.6191623471271</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.186">
+	<name>186</name>
+      <Point><coordinates>78.5184596742022,17.6282501703449</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.187">
+	<name>187</name>
+      <Point><coordinates>78.7551271221117,17.2873653494932</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.188">
+	<name>188</name>
+      <Point><coordinates>78.1236323323842,17.5996799810534</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.189">
+	<name>189</name>
+      <Point><coordinates>78.1723798490824,17.5285958650042</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.190">
+	<name>190</name>
+      <Point><coordinates>78.4921175324846,17.7278089319061</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.191">
+	<name>191</name>
+      <Point><coordinates>78.3888221952763,17.3271859420468</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.192">
+	<name>192</name>
+      <Point><coordinates>78.3977003552311,17.2776280179159</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.193">
+	<name>193</name>
+      <Point><coordinates>78.4601119117601,17.4963664898174</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.194">
+	<name>194</name>
+      <Point><coordinates>78.4717559731804,17.3548949931512</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.195">
+	<name>195</name>
+      <Point><coordinates>78.3743679045754,17.1792423189715</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.196">
+	<name>196</name>
+      <Point><coordinates>78.7533251783902,17.7249213786648</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.197">
+	<name>197</name>
+      <Point><coordinates>78.2299030037188,17.2843219573418</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.198">
+	<name>198</name>
+      <Point><coordinates>78.3802202202942,17.4294895743895</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.199">
+	<name>199</name>
+      <Point><coordinates>78.33793308982,17.5424492418402</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.200">
+	<name>200</name>
+      <Point><coordinates>78.2370402166021,17.4165371850671</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.201">
+	<name>201</name>
+      <Point><coordinates>78.2841457324854,17.4878957164246</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.202">
+	<name>202</name>
+      <Point><coordinates>78.4307847353671,17.5070075746426</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.203">
+	<name>203</name>
+      <Point><coordinates>78.3181699155685,17.3814314035652</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.204">
+	<name>204</name>
+      <Point><coordinates>78.5128124830669,17.2603008228907</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.205">
+	<name>205</name>
+      <Point><coordinates>78.2607885147522,17.7819687522939</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.206">
+	<name>206</name>
+      <Point><coordinates>78.5561950055082,17.3208993343884</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.207">
+	<name>207</name>
+      <Point><coordinates>78.1240078529291,17.5878566131544</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.208">
+	<name>208</name>
+      <Point><coordinates>78.6465241593786,17.5662297964284</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.209">
+	<name>209</name>
+      <Point><coordinates>78.1594605456665,17.4514758954161</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.210">
+	<name>210</name>
+      <Point><coordinates>78.205010797847,17.0702257662175</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.211">
+	<name>211</name>
+      <Point><coordinates>78.1846637390404,17.4337739784278</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.212">
+	<name>212</name>
+      <Point><coordinates>78.4477945990975,17.3193663636742</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.213">
+	<name>213</name>
+      <Point><coordinates>78.2888400331337,17.5646308435623</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.214">
+	<name>214</name>
+      <Point><coordinates>78.5352840503536,17.672447476367</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.215">
+	<name>215</name>
+      <Point><coordinates>78.4389387737717,17.7759823051397</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.216">
+	<name>216</name>
+      <Point><coordinates>78.5883886181761,17.404660561189</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.217">
+	<name>217</name>
+      <Point><coordinates>78.0809651961896,17.6299340999684</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.218">
+	<name>218</name>
+      <Point><coordinates>78.0084392526787,17.3378436015294</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.219">
+	<name>219</name>
+      <Point><coordinates>78.91163211001,17.3263674449391</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.220">
+	<name>220</name>
+      <Point><coordinates>78.2788704532987,17.7456474813873</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.221">
+	<name>221</name>
+      <Point><coordinates>78.5429774983416,17.4726612632967</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.222">
+	<name>222</name>
+      <Point><coordinates>78.0916363971344,17.3441273213116</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.223">
+	<name>223</name>
+      <Point><coordinates>78.3363532932115,17.2946144944396</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.224">
+	<name>224</name>
+      <Point><coordinates>78.1954276112225,17.2331826545757</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.225">
+	<name>225</name>
+      <Point><coordinates>78.8251699664137,17.0628295062185</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.226">
+	<name>226</name>
+      <Point><coordinates>78.5028939739922,17.144836058463</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.227">
+	<name>227</name>
+      <Point><coordinates>78.8163961807034,17.2748522389783</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.228">
+	<name>228</name>
+      <Point><coordinates>78.5882381602682,17.2794667003794</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.229">
+	<name>229</name>
+      <Point><coordinates>78.4929572770719,17.517196334835</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.230">
+	<name>230</name>
+      <Point><coordinates>78.3767498312989,17.5533532539382</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.231">
+	<name>231</name>
+      <Point><coordinates>78.3846246914761,17.1714278244475</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.232">
+	<name>232</name>
+      <Point><coordinates>78.1477592393608,17.0442343608989</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.233">
+	<name>233</name>
+      <Point><coordinates>78.5360770273769,17.1005326840136</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.234">
+	<name>234</name>
+      <Point><coordinates>78.3616420871544,17.4390883444981</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.235">
+	<name>235</name>
+      <Point><coordinates>78.6956930105172,17.5875846362423</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.236">
+	<name>236</name>
+      <Point><coordinates>78.5677658165507,17.3491313157673</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.237">
+	<name>237</name>
+      <Point><coordinates>78.7493087937058,17.2166578769565</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.238">
+	<name>238</name>
+      <Point><coordinates>78.2705613606477,17.7715396910451</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.239">
+	<name>239</name>
+      <Point><coordinates>78.5783268653033,17.4399460173787</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.240">
+	<name>240</name>
+      <Point><coordinates>78.1892747148774,17.2299361342425</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.241">
+	<name>241</name>
+      <Point><coordinates>78.8929200003639,17.4491261410016</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.242">
+	<name>242</name>
+      <Point><coordinates>78.3138434779016,17.329806149277</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.243">
+	<name>243</name>
+      <Point><coordinates>78.4293363689084,17.8080081723975</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.244">
+	<name>244</name>
+      <Point><coordinates>78.5822315058056,16.9735458248409</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.245">
+	<name>245</name>
+      <Point><coordinates>78.8051151574352,17.3142971991057</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.246">
+	<name>246</name>
+      <Point><coordinates>78.5196571935653,17.4642426224806</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.247">
+	<name>247</name>
+      <Point><coordinates>78.4642619410313,17.5702091724165</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.248">
+	<name>248</name>
+      <Point><coordinates>78.3694194870117,17.4478613254458</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.249">
+	<name>249</name>
+      <Point><coordinates>78.5921575570669,17.4687470020022</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.250">
+	<name>250</name>
+      <Point><coordinates>78.9446526154135,17.2496451141837</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.251">
+	<name>251</name>
+      <Point><coordinates>78.5148108104887,17.3145190300847</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.252">
+	<name>252</name>
+      <Point><coordinates>78.3850962704709,17.4372303442886</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.253">
+	<name>253</name>
+      <Point><coordinates>78.1821878696503,17.6789950695477</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.254">
+	<name>254</name>
+      <Point><coordinates>78.1766925255493,17.2045655137011</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.255">
+	<name>255</name>
+      <Point><coordinates>78.6849697038137,17.144836549086</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.256">
+	<name>256</name>
+      <Point><coordinates>78.484314127851,17.2475719163166</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.257">
+	<name>257</name>
+      <Point><coordinates>78.7723187586988,17.4752743353911</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.258">
+	<name>258</name>
+      <Point><coordinates>78.7758013065445,17.5679967222181</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.259">
+	<name>259</name>
+      <Point><coordinates>78.3982819983397,17.7453721762392</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.260">
+	<name>260</name>
+      <Point><coordinates>78.5363218716732,17.5613653584299</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.261">
+	<name>261</name>
+      <Point><coordinates>78.1734785239287,17.7118292078067</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.262">
+	<name>262</name>
+      <Point><coordinates>78.3703278338348,17.5025125078118</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.263">
+	<name>263</name>
+      <Point><coordinates>78.4284386476807,17.459651560304</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.264">
+	<name>264</name>
+      <Point><coordinates>78.5751607056864,17.0270262925491</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.265">
+	<name>265</name>
+      <Point><coordinates>78.7130635596556,17.060151605908</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.266">
+	<name>266</name>
+      <Point><coordinates>78.68537024629,17.5772567467323</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.267">
+	<name>267</name>
+      <Point><coordinates>78.2871211544082,17.4140646108914</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.268">
+	<name>268</name>
+      <Point><coordinates>78.4077169035341,17.0983881987942</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.269">
+	<name>269</name>
+      <Point><coordinates>78.1680161316188,17.494400179138</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.270">
+	<name>270</name>
+      <Point><coordinates>78.1689466578603,17.0211423731189</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.271">
+	<name>271</name>
+      <Point><coordinates>78.3991860673639,17.6105469677656</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.272">
+	<name>272</name>
+      <Point><coordinates>78.1586131054892,17.7940563681578</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.273">
+	<name>273</name>
+      <Point><coordinates>78.3869290004766,17.6180616270183</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.274">
+	<name>274</name>
+      <Point><coordinates>78.202631116252,17.0598078577765</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.275">
+	<name>275</name>
+      <Point><coordinates>78.3606368089107,17.3518329746395</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.276">
+	<name>276</name>
+      <Point><coordinates>78.1483178408468,17.4662157690442</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.277">
+	<name>277</name>
+      <Point><coordinates>78.3571536786526,17.6255220138977</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.278">
+	<name>278</name>
+      <Point><coordinates>78.5468007464229,17.355559153341</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.279">
+	<name>279</name>
+      <Point><coordinates>78.5180970988797,17.2376951442109</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.280">
+	<name>280</name>
+      <Point><coordinates>78.7283461400683,17.4613169396063</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.281">
+	<name>281</name>
+      <Point><coordinates>78.6600388954136,17.3190685761246</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.282">
+	<name>282</name>
+      <Point><coordinates>78.6305962990756,17.4366006782995</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.283">
+	<name>283</name>
+      <Point><coordinates>78.4901903327687,17.567740071833</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.284">
+	<name>284</name>
+      <Point><coordinates>78.4768455223943,17.2507298281426</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.285">
+	<name>285</name>
+      <Point><coordinates>78.5585461502663,17.3564255565784</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.286">
+	<name>286</name>
+      <Point><coordinates>78.4226023118593,17.379375226247</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.287">
+	<name>287</name>
+      <Point><coordinates>78.4403230146919,17.2408747802723</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.288">
+	<name>288</name>
+      <Point><coordinates>78.3916803669524,17.4042616805624</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.289">
+	<name>289</name>
+      <Point><coordinates>78.0430419242874,17.3374552575237</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.290">
+	<name>290</name>
+      <Point><coordinates>78.4009904373072,17.1903348653337</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.291">
+	<name>291</name>
+      <Point><coordinates>78.5486278448813,17.4372340611722</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.292">
+	<name>292</name>
+      <Point><coordinates>78.7073507462257,17.5593563786503</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.293">
+	<name>293</name>
+      <Point><coordinates>78.4767608859597,17.2015942937686</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.294">
+	<name>294</name>
+      <Point><coordinates>78.5298062318251,17.8039749687858</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.295">
+	<name>295</name>
+      <Point><coordinates>78.1216268045984,17.6252045744229</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.296">
+	<name>296</name>
+      <Point><coordinates>78.3848957554383,17.5761296032571</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.297">
+	<name>297</name>
+      <Point><coordinates>78.6022364358527,17.4896438019842</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.298">
+	<name>298</name>
+      <Point><coordinates>78.7001420913452,17.277980204153</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.299">
+	<name>299</name>
+      <Point><coordinates>78.2284466228025,16.9899032711559</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.300">
+	<name>300</name>
+      <Point><coordinates>78.2102212391836,17.7727660753229</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.301">
+	<name>301</name>
+      <Point><coordinates>78.4449330448395,17.0068250102058</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.302">
+	<name>302</name>
+      <Point><coordinates>78.2899949774701,17.505946868981</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.303">
+	<name>303</name>
+      <Point><coordinates>78.6384038225954,17.1939792235035</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.304">
+	<name>304</name>
+      <Point><coordinates>78.7456619353136,16.9966481851433</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.305">
+	<name>305</name>
+      <Point><coordinates>78.5397687306007,17.7236251869584</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.306">
+	<name>306</name>
+      <Point><coordinates>78.4972850101953,17.7289587281622</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.307">
+	<name>307</name>
+      <Point><coordinates>78.7289671936082,17.5778527027735</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.308">
+	<name>308</name>
+      <Point><coordinates>78.1349043609716,17.2214934617602</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.309">
+	<name>309</name>
+      <Point><coordinates>78.7251172975369,17.119366415107</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.310">
+	<name>310</name>
+      <Point><coordinates>78.1694128813109,17.5802049169253</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.311">
+	<name>311</name>
+      <Point><coordinates>78.1322873473711,17.1596008523485</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.312">
+	<name>312</name>
+      <Point><coordinates>78.4864571619939,17.8225696198612</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.313">
+	<name>313</name>
+      <Point><coordinates>78.6357378627983,17.4100150088255</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.314">
+	<name>314</name>
+      <Point><coordinates>78.3129675975229,17.6773034930869</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.315">
+	<name>315</name>
+      <Point><coordinates>78.5340283140795,17.4243182720465</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.316">
+	<name>316</name>
+      <Point><coordinates>78.7306086544393,17.4382175466932</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.317">
+	<name>317</name>
+      <Point><coordinates>78.7082458795547,17.00851603254</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.318">
+	<name>318</name>
+      <Point><coordinates>78.9318592225547,17.2333422217218</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.319">
+	<name>319</name>
+      <Point><coordinates>78.7232982466803,17.5265693917224</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.320">
+	<name>320</name>
+      <Point><coordinates>78.7662423401607,17.3945370930416</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.321">
+	<name>321</name>
+      <Point><coordinates>78.4707781706304,17.1646684260785</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.322">
+	<name>322</name>
+      <Point><coordinates>78.7804972851196,17.0440974041425</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.323">
+	<name>323</name>
+      <Point><coordinates>78.494737461675,17.5452178897506</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.324">
+	<name>324</name>
+      <Point><coordinates>78.7197656349419,17.5154179678709</coordinates></Point>
+  </Placemark>
+  <Placemark id="validation_points.325">
+	<name>325</name>
+      <Point><coordinates>78.6221297000566,17.1436551124458</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

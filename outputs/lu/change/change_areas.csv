@@ -1,0 +1,61 @@
+site,model,year,class,hectares
+Lingampally,ALL,2017,residential,189.55
+Lingampally,ALL,2017,non-residential,148.31
+Lingampally,ALL,2017,water,0.0
+Lingampally,ALL,2017,forest/trees,44.53
+Lingampally,ALL,2017,other open,17.61
+Lingampally,ALL,2020,residential,223.19
+Lingampally,ALL,2020,non-residential,122.44
+Lingampally,ALL,2020,water,0.0
+Lingampally,ALL,2020,forest/trees,37.44
+Lingampally,ALL,2020,other open,16.93
+Lingampally,ALL,2023,residential,187.56
+Lingampally,ALL,2023,non-residential,136.39
+Lingampally,ALL,2023,water,1.55
+Lingampally,ALL,2023,forest/trees,54.54
+Lingampally,ALL,2023,other open,19.96
+Lingampally,S2+BLD (no AlphaEarth),2017,residential,110.11
+Lingampally,S2+BLD (no AlphaEarth),2017,non-residential,237.53
+Lingampally,S2+BLD (no AlphaEarth),2017,water,0.0
+Lingampally,S2+BLD (no AlphaEarth),2017,forest/trees,27.04
+Lingampally,S2+BLD (no AlphaEarth),2017,other open,25.32
+Lingampally,S2+BLD (no AlphaEarth),2020,residential,189.26
+Lingampally,S2+BLD (no AlphaEarth),2020,non-residential,164.76
+Lingampally,S2+BLD (no AlphaEarth),2020,water,0.0
+Lingampally,S2+BLD (no AlphaEarth),2020,forest/trees,13.07
+Lingampally,S2+BLD (no AlphaEarth),2020,other open,32.91
+Lingampally,S2+BLD (no AlphaEarth),2023,residential,174.36
+Lingampally,S2+BLD (no AlphaEarth),2023,non-residential,149.56
+Lingampally,S2+BLD (no AlphaEarth),2023,water,1.65
+Lingampally,S2+BLD (no AlphaEarth),2023,forest/trees,55.53
+Lingampally,S2+BLD (no AlphaEarth),2023,other open,18.9
+Gachibowli_FinancialDistrict,ALL,2017,residential,20.86
+Gachibowli_FinancialDistrict,ALL,2017,non-residential,268.31
+Gachibowli_FinancialDistrict,ALL,2017,water,2.52
+Gachibowli_FinancialDistrict,ALL,2017,forest/trees,11.28
+Gachibowli_FinancialDistrict,ALL,2017,other open,97.03
+Gachibowli_FinancialDistrict,ALL,2020,residential,55.23
+Gachibowli_FinancialDistrict,ALL,2020,non-residential,245.27
+Gachibowli_FinancialDistrict,ALL,2020,water,2.6
+Gachibowli_FinancialDistrict,ALL,2020,forest/trees,13.05
+Gachibowli_FinancialDistrict,ALL,2020,other open,83.85
+Gachibowli_FinancialDistrict,ALL,2023,residential,62.58
+Gachibowli_FinancialDistrict,ALL,2023,non-residential,242.13
+Gachibowli_FinancialDistrict,ALL,2023,water,2.35
+Gachibowli_FinancialDistrict,ALL,2023,forest/trees,26.64
+Gachibowli_FinancialDistrict,ALL,2023,other open,66.3
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2017,residential,34.88
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2017,non-residential,296.39
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2017,water,2.38
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2017,forest/trees,9.3
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2017,other open,57.05
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2020,residential,73.79
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2020,non-residential,246.29
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2020,water,2.87
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2020,forest/trees,9.23
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2020,other open,67.82
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2023,residential,66.74
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2023,non-residential,235.62
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2023,water,2.66
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2023,forest/trees,24.0
+Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth),2023,other open,70.98

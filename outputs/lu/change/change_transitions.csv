@@ -1,0 +1,19 @@
+2017,forest/trees,non-residential,other open,residential,water,site,model
+forest/trees,37.38,2.1,2.54,0.96,1.55,Lingampally,ALL
+non-residential,12.36,99.83,4.61,31.51,0.0,Lingampally,ALL
+other open,2.98,2.21,11.89,0.53,0.0,Lingampally,ALL
+residential,1.82,32.25,0.92,154.56,0.0,Lingampally,ALL
+forest/trees,23.51,1.11,1.13,0.1,1.19,Lingampally,S2+BLD (no AlphaEarth)
+non-residential,22.99,136.16,3.39,74.99,0.0,Lingampally,S2+BLD (no AlphaEarth)
+other open,7.26,3.3,14.29,0.01,0.46,Lingampally,S2+BLD (no AlphaEarth)
+residential,1.77,8.99,0.09,99.26,0.0,Lingampally,S2+BLD (no AlphaEarth)
+forest/trees,10.04,0.55,0.69,0.0,0.0,Gachibowli_FinancialDistrict,ALL
+non-residential,7.38,198.57,19.43,42.5,0.43,Gachibowli_FinancialDistrict,ALL
+other open,9.1,36.08,45.99,5.84,0.02,Gachibowli_FinancialDistrict,ALL
+residential,0.12,6.56,0.0,14.18,0.0,Gachibowli_FinancialDistrict,ALL
+water,0.0,0.37,0.19,0.06,1.9,Gachibowli_FinancialDistrict,ALL
+forest/trees,8.1,0.4,0.8,0.0,0.0,Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth)
+non-residential,11.58,196.22,43.23,44.4,0.96,Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth)
+other open,4.0,21.37,26.68,5.0,0.0,Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth)
+residential,0.32,17.16,0.12,17.28,0.0,Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth)
+water,0.0,0.47,0.15,0.06,1.7,Gachibowli_FinancialDistrict,S2+BLD (no AlphaEarth)
