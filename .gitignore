@@ -32,3 +32,10 @@ data/processed/lu/*
 
 # Training scratch
 catboost_info/
+
+# Starter data (small enough for GitHub; samples.parquet is split into <100 MB parts)
+!data/processed/lu/samples_parts/
+!data/processed/lu/validation_features.parquet
+!data/processed/lu/oof_predictions.parquet
+!data/processed/lu/model_all_2023.pkl
+!data/processed/lu/sisdp_at_validation.json

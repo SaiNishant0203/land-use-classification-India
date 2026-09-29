@@ -326,3 +326,47 @@ next phase shifts to **zone-level estimates**:
 **Open decisions:**
 - the zone system: grid, GHMC wards, or Comprehensive Mobility Plan traffic analysis zones;
 - which transport question to pursue.
+
+---
+
+## 13. Data and how to run
+
+### In this repository (starter data)
+
+| file | what it is |
+|---|---|
+| `data/processed/lu/samples_parts/samples_part1.parquet`, `samples_part2.parquet` | the 393,098 labelled training pixels × 181 features, split because GitHub limits files to 100 MB |
+| `data/processed/lu/validation_points.gpkg`, `validation_key.csv`, `validation_strata.csv` | the 325 hand-labelled test pixels, their strata and weights |
+| `data/processed/lu/validation_features.parquet` | the 181 features at the test pixels |
+| `data/processed/lu/oof_predictions.parquet` | out-of-fold predictions from the spatial cross-validation |
+| `data/processed/lu/model_all_2023.pkl` | the trained LightGBM model |
+| `data/processed/lu/sisdp_at_validation.json` | NRSC SIS-DP 1:10K class at each test pixel |
+
+After cloning, rebuild the training table once:
+
+```
+cd scripts/lu
+python 00_join_samples.py
+```
+
+This is enough to retrain the model and rerun the spatial cross-validation and product audit
+(`06_train_eval.py`).
+
+### Not in this repository (shared separately as a zip)
+
+The raster tiles are too large for GitHub (about 8 GB). Unzip them into the repository root, so
+that their `data/...` paths line up. They are needed for:
+
+| folder | size | needed for |
+|---|---|---|
+| `data/raw/lu/feat_2023/` (incl. `tiles.json`) | 7.3 GB | the HMDA map (`09`), recomputing features (`05`, `15`) |
+| `data/raw/lu/prod/`, `lab/`, `pred_2023/`, `ben/`, `senclip/`, `unet_2023/`, `euluc/*.tif` | ~95 MB | hand-label evaluation of all products (`07`) and relabelling (`04`) |
+| `data/raw/lu/gulu/IND.tif` | 164 MB | GULU in the audit (`05`, `07`) |
+| `data/raw/lu/feat_2017/`, `feat_2020/` | 0.6 GB | the change test (`13`) |
+
+Everything can also be rebuilt from scratch with the download scripts (`03*`). This needs a
+Google Earth Engine account and takes about one night.
+
+### Python packages
+
+`numpy pandas pyarrow geopandas rasterio scipy scikit-learn lightgbm matplotlib pyproj shapely earthengine-api`
