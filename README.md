@@ -85,7 +85,7 @@ tiles.
 2. **Neighbourhood context.** A single pixel cannot show that it lies inside an industrial
    estate, but its surroundings can. For windows of **70 m, 150 m, 310 m and 610 m**, we
    compute:
-   - building cover, building count, **average building size (m²)** and **average building
+   - building cover, building count, **average building size (relative units)** and **average building
      height**;
    - average NDVI, NDBI, MNDWI and night lights;
    - maximum building height (150 m and 310 m windows only).
@@ -331,6 +331,9 @@ next phase shifts to **zone-level estimates**:
 
 ## 13. Data and how to run
 
+**`DATA.md` is the full data guide**: how every layer was made, what each band and column
+means, code examples, and which scripts run with which data.
+
 ### In this repository (starter data)
 
 | file | what it is |
@@ -341,6 +344,8 @@ next phase shifts to **zone-level estimates**:
 | `data/processed/lu/oof_predictions.parquet` | out-of-fold predictions from the spatial cross-validation |
 | `data/processed/lu/model_all_2023.pkl` | the trained LightGBM model |
 | `data/processed/lu/sisdp_at_validation.json` | NRSC SIS-DP 1:10K class at each test pixel |
+| `data/processed/lu/prox/` | major roads (2023), ORR interchanges and metro stations, for the proximity distances |
+| `data/processed/aoi_utm44n.gpkg` | the HMDA boundary |
 
 After cloning, rebuild the training table once:
 
@@ -350,7 +355,9 @@ python 00_join_samples.py
 ```
 
 This is enough to retrain the model and rerun the spatial cross-validation and product audit
-(`06_train_eval.py`).
+(`06_train_eval.py`), the feature analysis (`15_feature_analysis.py`, written up in
+`FEATURES.md`) and the proximity-feature test (`16_proximity_features.py`, summarised in
+`DATA.md` section 3.9).
 
 ### Not in this repository (shared separately as a zip)
 
@@ -369,4 +376,4 @@ Google Earth Engine account and takes about one night.
 
 ### Python packages
 
-`numpy pandas pyarrow geopandas rasterio scipy scikit-learn lightgbm matplotlib pyproj shapely earthengine-api`
+`numpy pandas pyarrow geopandas rasterio scipy scikit-learn lightgbm matplotlib pyproj shapely requests earthengine-api`

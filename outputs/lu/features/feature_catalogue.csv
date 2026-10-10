@@ -1,0 +1,182 @@
+feature,family,window,description
+B2,S2 bands,pixel,blue
+B3,S2 bands,pixel,green
+B4,S2 bands,pixel,red
+B5,S2 bands,pixel,red-edge 1 (20 m)
+B8,S2 bands,pixel,near-infrared
+B11,S2 bands,pixel,short-wave IR 1 (20 m)
+B12,S2 bands,pixel,short-wave IR 2 (20 m)
+ob_cov,Buildings (pixel),pixel,share of pixel covered by buildings
+ob_h,Buildings (pixel),pixel,mean building height (m)
+ob_hmax,Buildings (pixel),pixel,max building height (m)
+ob_cnt,Buildings (pixel),pixel,number of buildings in pixel
+viirs,Night lights,pixel,night-time light radiance
+ndvi,S2 indices (pixel),pixel,(B8-B4)/(B8+B4) vegetation
+ndbi,S2 indices (pixel),pixel,(B11-B8)/(B11+B8) built-up
+mndwi,S2 indices (pixel),pixel,(B3-B11)/(B3+B11) water
+bsi,S2 indices (pixel),pixel,((B11+B4)-(B8+B2))/((B11+B4)+(B8+B2)) bare soil
+A00,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 0
+A01,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 1
+A02,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 2
+A03,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 3
+A04,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 4
+A05,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 5
+A06,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 6
+A07,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 7
+A08,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 8
+A09,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 9
+A10,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 10
+A11,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 11
+A12,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 12
+A13,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 13
+A14,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 14
+A15,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 15
+A16,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 16
+A17,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 17
+A18,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 18
+A19,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 19
+A20,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 20
+A21,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 21
+A22,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 22
+A23,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 23
+A24,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 24
+A25,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 25
+A26,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 26
+A27,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 27
+A28,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 28
+A29,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 29
+A30,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 30
+A31,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 31
+A32,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 32
+A33,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 33
+A34,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 34
+A35,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 35
+A36,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 36
+A37,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 37
+A38,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 38
+A39,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 39
+A40,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 40
+A41,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 41
+A42,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 42
+A43,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 43
+A44,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 44
+A45,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 45
+A46,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 46
+A47,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 47
+A48,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 48
+A49,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 49
+A50,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 50
+A51,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 51
+A52,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 52
+A53,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 53
+A54,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 54
+A55,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 55
+A56,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 56
+A57,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 57
+A58,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 58
+A59,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 59
+A60,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 60
+A61,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 61
+A62,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 62
+A63,AlphaEarth (pixel),pixel,AlphaEarth embedding dimension 63
+cov_7,Buildings (neighbourhood),70 m,"mean building cover, mean over 70 m window"
+cnt_7,Buildings (neighbourhood),70 m,"buildings per window (x100), mean over 70 m window"
+bldg_area_7,Buildings (neighbourhood),70 m,"mean building footprint (m2), mean over 70 m window"
+bldg_h_7,Buildings (neighbourhood),70 m,"cover-weighted mean building height (m), mean over 70 m window"
+ndvi_7,S2 indices (neighbourhood mean),70 m,"(B8-B4)/(B8+B4) vegetation, mean over 70 m window"
+ndbi_7,S2 indices (neighbourhood mean),70 m,"(B11-B8)/(B11+B8) built-up, mean over 70 m window"
+mndwi_7,S2 indices (neighbourhood mean),70 m,"(B3-B11)/(B3+B11) water, mean over 70 m window"
+viirs_7,Night lights,70 m,"night-time light radiance, mean over 70 m window"
+cov_15,Buildings (neighbourhood),150 m,"mean building cover, mean over 150 m window"
+cnt_15,Buildings (neighbourhood),150 m,"buildings per window (x100), mean over 150 m window"
+bldg_area_15,Buildings (neighbourhood),150 m,"mean building footprint (m2), mean over 150 m window"
+bldg_h_15,Buildings (neighbourhood),150 m,"cover-weighted mean building height (m), mean over 150 m window"
+ndvi_15,S2 indices (neighbourhood mean),150 m,"(B8-B4)/(B8+B4) vegetation, mean over 150 m window"
+ndbi_15,S2 indices (neighbourhood mean),150 m,"(B11-B8)/(B11+B8) built-up, mean over 150 m window"
+mndwi_15,S2 indices (neighbourhood mean),150 m,"(B3-B11)/(B3+B11) water, mean over 150 m window"
+viirs_15,Night lights,150 m,"night-time light radiance, mean over 150 m window"
+cov_31,Buildings (neighbourhood),310 m,"mean building cover, mean over 310 m window"
+cnt_31,Buildings (neighbourhood),310 m,"buildings per window (x100), mean over 310 m window"
+bldg_area_31,Buildings (neighbourhood),310 m,"mean building footprint (m2), mean over 310 m window"
+bldg_h_31,Buildings (neighbourhood),310 m,"cover-weighted mean building height (m), mean over 310 m window"
+ndvi_31,S2 indices (neighbourhood mean),310 m,"(B8-B4)/(B8+B4) vegetation, mean over 310 m window"
+ndbi_31,S2 indices (neighbourhood mean),310 m,"(B11-B8)/(B11+B8) built-up, mean over 310 m window"
+mndwi_31,S2 indices (neighbourhood mean),310 m,"(B3-B11)/(B3+B11) water, mean over 310 m window"
+viirs_31,Night lights,310 m,"night-time light radiance, mean over 310 m window"
+cov_61,Buildings (neighbourhood),610 m,"mean building cover, mean over 610 m window"
+cnt_61,Buildings (neighbourhood),610 m,"buildings per window (x100), mean over 610 m window"
+bldg_area_61,Buildings (neighbourhood),610 m,"mean building footprint (m2), mean over 610 m window"
+bldg_h_61,Buildings (neighbourhood),610 m,"cover-weighted mean building height (m), mean over 610 m window"
+ndvi_61,S2 indices (neighbourhood mean),610 m,"(B8-B4)/(B8+B4) vegetation, mean over 610 m window"
+ndbi_61,S2 indices (neighbourhood mean),610 m,"(B11-B8)/(B11+B8) built-up, mean over 610 m window"
+mndwi_61,S2 indices (neighbourhood mean),610 m,"(B3-B11)/(B3+B11) water, mean over 610 m window"
+viirs_61,Night lights,610 m,"night-time light radiance, mean over 610 m window"
+hmax_15,Buildings (neighbourhood),150 m,max building height in window over 150 m window
+hmax_31,Buildings (neighbourhood),310 m,max building height in window over 310 m window
+b8_sd_7,S2 texture,70 m,std-dev of NIR (texture) over 70 m window
+b8_sd_15,S2 texture,150 m,std-dev of NIR (texture) over 150 m window
+h_sd_15,Buildings (neighbourhood),150 m,std-dev of building height over 150 m window
+A00_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 0 averaged over 150 m
+A01_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 1 averaged over 150 m
+A02_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 2 averaged over 150 m
+A03_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 3 averaged over 150 m
+A04_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 4 averaged over 150 m
+A05_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 5 averaged over 150 m
+A06_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 6 averaged over 150 m
+A07_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 7 averaged over 150 m
+A08_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 8 averaged over 150 m
+A09_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 9 averaged over 150 m
+A10_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 10 averaged over 150 m
+A11_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 11 averaged over 150 m
+A12_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 12 averaged over 150 m
+A13_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 13 averaged over 150 m
+A14_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 14 averaged over 150 m
+A15_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 15 averaged over 150 m
+A16_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 16 averaged over 150 m
+A17_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 17 averaged over 150 m
+A18_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 18 averaged over 150 m
+A19_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 19 averaged over 150 m
+A20_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 20 averaged over 150 m
+A21_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 21 averaged over 150 m
+A22_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 22 averaged over 150 m
+A23_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 23 averaged over 150 m
+A24_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 24 averaged over 150 m
+A25_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 25 averaged over 150 m
+A26_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 26 averaged over 150 m
+A27_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 27 averaged over 150 m
+A28_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 28 averaged over 150 m
+A29_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 29 averaged over 150 m
+A30_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 30 averaged over 150 m
+A31_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 31 averaged over 150 m
+A32_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 32 averaged over 150 m
+A33_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 33 averaged over 150 m
+A34_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 34 averaged over 150 m
+A35_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 35 averaged over 150 m
+A36_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 36 averaged over 150 m
+A37_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 37 averaged over 150 m
+A38_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 38 averaged over 150 m
+A39_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 39 averaged over 150 m
+A40_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 40 averaged over 150 m
+A41_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 41 averaged over 150 m
+A42_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 42 averaged over 150 m
+A43_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 43 averaged over 150 m
+A44_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 44 averaged over 150 m
+A45_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 45 averaged over 150 m
+A46_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 46 averaged over 150 m
+A47_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 47 averaged over 150 m
+A48_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 48 averaged over 150 m
+A49_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 49 averaged over 150 m
+A50_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 50 averaged over 150 m
+A51_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 51 averaged over 150 m
+A52_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 52 averaged over 150 m
+A53_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 53 averaged over 150 m
+A54_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 54 averaged over 150 m
+A55_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 55 averaged over 150 m
+A56_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 56 averaged over 150 m
+A57_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 57 averaged over 150 m
+A58_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 58 averaged over 150 m
+A59_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 59 averaged over 150 m
+A60_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 60 averaged over 150 m
+A61_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 61 averaged over 150 m
+A62_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 62 averaged over 150 m
+A63_15,AlphaEarth (150 m mean),150 m,AlphaEarth embedding dimension 63 averaged over 150 m

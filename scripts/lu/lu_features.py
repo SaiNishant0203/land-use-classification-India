@@ -36,7 +36,7 @@ def read_padded(key, folder="feat_2023", nb=len(BANDS)):
             fp = LURAW / folder / f"{neighbour_key(key, dx, dy)}.tif"
             if fp.exists():
                 with rasterio.open(fp) as s:
-                    a = s.read()
+                    a = s.read(list(range(1, nb + 1)))
                 r0 = (1 - dy) * TS; c0 = (dx + 1) * TS          # north is up: +dy tile sits above
                 big[:, r0:r0 + TS, c0:c0 + TS] = a[:, :TS, :TS]
     return big[:, TS - PAD:2 * TS + PAD, TS - PAD:2 * TS + PAD]
@@ -46,10 +46,15 @@ def nd(a, b):
     return (a - b) / (a + b + 1e-6)
 
 
-def compute(key, folder="feat_2023"):
-    """Return (names, float32 array (F, TS, TS)) for tile `key`."""
-    raw = read_padded(key, folder=folder).astype(np.float32)
-    B = {n: raw[i] for i, n in enumerate(BANDS)}
+def compute(key, folder="feat_2023", aef=True):
+    """Return (names, float32 array (F, TS, TS)) for tile `key`.
+
+    aef=False skips the 128 AlphaEarth features and reads only the first 12 bands (Sentinel-2,
+    buildings, night lights), giving the 53 physical features.
+    """
+    nb = len(BANDS) if aef else 12
+    raw = read_padded(key, folder=folder, nb=nb).astype(np.float32)
+    B = {n: raw[i] for i, n in enumerate(BANDS[:nb])}
     s2 = {b: B[b] / 1e4 for b in ["B2", "B3", "B4", "B5", "B8", "B11", "B12"]}
     cov = B["ob_cov"] / 1000; h = B["ob_h"] / 10; hmax = B["ob_hmax"] / 10
     cnt = B["ob_cnt"] / 1e4; viirs = B["viirs"] / 100
@@ -58,8 +63,9 @@ def compute(key, folder="feat_2023"):
 
     feats = {**{k: v for k, v in s2.items()}, "ob_cov": cov, "ob_h": h, "ob_hmax": hmax,
              "ob_cnt": cnt, "viirs": viirs, "ndvi": ndvi, "ndbi": ndbi, "mndwi": mndwi, "bsi": bsi}
-    for i in range(64):
-        feats[f"A{i:02d}"] = B[f"A{i:02d}"] / 1000
+    if aef:
+        for i in range(64):
+            feats[f"A{i:02d}"] = B[f"A{i:02d}"] / 1000
     hw = h * cov                                        # height weighted by building cover
     for w in WINDOWS:
         m = lambda a: uniform_filter(a, w, mode="nearest")
@@ -77,7 +83,7 @@ def compute(key, folder="feat_2023"):
         feats[f"b8_sd_{w}"] = np.sqrt(np.maximum(m2 - m1 ** 2, 0))
     m1 = uniform_filter(h, 15); m2 = uniform_filter(h ** 2, 15)
     feats["h_sd_15"] = np.sqrt(np.maximum(m2 - m1 ** 2, 0))
-    for i in range(64):
+    for i in range(64 if aef else 0):
         feats[f"A{i:02d}_15"] = uniform_filter(feats[f"A{i:02d}"], 15, mode="nearest")
     names = list(feats)
     arr = np.stack([feats[n][PAD:PAD + TS, PAD:PAD + TS] for n in names]).astype(np.float32)

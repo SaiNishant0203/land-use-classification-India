@@ -32,6 +32,10 @@ Classes (fixed, transport-oriented):
 | U-Net (our model v2) | `10_unet.py [epochs]` | .venv-xpu | `outputs/lu/unet_vs_lgbm.csv` |
 | SenCLIP zero-shot | `11_senclip.py` | .venv-xpu | `data/raw/lu/senclip/` |
 | EULUC-Globe 2024 parcels | `12_euluc.py` | main | `data/raw/lu/euluc/` |
+| class-change test, two areas | `13_change.py` | main | `outputs/lu/change/` |
+| feature analysis: SHAP legend, redundancy, reduced sets | `15_feature_analysis.py` | main | `outputs/lu/features/`, written up in `FEATURES.md` |
+| proximity distances at any point | `20_proximity.py` | main | `Prox().at(x, y)` |
+| do proximity features help the classifier? | `16_proximity_features.py` | main | `outputs/lu/proximity_features/` |
 
 Chains: `run_overnight.sh` runs downloads → labels → samples → BEN → 06 → 09 → 07, and
 `final_rerun.sh` runs EULUC and then re-runs 06 and 07 once everything exists. Logs are in
@@ -51,7 +55,7 @@ Chains: `run_overnight.sh` runs downloads → labels → samples → BEN → 06 
 ## Gotchas
 
 - **Open Buildings Temporal:** filter the collection to Hyderabad before `first().projection()`. Unfiltered, it picks a tile from another UTM zone and `reduceResolution` fails.
-- **`ob_cnt` is stored ×1e4:** a 10 m pixel holds only ~0.01 buildings.
+- **`ob_cnt` is stored ×1e4** and is in relative units: the Earth Engine aggregation did not preserve absolute counts, so `cnt_w` and `bldg_area_w` rank places correctly but are not true counts or m².
 - **GULU `IND.tif`:** the CRS tag is broken; the data is EPSG:3857.
 - **`getDownloadURL`:**
   - The cap is 50 MB, hence 4 km tiles.

@@ -6,12 +6,27 @@ computed locally from the downloaded tiles, so training pixels and wall-to-wall
 inference go through exactly the same code.
 """
 from pathlib import Path
-import sys, time
+import os, time, warnings
 import numpy as np
 
+warnings.filterwarnings("ignore")
+
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "scripts" / "overnight"))
-from common import log, ee_init, UTM, PROC, RAW  # noqa: E402,F401
+PROC = ROOT / "data" / "processed"
+RAW = ROOT / "data" / "raw"
+UTM = 32644
+EE_PROJECT = os.environ.get("EE_PROJECT", "exploringclass")   # set EE_PROJECT to your own Earth Engine project
+
+
+def log(*a):
+    print(time.strftime("%H:%M:%S"), *a, flush=True)
+
+
+def ee_init():
+    import ee
+    ee.Initialize(project=EE_PROJECT)
+    return ee
+
 
 LU = PROC / "lu"; LU.mkdir(parents=True, exist_ok=True)
 LURAW = RAW / "lu"; LURAW.mkdir(parents=True, exist_ok=True)

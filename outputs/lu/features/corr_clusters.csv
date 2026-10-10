@@ -1,0 +1,182 @@
+feature,cluster,family,shap_total,keep
+A56_15,1,AlphaEarth (150 m mean),0.14630625615800552,True
+A56,1,AlphaEarth (pixel),0.04165353247529049,False
+A29,2,AlphaEarth (pixel),0.031076370713134963,True
+A29_15,3,AlphaEarth (150 m mean),0.18134375833707655,True
+A24,4,AlphaEarth (pixel),0.9990635924125725,True
+A24_15,5,AlphaEarth (150 m mean),0.7659094260307993,True
+A38,6,AlphaEarth (pixel),0.04902686029853387,True
+A38_15,7,AlphaEarth (150 m mean),0.229207556786004,True
+A63_15,8,AlphaEarth (150 m mean),0.2772512237874918,True
+A63,8,AlphaEarth (pixel),0.2609005364608301,False
+A47,9,AlphaEarth (pixel),0.230487737147066,True
+A47_15,9,AlphaEarth (150 m mean),0.1803949323932404,False
+A46,10,AlphaEarth (pixel),0.40875212329835486,True
+A46_15,10,AlphaEarth (150 m mean),0.2266206355678582,False
+A28_15,11,AlphaEarth (150 m mean),0.12198526950077763,True
+A28,11,AlphaEarth (pixel),0.06413391733613102,False
+A17,12,AlphaEarth (pixel),0.8965760715275971,True
+A17_15,12,AlphaEarth (150 m mean),0.1536713734722595,False
+A21,13,AlphaEarth (pixel),0.05867937130949732,True
+A21_15,14,AlphaEarth (150 m mean),0.17397476547075993,True
+A40,15,AlphaEarth (pixel),0.1880350700622116,True
+A40_15,15,AlphaEarth (150 m mean),0.13542550616965027,False
+A22_15,16,AlphaEarth (150 m mean),0.3051035318692184,True
+A22,16,AlphaEarth (pixel),0.24715203889510845,False
+mndwi_61,17,S2 indices (neighbourhood mean),0.3193109330116125,True
+mndwi_31,17,S2 indices (neighbourhood mean),0.24866940045734665,False
+mndwi_7,18,S2 indices (neighbourhood mean),1.1754926009612388,True
+mndwi,18,S2 indices (pixel),0.3552891422983326,False
+mndwi_15,18,S2 indices (neighbourhood mean),0.1956677693727082,False
+A60_15,19,AlphaEarth (150 m mean),0.25935132962149954,True
+A60,19,AlphaEarth (pixel),0.06605804485006077,False
+A59_15,20,AlphaEarth (150 m mean),0.12877626508704343,True
+A59,20,AlphaEarth (pixel),0.028752636309350196,False
+A01,21,AlphaEarth (pixel),0.08977639862831541,True
+A01_15,22,AlphaEarth (150 m mean),0.1319589968154329,True
+A45,23,AlphaEarth (pixel),0.06439519766753744,True
+A45_15,24,AlphaEarth (150 m mean),0.1171775309337997,True
+A07_15,25,AlphaEarth (150 m mean),0.29189067314090517,True
+A07,25,AlphaEarth (pixel),0.18806829284005783,False
+A06_15,26,AlphaEarth (150 m mean),0.09290193663358541,True
+A06,26,AlphaEarth (pixel),0.07462019819767957,False
+A41_15,27,AlphaEarth (150 m mean),0.1682250777726728,True
+A41,27,AlphaEarth (pixel),0.08550087886501484,False
+A27,28,AlphaEarth (pixel),0.2794017532905158,True
+A27_15,28,AlphaEarth (150 m mean),0.27495749917547335,False
+A11_15,29,AlphaEarth (150 m mean),0.22430881675341843,True
+A11,29,AlphaEarth (pixel),0.16723468711551082,False
+A57,30,AlphaEarth (pixel),0.04515018792123249,True
+A57_15,31,AlphaEarth (150 m mean),0.12048717313723731,True
+A50,32,AlphaEarth (pixel),0.27515548062379064,True
+A50_15,33,AlphaEarth (150 m mean),0.24585937379632414,True
+A20,34,AlphaEarth (pixel),0.39281328699983925,True
+A20_15,34,AlphaEarth (150 m mean),0.3797625630334146,False
+A52_15,35,AlphaEarth (150 m mean),0.2485106778035137,True
+A52,35,AlphaEarth (pixel),0.09816313839541348,False
+A58_15,36,AlphaEarth (150 m mean),0.20027641315093847,True
+A58,36,AlphaEarth (pixel),0.126270425811533,False
+ndvi_7,37,S2 indices (neighbourhood mean),1.3510771158626205,True
+ndvi_15,37,S2 indices (neighbourhood mean),0.3967743043838555,False
+ndvi,37,S2 indices (pixel),0.3395266875682261,False
+ndvi_31,38,S2 indices (neighbourhood mean),0.07457652664878378,True
+ndvi_61,39,S2 indices (neighbourhood mean),0.1485149383699615,True
+A35_15,40,AlphaEarth (150 m mean),0.17086802376461943,True
+A35,40,AlphaEarth (pixel),0.05566956295896994,False
+A44_15,41,AlphaEarth (150 m mean),0.2811268061956558,True
+A44,41,AlphaEarth (pixel),0.12271541605423972,False
+A51,42,AlphaEarth (pixel),0.37703319426657766,True
+A51_15,42,AlphaEarth (150 m mean),0.20943906584085437,False
+A43_15,43,AlphaEarth (150 m mean),0.10025868926268114,True
+A43,43,AlphaEarth (pixel),0.07789287051626478,False
+ob_h,44,Buildings (pixel),0.12717539087074248,True
+ob_cov,44,Buildings (pixel),0.0827057894426996,False
+ob_hmax,44,Buildings (pixel),0.05836911269170068,False
+ob_cnt,45,Buildings (pixel),0.13140066317265803,True
+A16_15,46,AlphaEarth (150 m mean),0.20119563849471106,True
+A16,46,AlphaEarth (pixel),0.06636912394654897,False
+A15_15,47,AlphaEarth (150 m mean),0.1386007733763802,True
+A15,47,AlphaEarth (pixel),0.09924593868277595,False
+A18_15,48,AlphaEarth (150 m mean),0.1452874855598281,True
+A18,48,AlphaEarth (pixel),0.03569575764606931,False
+viirs_61,49,Night lights,0.7789405113928972,True
+viirs,49,Night lights,0.5388789135422544,False
+viirs_7,49,Night lights,0.285229672187625,False
+viirs_31,49,Night lights,0.2289926818231537,False
+viirs_15,49,Night lights,0.22359963186177081,False
+cov_7,50,Buildings (neighbourhood),0.4200994767010754,True
+bldg_h_7,50,Buildings (neighbourhood),0.07331730010408116,False
+bldg_area_7,50,Buildings (neighbourhood),0.0667087136222384,False
+cnt_7,51,Buildings (neighbourhood),0.7281150901631043,True
+cov_15,52,Buildings (neighbourhood),0.1976796234997287,True
+h_sd_15,52,Buildings (neighbourhood),0.15920290443658472,False
+bldg_area_15,52,Buildings (neighbourhood),0.08195677751391202,False
+hmax_15,52,Buildings (neighbourhood),0.0532274778702262,False
+bldg_h_15,52,Buildings (neighbourhood),0.04534799568599519,False
+cnt_15,53,Buildings (neighbourhood),1.076681370195878,True
+bldg_area_61,54,Buildings (neighbourhood),0.6087443756553357,True
+bldg_h_61,55,Buildings (neighbourhood),0.34101292411824535,True
+cnt_61,56,Buildings (neighbourhood),0.48339915351416984,True
+cov_61,56,Buildings (neighbourhood),0.13487803889143965,False
+cnt_31,57,Buildings (neighbourhood),0.5159469497565289,True
+cov_31,57,Buildings (neighbourhood),0.09520294930646118,False
+hmax_31,58,Buildings (neighbourhood),0.3086355186414633,True
+bldg_h_31,58,Buildings (neighbourhood),0.18219822466399727,False
+bldg_area_31,59,Buildings (neighbourhood),0.2990922081587737,True
+A55,60,AlphaEarth (pixel),0.2091310293829738,True
+A55_15,60,AlphaEarth (150 m mean),0.09849784878580363,False
+A00,61,AlphaEarth (pixel),0.11439579687367055,True
+A00_15,61,AlphaEarth (150 m mean),0.09161556333426732,False
+A62_15,62,AlphaEarth (150 m mean),0.06672596983089138,True
+A62,62,AlphaEarth (pixel),0.021997387425192694,False
+A48_15,63,AlphaEarth (150 m mean),0.16450545075324385,True
+A48,63,AlphaEarth (pixel),0.07142278678412832,False
+A53,64,AlphaEarth (pixel),0.023433104555512573,True
+A53_15,65,AlphaEarth (150 m mean),0.22172183780287893,True
+A23_15,66,AlphaEarth (150 m mean),0.2237876565150128,True
+A23,66,AlphaEarth (pixel),0.08441426220683516,False
+A19,67,AlphaEarth (pixel),0.07620761181361468,True
+A19_15,68,AlphaEarth (150 m mean),0.21385630740132133,True
+A14_15,69,AlphaEarth (150 m mean),0.07682535308120678,True
+A14,69,AlphaEarth (pixel),0.06702643823940538,False
+A05,70,AlphaEarth (pixel),0.05345251518759277,True
+A05_15,71,AlphaEarth (150 m mean),0.23589952740841305,True
+A39,72,AlphaEarth (pixel),0.32156671377201596,True
+A39_15,72,AlphaEarth (150 m mean),0.25871820307519455,False
+A10,73,AlphaEarth (pixel),0.2856071374707577,True
+A10_15,74,AlphaEarth (150 m mean),0.28590814524511265,True
+A08_15,75,AlphaEarth (150 m mean),0.317964797720778,True
+A08,75,AlphaEarth (pixel),0.1394326646289507,False
+A25_15,76,AlphaEarth (150 m mean),0.17269112280032772,True
+A25,76,AlphaEarth (pixel),0.053020088721094774,False
+A04,77,AlphaEarth (pixel),0.08175093151181911,True
+A04_15,78,AlphaEarth (150 m mean),0.14006629922375058,True
+A32,79,AlphaEarth (pixel),0.11397461806153156,True
+A32_15,80,AlphaEarth (150 m mean),0.149456326300653,True
+A61_15,81,AlphaEarth (150 m mean),0.12578558722079627,True
+A61,81,AlphaEarth (pixel),0.06893458888142268,False
+A42,82,AlphaEarth (pixel),0.45991707250620506,True
+A42_15,82,AlphaEarth (150 m mean),0.19732903839764623,False
+B11,83,S2 bands,1.0161823453904784,True
+B12,83,S2 bands,0.5702363408859932,False
+B5,84,S2 bands,0.2791749271550714,True
+B4,84,S2 bands,0.24860452578811792,False
+B2,84,S2 bands,0.11981383278318097,False
+B3,84,S2 bands,0.061625372085378244,False
+A36_15,85,AlphaEarth (150 m mean),0.5969161376099538,True
+A36,85,AlphaEarth (pixel),0.5423712190112331,False
+A30_15,86,AlphaEarth (150 m mean),0.24526825232469032,True
+A30,86,AlphaEarth (pixel),0.03821512883678382,False
+A09_15,87,AlphaEarth (150 m mean),0.1212698560376626,True
+A09,87,AlphaEarth (pixel),0.0972650522637377,False
+ndbi_31,88,S2 indices (neighbourhood mean),0.13312636650042925,True
+ndbi_61,89,S2 indices (neighbourhood mean),0.35291632598557793,True
+ndbi_7,90,S2 indices (neighbourhood mean),0.11283518599968405,True
+ndbi_15,90,S2 indices (neighbourhood mean),0.07207500979367445,False
+ndbi,91,S2 indices (pixel),0.06746027837373458,True
+bsi,91,S2 indices (pixel),0.048479966418050816,False
+A26,92,AlphaEarth (pixel),0.04600910034527292,True
+A26_15,93,AlphaEarth (150 m mean),0.11945953544465421,True
+A03,94,AlphaEarth (pixel),0.02463532608643979,True
+A03_15,95,AlphaEarth (150 m mean),0.11613666554565444,True
+A37_15,96,AlphaEarth (150 m mean),0.149474842603878,True
+A37,96,AlphaEarth (pixel),0.057441422040317096,False
+A13_15,97,AlphaEarth (150 m mean),0.18314415678145124,True
+A13,97,AlphaEarth (pixel),0.03209187937563986,False
+A02,98,AlphaEarth (pixel),0.07698143694813744,True
+A02_15,99,AlphaEarth (150 m mean),0.15196755082290073,True
+B8,100,S2 bands,0.3455756553168934,True
+A31,101,AlphaEarth (pixel),0.12555360318766323,True
+A31_15,102,AlphaEarth (150 m mean),0.12898853534388424,True
+A49,103,AlphaEarth (pixel),0.0267682931280672,True
+A49_15,104,AlphaEarth (150 m mean),0.14023969621903068,True
+A34_15,105,AlphaEarth (150 m mean),0.08624149526178537,True
+A34,105,AlphaEarth (pixel),0.03413453012664386,False
+A12_15,106,AlphaEarth (150 m mean),0.21713827475487862,True
+A12,106,AlphaEarth (pixel),0.05904640037143634,False
+A54_15,107,AlphaEarth (150 m mean),0.2624608757511477,True
+A54,107,AlphaEarth (pixel),0.0702824234233112,False
+A33,108,AlphaEarth (pixel),0.08721362279171414,True
+A33_15,109,AlphaEarth (150 m mean),0.10195184968809998,True
+b8_sd_7,110,S2 texture,0.18326638316713417,True
+b8_sd_15,111,S2 texture,0.21671954183753445,True

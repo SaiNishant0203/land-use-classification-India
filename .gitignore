@@ -39,3 +39,11 @@ catboost_info/
 !data/processed/lu/oof_predictions.parquet
 !data/processed/lu/model_all_2023.pkl
 !data/processed/lu/sisdp_at_validation.json
+
+# Proximity inputs and the study-area boundary (small)
+!data/processed/aoi_utm44n.gpkg
+!data/processed/lu/prox/
+data/processed/lu/prox/*
+!data/processed/lu/prox/roads_major_2023.gpkg
+!data/processed/lu/prox/orr_access.gpkg
+!data/processed/lu/prox/metro_stations_opening.csv
