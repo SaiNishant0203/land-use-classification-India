@@ -155,6 +155,6 @@ class Prox:
 
 
 if __name__ == "__main__":
-    P = Prox()
+    P = Prox(years=("2023",))
     d = P.at([231000, 220000], [1921000, 1930000])
     log("\n" + d.round(2).T.to_string())
