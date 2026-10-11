@@ -1,0 +1,5 @@
+model,train_rows,features,fit_s,map_s_estimate,note
+10 m ALL,393098,181,57.502485513687134,2639.1428241729736,features 1.9s + predict 2.8s per 4 km tile x 556 tiles
+10 m PHYS,393098,53,24.691418647766113,,
+100 m ALL,102575,173,17.137996912002563,19.963039875030518,whole-map features 4.1s + predict 15.8s
+100 m PHYS,102575,45,6.765594720840454,,
