@@ -512,8 +512,8 @@ d = px.Prox(years=("2023",)).at(s.x.values, s.y.values)    # DataFrame of d_* co
 |---|---|---|
 | `00_join_samples.py` | builds `samples.parquet` | repository only |
 | `06_train_eval.py` | spatial CV for four feature sets, audit of products | repository only (uses `ben/`, `senclip/`, `euluc/` from the zip if present) |
-| `15_feature_analysis.py` | SHAP legend, redundancy, reduced feature sets; about 75 min | repository only |
-| `16_proximity_features.py` | the proximity test; about 85 min | repository only |
+| `15_feature_analysis.py` | SHAP legend, redundancy, reduced feature sets; 25–75 min depending on the machine | repository only |
+| `16_proximity_features.py` | the proximity test; 30–90 min depending on the machine | repository only |
 | `20_proximity.py` | distances at given points | repository only |
 | `07_eval_handlabels.py` | headline table on the hand labels | repository + zip |
 | `09_predict_map.py` | retrains, maps any tile without a prediction, rebuilds the mosaic | repository + zip |
