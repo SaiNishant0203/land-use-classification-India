@@ -1,7 +1,19 @@
-experiment,comparison,diff_macro_F1,lo,hi
-"OSM pixels (paired, 12 km-block bootstrap)",100 m ALL minus 10 m ALL,-0.06811479448539948,-0.07459888905471149,-0.06231460954037748
-"OSM pixels (paired, 12 km-block bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.06901655366832327,-0.07587224967336433,-0.06216292798984891
-"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",100 m ALL minus 10 m ALL,-0.022404566568478557,-0.06133818105483154,0.018550503584101808
-"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.031190453082882263,-0.07445797619511474,0.01120205452822591
-"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",100 m ALL minus 10 m ALL,-0.02606489515187216,-0.06935290798146429,0.012557035580373401
-"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.03098637034272944,-0.08039578615899841,0.008789365687597604
+cell_m,experiment,comparison,diff_macro_F1,lo,hi
+20,"OSM pixels (paired, 12 km-block bootstrap)",20 m ALL minus 10 m ALL,-0.0012648890676423,-0.0036018763211926,0.0011618606506027
+20,"OSM pixels (paired, 12 km-block bootstrap)",20 m PHYS minus 10 m PHYS (S2+BLD),-0.0007447544600797,-0.0034829800361254,0.0022152150041291
+20,"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",20 m ALL minus 10 m ALL,0.0172269822670159,-0.0110632192235146,0.0436338297008235
+20,"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",20 m PHYS minus 10 m PHYS (S2+BLD),-0.0046365651042535,-0.0342465640177594,0.0230996714718406
+20,"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",20 m ALL minus 10 m ALL,0.0201330792409333,-0.00657274097372,0.0486492344944697
+20,"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",20 m PHYS minus 10 m PHYS (S2+BLD),-0.005047131753327,-0.034493736723124,0.0234084682899326
+50,"OSM pixels (paired, 12 km-block bootstrap)",50 m ALL minus 10 m ALL,-0.0195314258956593,-0.0224348814142306,-0.0162883987768944
+50,"OSM pixels (paired, 12 km-block bootstrap)",50 m PHYS minus 10 m PHYS (S2+BLD),-0.0201422733798818,-0.0233742989199351,-0.0164667151065117
+50,"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",50 m ALL minus 10 m ALL,-0.0432484904090907,-0.0832819969313166,-0.0075520235011126
+50,"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",50 m PHYS minus 10 m PHYS (S2+BLD),-0.0426569987782685,-0.0923749274921362,-0.0005503439750437
+50,"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",50 m ALL minus 10 m ALL,-0.0446436729955012,-0.0828679447173117,-0.0080886902933208
+50,"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",50 m PHYS minus 10 m PHYS (S2+BLD),-0.0434975635958065,-0.0939745332790002,0.003980706846308
+100,"OSM pixels (paired, 12 km-block bootstrap)",100 m ALL minus 10 m ALL,-0.0703173251277546,-0.0773664508710393,-0.0637993842002738
+100,"OSM pixels (paired, 12 km-block bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.0699160540297973,-0.0763578097811096,-0.0628349293336497
+100,"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",100 m ALL minus 10 m ALL,-0.0286925776374473,-0.069299384656478,0.012016826087576
+100,"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.034186407159971,-0.0785210916832238,0.0062708597766444
+100,"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",100 m ALL minus 10 m ALL,-0.0319396766487629,-0.0757477092258441,0.0095472848049749
+100,"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.0301265821561868,-0.0744541569621977,0.0088073880388299
