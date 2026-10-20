@@ -20,6 +20,7 @@ data/processed/lu/*
 !data/processed/lu/validation_strata.csv
 !data/processed/lu/LABELLING_GUIDE.md
 !data/processed/lu/label_stats.csv
+!data/processed/lu/handlabelled_ethan.csv
 
 # LaTeX build files
 *.aux
