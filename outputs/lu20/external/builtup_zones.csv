@@ -1,0 +1,13 @@
+year,pair,spearman,zones
+2017,built share: ours vs Esri IO,0.9117883854326599,7451
+2017,built share: ours vs Open Buildings (our input),0.9084309248472265,7451
+2020,built share: ours vs Esri IO,0.9289641637521628,7451
+2020,built share: ours vs Open Buildings (our input),0.944086808649058,7451
+2023,built share: ours vs Esri IO,0.9269905098963196,7451
+2023,built share: ours vs Open Buildings (our input),0.9506354831834408,7451
+2020,built share: ours vs WSF 2019,0.9218540156377502,7451
+2023,built share: ours vs Microsoft building cover (west of 78.75 E),0.6434218053090399,6621
+2023,Open Buildings cover (our input) vs Microsoft cover (west of 78.75 E),0.599343654566582,6621
+2017-2023,built change 2017-2023: ours vs Esri IO,0.6242586602110984,7451
+2017-2023,built change: ours vs Open Buildings cover change,0.6098725637526816,7451
+2017-2023,built change: Esri IO vs Open Buildings cover change,0.524062209745153,7451

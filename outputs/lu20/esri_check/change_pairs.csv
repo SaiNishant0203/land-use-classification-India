@@ -1,0 +1,9 @@
+,ours,Esri
+trees -> open,0.0819,0.00805
+open -> trees,0.0485,0.01515
+open -> built,0.03585,0.06855
+open -> water,0.01675,0.01855
+trees -> built,0.011,0.00065
+trees -> water,0.00685,0.00015
+built -> open,0.0046,0.00575
+built -> trees,0.0028,0.00045

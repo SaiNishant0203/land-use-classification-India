@@ -1,0 +1,4 @@
+map,cells,changed_17_23,flip_flop,built_gain_17_23,built_loss_17_23
+ours (land cover),20000,0.2088,0.06145,0.04685,0.0078
+Esri,20000,0.1188,0.02145,0.0696,0.00655
+ours (5 use classes),20000,0.23155,0.06585,,
