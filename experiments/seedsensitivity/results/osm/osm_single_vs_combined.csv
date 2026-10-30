@@ -1,0 +1,19 @@
+test,comparison,diff_macro_F1,lo,hi
+"OSM cells (20 m, majority OSM label)",combined: majority vote minus average single run,0.002555831470343106,0.0019109502321728673,0.003213973618154008
+"OSM cells (20 m, majority OSM label)",combined: majority vote minus best single run,0.001666562497279478,,
+"OSM cells (20 m, majority OSM label)",combined: majority vote minus worst single run,0.0032968056716864425,,
+"OSM cells (20 m, majority OSM label)",combined: mean probability minus average single run,0.0025028269387842306,0.0018014070229867341,0.0032168712896635393
+"OSM cells (20 m, majority OSM label)",combined: mean probability minus best single run,0.0016135579657206023,,
+"OSM cells (20 m, majority OSM label)",combined: mean probability minus worst single run,0.003243801140127567,,
+"OSM pixels (393k 10 m sample pixels, 10 m label)",combined: majority vote minus average single run,0.0022198355280702575,0.0015905829682753198,0.0028986043443623654
+"OSM pixels (393k 10 m sample pixels, 10 m label)",combined: majority vote minus best single run,0.001815060701301996,,
+"OSM pixels (393k 10 m sample pixels, 10 m label)",combined: majority vote minus worst single run,0.002923888642268224,,
+"OSM pixels (393k 10 m sample pixels, 10 m label)",combined: mean probability minus average single run,0.002171634875078432,0.001528445280869556,0.0028209725441481733
+"OSM pixels (393k 10 m sample pixels, 10 m label)",combined: mean probability minus best single run,0.0017668600483101704,,
+"OSM pixels (393k 10 m sample pixels, 10 m label)",combined: mean probability minus worst single run,0.0028756879892763987,,
+hand labels (313 points),combined: majority vote minus average single run,-0.0019435349089933496,-0.0118443057995025,0.008128851415447018
+hand labels (313 points),combined: majority vote minus best single run,-0.014122830847351331,,
+hand labels (313 points),combined: majority vote minus worst single run,0.010046137949920153,,
+hand labels (313 points),combined: mean probability minus average single run,-0.008052322215753693,-0.018290405401680743,0.0016647031852896643
+hand labels (313 points),combined: mean probability minus best single run,-0.020231618154111675,,
+hand labels (313 points),combined: mean probability minus worst single run,0.003937350643159809,,

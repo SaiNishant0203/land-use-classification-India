@@ -4,13 +4,10 @@
 
 ## Result
 
-- **20 m: no detectable loss.** Paired difference in macro-F1 is −0.001 on OSM labels and
-  +0.017 on hand labels (both intervals include 0). A full map is about 5× cheaper.
-- **50 m: small, clear loss on OSM labels (−0.020); borderline loss on hand labels (−0.043).** About 33× cheaper.
-- **100 m: −0.070 on OSM labels; on hand labels −0.029, not distinguishable from 0.** About 126× cheaper.
-- On hand labels the loss comes mostly from **water** (small lakes and tanks vanish in a coarse
-  cell). Residential and non-residential F1 hold up to 50 m.
-- The hand-label test is small, so it cannot rank 50 m against 100 m. Trust the OSM comparison for the trend.
+- **20 m: no detectable loss.** Paired difference in macro-F1 is −0.001 [−0.004, +0.001]. A full map
+  is about 5× cheaper.
+- **50 m: small, clear loss (−0.020).** About 33× cheaper.
+- **100 m: −0.070.** About 126× cheaper. Forest, open and non-residential lose most.
 
 All intervals are 95% bootstrap intervals. Scores are macro-F1. The 10 m reference is the existing model.
 
@@ -37,31 +34,7 @@ Per-class F1, all features:
 
 Part of the loss is built in: a coarse cell predicts one class, so it cannot be right for every pixel of a mixed cell.
 
-## 2. Hand labels (325-point test set, confidence ≤ 2, 313 points)
-
-Stratum-weighted (Olofsson et al. 2014), stratified bootstrap. Each coarse prediction is the cell
-containing the test pixel, scored against that pixel's 10 m label.
-
-| cell | all features | difference vs 10 m | non-AlphaEarth features | difference vs 10 m |
-|---|---|---|---|---|
-| 10 m | 0.617 [0.547, 0.685] | – | 0.627 [0.556, 0.698] | – |
-| 20 m | 0.634 [0.565, 0.702] | +0.017 [−0.011, +0.044] | 0.622 [0.553, 0.692] | −0.005 [−0.034, +0.023] |
-| 50 m | 0.573 [0.501, 0.650] | −0.043 [−0.083, −0.008] | 0.584 [0.511, 0.661] | −0.043 [−0.092, −0.001] |
-| 100 m | 0.588 [0.516, 0.666] | −0.029 [−0.069, +0.012] | 0.593 [0.522, 0.674] | −0.034 [−0.079, +0.006] |
-
-Per-class F1, all features:
-
-| cell | residential | non-residential | water | forest | open |
-|---|---|---|---|---|---|
-| 10 m | 0.67 | 0.41 | 0.72 | 0.46 | 0.83 |
-| 20 m | 0.74 | 0.44 | 0.74 | 0.43 | 0.83 |
-| 50 m | 0.62 | 0.36 | 0.62 | 0.44 | 0.83 |
-| 100 m | 0.68 | 0.39 | 0.57 | 0.45 | 0.84 |
-
-Excluding road pixels gives the same picture (`results/scores.csv`). The 10 m baseline reproduces
-the repo's stored values (0.617 vs 0.6165; 0.627 vs 0.626).
-
-## 3. Cost
+## 2. Cost
 
 Speed-up of a coarse model over the 10 m model, measured in the same session (machine speed
 varied between sessions, so absolute seconds are not comparable across rows).
@@ -75,7 +48,7 @@ varied between sessions, so absolute seconds are not comparable across rows).
 
 The 10 m map time is one 4 km tile times 556.
 
-## 4. Method
+## 3. Method
 
 - Every 10 m tile is block-averaged to one mosaic per cell size. Building height is
   cover-weighted; maximum height is the block maximum; indices come from the averaged bands.
@@ -85,23 +58,24 @@ The 10 m map time is one 4 km tile times 556.
   at least ~1.5 cells wide: 20 m uses 60/140/300/620 m, 50 m uses 150/350/650 m, 100 m uses
   300/500/700 m. The 10 m model's 70 m window has no counterpart at 50 or 100 m.
 - A cell is a training row if at least 50% of its pixels carry an OSM-derived label; its label is
-  the majority class. At most 100 cells per class per tile. Cells within 400 m of a hand-label point
-  are dropped.
+  the majority class. Cells within 400 m of a hand-label point are dropped.
+- **Training cap: at most 100 cells per class per 4 km tile** (`CAP_PER_CLASS_TILE` in
+  `run_experiment.py`), drawn at random with a fixed seed. The main pipeline instead uses up to
+  200 pixels per class per tile (`N_PER_CLASS` in `scripts/lu/05_sample_pixels.py`). The same cap
+  of 100 is used at 20, 50 and 100 m. It was not tuned: neither 200 nor any other value was tested.
 - Same spatial CV (5-fold GroupKFold over 12 km blocks).
 - The 10 m numbers come from the repo's stored out-of-fold predictions and saved model.
 
-## 5. Caveats
+## 4. Caveats
 
 - **Training rows differ** across sizes (393k, 191k, 150k, 103k), because fewer coarse cells meet
   the 50% label rule. Some of the coarse-cell loss could be from less training data.
-- **Hand labels were not relabelled at the coarse size.** A coarse prediction is scored against a
-  single 10 m pixel, which penalises mixed cells.
-- **The hand-label test is small** (39 usable non-residential points). Differences below about
-  0.04 cannot be resolved there, and 50 m scoring worse than 100 m is probably noise.
+- **No hand-label comparison.** The hand labels are single 10 m pixels; scoring a 20–100 m cell
+  against one pixel is not a fair test of a coarse model, so those scores are not reported.
 - Inputs are plain block means. Within-cell variation is discarded, which is the realistic case
   for genuinely coarse inputs.
 
-## 6. Reproduce
+## 5. Reproduce
 
 Needs the raster zip (`feat_2023/`, `lab/`) under `data/raw/lu/`, or set `LU_RAW` to the folder
 that holds them. `LU_REPO` overrides the repo root. Packages as in the main README plus `pyarrow`.

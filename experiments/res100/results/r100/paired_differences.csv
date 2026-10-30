@@ -1,0 +1,7 @@
+experiment,comparison,diff_macro_F1,lo,hi
+"OSM pixels (paired, 12 km-block bootstrap)",100 m ALL minus 10 m ALL,-0.07031732512775468,-0.07736645087103933,-0.06379938420027383
+"OSM pixels (paired, 12 km-block bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.06991605402979739,-0.0763578097811096,-0.06283492933364973
+"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",100 m ALL minus 10 m ALL,-0.02869257763744737,-0.06929938465647803,0.012016826087576012
+"hand labels, confidence<=2 (headline) (paired, stratified bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.03418640715997101,-0.0785210916832238,0.006270859776644461
+"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",100 m ALL minus 10 m ALL,-0.03193967664876296,-0.07574770922584415,0.009547284804974918
+"hand labels, confidence<=2, no road pixels (paired, stratified bootstrap)",100 m PHYS minus 10 m PHYS (S2+BLD),-0.0301265821561868,-0.07445415696219777,0.008807388038829956

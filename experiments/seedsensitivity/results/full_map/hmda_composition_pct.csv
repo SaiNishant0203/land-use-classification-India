@@ -1,0 +1,8 @@
+map,residential,non-residential,water,forest,open
+seed 1,10.54,8.16,2.96,14.01,64.34
+seed 2,10.5,8.3,2.96,13.94,64.3
+seed 3,10.55,8.17,2.93,13.86,64.48
+seed 4,10.59,8.16,2.92,13.96,64.38
+seed 5,10.54,8.16,2.94,13.9,64.45
+combined: majority vote,10.55,8.14,2.94,13.91,64.45
+combined: mean probability (final),10.55,8.13,2.95,13.91,64.46
