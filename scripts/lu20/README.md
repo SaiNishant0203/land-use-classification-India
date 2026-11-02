@@ -26,6 +26,8 @@ They are not in git. The extracted polygons are: `data/processed/lu20/osm_<year>
 | WorldPop check | `07_worldpop_check.py` | `outputs/lu20/worldpop/` |
 | external validation | `08_external.py` | `outputs/lu20/external/` |
 | Esri check | `08_esri_check.py` | `outputs/lu20/esri_check/` |
+| Ethan's 281 cells | `10_ethan_cells_check.py` | `outputs/lu20/ethan_cells/` (`NOTE.md`) |
+| fixes across seeds | `11_retrain_variants.py` | `outputs/lu20/retrain/RESULTS.md` |
 
 Log: `outputs/lu20/logs/run_<date>.log`. `LU20_TEST=1` runs everything on 12 tiles around
 Gachibowli into `*_test` folders (50 boosting rounds), to check the code path in a few minutes.
