@@ -4,6 +4,7 @@ OSM land-use sources as mapped at the end of each year, from Geofabrik's dated s
 
   2017 -> india-180101.osm.pbf          2020 -> india-210101.osm.pbf
   2023 -> india/southern-zone-240101.osm.pbf   (the southern zone contains all of HMDA)
+  2018, 2019, 2021, 2022 -> india-190101, india-200101, india-220101, india-230101 (final maps only)
 
 Replaces 01_osm_dated.py (Overpass history queries), which stalled because overpass-api.de was at
 capacity and then unreachable. GDAL's OSM driver (through pyogrio) reads the file, keeps the HMDA
@@ -20,7 +21,9 @@ from common20 import *
 
 warnings.filterwarnings("ignore")
 SNAP = RAW.parent / "osm_snapshots"
-FILES = {2017: "india-180101.osm.pbf", 2020: "india-210101.osm.pbf", 2023: "southern-zone-240101.osm.pbf"}
+FILES = {2017: "india-180101.osm.pbf", 2020: "india-210101.osm.pbf", 2023: "southern-zone-240101.osm.pbf",
+         2018: "india-190101.osm.pbf", 2019: "india-200101.osm.pbf", 2021: "india-220101.osm.pbf",
+         2022: "india-230101.osm.pbf"}
 AMENITY = ["school", "college", "university", "hospital", "clinic", "townhall", "police", "fire_station", "courthouse",
            "bus_station", "marketplace", "place_of_worship", "prison", "community_centre", "library", "research_institute"]
 SHOP = ["mall", "supermarket", "department_store", "wholesale"]

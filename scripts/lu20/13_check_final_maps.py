@@ -1,7 +1,8 @@
 """
 Checks of the final maps from 12_final_maps.py against the current production maps (06_maps.py,
 `year` model, one seed): hand-label macro-F1 for 2023 (confidence <= 2, stratum-weighted, paired
-stratified bootstrap), class shares per year, and year-to-year stability inside HMDA.
+stratified bootstrap), class shares per year, and year-to-year stability inside HMDA. A last section
+covers the final maps alone for every year 2017-2023 (production maps exist for 2017/2020/2023 only).
 
 Expected from 11_retrain_variants.py: cw_prior 5-seed mean-probability map 0.651 vs base 0.634.
 
@@ -22,6 +23,26 @@ MAPS = {"final (cw_prior, 5 seeds)": lambda y: F / f"landuse_{y}_20m.tif",
 def read(fp):
     with rasterio.open(fp) as r:
         return r.read(1)
+
+
+def annual(ins):
+    """Class shares and one-year change of the final maps, all years."""
+    a = {y: read(F / f"landuse_{y}_20m.tif")[ins] for y in ALL_YEARS}
+    rows = []
+    for i, y in enumerate(ALL_YEARS):
+        r = {"year": y, **{n: (a[y] == c).mean() for c, n in zip(CL, ["res", "nonres", "water", "trees", "open"])}}
+        if i:
+            p, q = a[ALL_YEARS[i - 1]], a[y]
+            r.update({"changed": (p != q).mean(), "built_to_open": (np.isin(p, [1, 2]) & np.isin(q, [4, 5])).mean(),
+                      "open_to_built": (np.isin(p, [4, 5]) & np.isin(q, [1, 2])).mean()})
+        if 0 < i < len(ALL_YEARS) - 1:
+            p, q, n = a[ALL_YEARS[i - 1]], a[y], a[ALL_YEARS[i + 1]]
+            r["flip-flop"] = ((p == n) & (q != p)).mean()
+        rows.append(r)
+    t = pd.DataFrame(rows)
+    t.to_csv(F / "check_annual.csv", index=False)
+    log("\n" + t.round(4).to_string(index=False))
+    return t
 
 
 def main():
@@ -77,6 +98,14 @@ Paired: {pair}
 `changed` rows: c1 = any class change, c2 = built → trees/open, c3 = trees ↔ open.
 
 {E.md(mp, 4)}
+
+## Final maps, every year 2017–2023
+
+`changed` = any class change from the previous year; `built_to_open` (built → trees/open) and `open_to_built` are
+shares of all HMDA cells; `flip-flop` = class differs from the previous year and returns to it the
+next year.
+
+{E.md(annual(ins), 4)}
 """
     (F / "CHECK.md").write_text(txt, encoding="utf-8")
     log(f"wrote {F / 'CHECK.md'}")

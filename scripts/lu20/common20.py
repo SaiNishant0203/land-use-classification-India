@@ -22,9 +22,10 @@ OUT = ROOT / "outputs" / f"lu20{SFX}"      # models, scores, maps, RESULTS.md
 for d in (OSM, W20, OUT):
     d.mkdir(parents=True, exist_ok=True)
 
-YEARS = [2017, 2020, 2023]
-FEAT = {2017: "phys_2017", 2020: "phys_2020", 2023: "feat_2023"}      # first 12 bands are the same in all
-OSM_DATE = {y: f"{y}-12-31T23:59:59Z" for y in YEARS}                # OSM as mapped at the end of the year
+YEARS = [2017, 2020, 2023]                 # the model-comparison years (04-11 scripts)
+ALL_YEARS = list(range(2017, 2024))        # final maps (12_final_maps.py); Open Buildings temporal ends in 2023
+FEAT = {2023: "feat_2023", **{y: f"phys_{y}" for y in ALL_YEARS if y != 2023}}   # first 12 bands are the same in all
+OSM_DATE = {y: f"{y}-12-31T23:59:59Z" for y in ALL_YEARS}            # OSM as mapped at the end of the year
 
 CELL = 20
 K = CELL // 10                   # 10 m pixels per cell edge
