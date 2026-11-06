@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>Change eyeball check (60 cells)</name>
+  <Style id="c"><LineStyle><color>ff00ffff</color><width>2</width></LineStyle>
+    <PolyStyle><fill>0</fill></PolyStyle><IconStyle><scale>0.6</scale></IconStyle></Style>
+  <Placemark><name>E01</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5690869,17.8275897,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5690379,17.8277245,0 78.5692265,17.8277269,0 78.5692289,17.8275463,0 78.5690403,17.8275439,0 78.5690379,17.8277245,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E02</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5706497,17.2728414,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5706009,17.2729763,0 78.5707889,17.2729786,0 78.5707913,17.2727980,0 78.5706033,17.2727957,0 78.5706009,17.2729763,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E03</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5912791,17.7690645,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5911371,17.7691079,0 78.5913256,17.7691102,0 78.5913280,17.7689296,0 78.5911395,17.7689273,0 78.5911371,17.7691079,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E04</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5858664,17.5175365,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5858187,17.5175810,0 78.5860070,17.5175833,0 78.5860094,17.5174027,0 78.5858211,17.5174004,0 78.5858187,17.5175810,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E05</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4623949,17.2763793,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4622521,17.2765129,0 78.4624401,17.2765153,0 78.4624425,17.2763347,0 78.4622546,17.2763323,0 78.4622521,17.2765129,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E06</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.1908533,17.7998498,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.1908055,17.7998943,0 78.1909940,17.7998970,0 78.1909968,17.7997164,0 78.1908083,17.7997137,0 78.1908055,17.7998943,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E07</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6764110,17.0395006,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6763635,17.0395452,0 78.6765513,17.0395474,0 78.6765535,17.0393668,0 78.6763657,17.0393646,0 78.6763635,17.0395452,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E08</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.2414167,17.5442888,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.2412748,17.5443319,0 78.2414630,17.5443346,0 78.2414658,17.5441540,0 78.2412775,17.5441514,0 78.2412748,17.5443319,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E09</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4023280,17.2626955,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4022804,17.2627401,0 78.4024683,17.2627425,0 78.4024709,17.2625619,0 78.4022829,17.2625595,0 78.4022804,17.2627401,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E10</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6266575,17.3991581,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6265158,17.3992016,0 78.6267039,17.3992038,0 78.6267063,17.3990232,0 78.6265181,17.3990210,0 78.6265158,17.3992016,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E11</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5185316,17.0138780,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5183890,17.0140118,0 78.5185767,17.0140141,0 78.5185791,17.0138335,0 78.5183914,17.0138312,0 78.5183890,17.0140118,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E12</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5385948,17.2087724,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5385472,17.2088170,0 78.5387352,17.2088192,0 78.5387375,17.2086386,0 78.5385496,17.2086363,0 78.5385472,17.2088170,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E13</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.1952179,17.7678561,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.1950744,17.7679895,0 78.1952629,17.7679922,0 78.1952657,17.7678116,0 78.1950773,17.7678089,0 78.1950744,17.7679895,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E14</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5987749,17.6165991,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5986318,17.6167329,0 78.5988202,17.6167352,0 78.5988225,17.6165545,0 78.5986342,17.6165523,0 78.5986318,17.6167329,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E15</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.9717335,17.3095486,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.9716860,17.3095933,0 78.9718741,17.3095952,0 78.9718761,17.3094145,0 78.9716880,17.3094126,0 78.9716860,17.3095933,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E16</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.7955387,17.5011887,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.7953970,17.5012323,0 78.7955852,17.5012344,0 78.7955874,17.5010537,0 78.7953992,17.5010516,0 78.7953970,17.5012323,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E17</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.1755022,17.1963313,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.1754531,17.1964661,0 78.1756410,17.1964687,0 78.1756437,17.1962881,0 78.1754559,17.1962855,0 78.1754531,17.1964661,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E18</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3294980,17.3655982,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3293563,17.3656415,0 78.3295444,17.3656440,0 78.3295470,17.3654634,0 78.3293589,17.3654609,0 78.3293563,17.3656415,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E19</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4466824,17.7152110,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4465404,17.7152543,0 78.4467288,17.7152568,0 78.4467314,17.7150762,0 78.4465430,17.7150737,0 78.4465404,17.7152543,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E20</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.2574999,17.1020086,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.2574523,17.1020531,0 78.2576401,17.1020557,0 78.2576428,17.1018751,0 78.2574550,17.1018725,0 78.2574523,17.1020531,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E21</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.1986235,17.4313522,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.1985758,17.4313966,0 78.1987639,17.4313993,0 78.1987666,17.4312187,0 78.1985785,17.4312161,0 78.1985758,17.4313966,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E22</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5289928,17.6294663,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5289439,17.6296012,0 78.5291323,17.6296035,0 78.5291347,17.6294229,0 78.5289464,17.6294206,0 78.5289439,17.6296012,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E23</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6337391,17.4117979,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6336903,17.4119328,0 78.6338784,17.4119350,0 78.6338808,17.4117544,0 78.6336926,17.4117521,0 78.6336903,17.4119328,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E24</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4575706,17.1341549,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4574279,17.1342886,0 78.4576157,17.1342909,0 78.4576182,17.1341103,0 78.4574303,17.1341080,0 78.4574279,17.1342886,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E25</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6099108,17.7148272,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6097677,17.7149609,0 78.6099561,17.7149632,0 78.6099585,17.7147826,0 78.6097701,17.7147803,0 78.6097677,17.7149609,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E26</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.1109437,17.3480191,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.1108945,17.3481539,0 78.1110825,17.3481566,0 78.1110854,17.3479760,0 78.1108974,17.3479733,0 78.1108945,17.3481539,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E27</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4816280,17.2792409,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4815804,17.2792854,0 78.4817684,17.2792878,0 78.4817709,17.2791072,0 78.4815829,17.2791048,0 78.4815804,17.2792854,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E28</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5978347,17.3513014,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5977871,17.3513459,0 78.5979751,17.3513482,0 78.5979775,17.3511676,0 78.5977894,17.3511653,0 78.5977871,17.3513459,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E29</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.2222565,17.3240406,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.2222088,17.3240851,0 78.2223968,17.3240877,0 78.2223995,17.3239071,0 78.2222115,17.3239045,0 78.2222088,17.3240851,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E30</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5072739,17.1826451,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5071312,17.1827788,0 78.5073191,17.1827812,0 78.5073215,17.1826006,0 78.5071336,17.1825982,0 78.5071312,17.1827788,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E31</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5710368,17.2791689,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5708940,17.2793026,0 78.5710820,17.2793049,0 78.5710844,17.2791243,0 78.5708964,17.2791220,0 78.5708940,17.2793026,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E32</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.1020852,17.0294107,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.1019438,17.0294538,0 78.1021315,17.0294565,0 78.1021343,17.0292759,0 78.1019466,17.0292733,0 78.1019438,17.0294538,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E33</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.2557976,17.4328709,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.2557499,17.4329154,0 78.2559380,17.4329180,0 78.2559407,17.4327374,0 78.2557526,17.4327348,0 78.2557499,17.4329154,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E34</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.2330746,17.0899364,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.2330270,17.0899809,0 78.2332147,17.0899834,0 78.2332174,17.0898028,0 78.2330296,17.0898003,0 78.2330270,17.0899809,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E35</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3281193,17.4474916,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3279762,17.4476251,0 78.3281644,17.4476276,0 78.3281670,17.4474470,0 78.3279789,17.4474445,0 78.3279762,17.4476251,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E36</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5619861,17.4869859,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5619372,17.4871208,0 78.5621255,17.4871231,0 78.5621279,17.4869425,0 78.5619397,17.4869402,0 78.5619372,17.4871208,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E37</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.8834229,17.2598507,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.8832813,17.2598944,0 78.8834693,17.2598964,0 78.8834714,17.2597157,0 78.8832834,17.2597137,0 78.8832813,17.2598944,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E38</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3955623,17.1282174,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3955147,17.1282619,0 78.3957025,17.1282644,0 78.3957050,17.1280838,0 78.3955172,17.1280813,0 78.3955147,17.1282619,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E39</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6720243,17.5014042,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6718826,17.5014477,0 78.6720708,17.5014499,0 78.6720731,17.5012693,0 78.6718849,17.5012671,0 78.6718826,17.5014477,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E40</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5597767,17.5747529,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5596337,17.5748866,0 78.5598220,17.5748889,0 78.5598244,17.5747083,0 78.5596361,17.5747060,0 78.5596337,17.5748866,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E41</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4099966,17.5723056,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4099476,17.5724404,0 78.4101359,17.5724429,0 78.4101385,17.5722623,0 78.4099502,17.5722598,0 78.4099476,17.5724404,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E42</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.0663352,17.3092652,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.0661921,17.3093986,0 78.0663800,17.3094013,0 78.0663829,17.3092208,0 78.0661949,17.3092180,0 78.0661921,17.3093986,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E43</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6565004,17.4860462,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6564528,17.4860908,0 78.6566410,17.4860931,0 78.6566434,17.4859124,0 78.6564551,17.4859102,0 78.6564528,17.4860908,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E44</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4249555,17.2983913,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4249079,17.2984359,0 78.4250959,17.2984383,0 78.4250984,17.2982577,0 78.4249104,17.2982553,0 78.4249079,17.2984359,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E45</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6434574,17.3435340,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6434098,17.3435786,0 78.6435979,17.3435808,0 78.6436002,17.3434002,0 78.6434121,17.3433980,0 78.6434098,17.3435786,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E46</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4853332,17.4760948,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4852843,17.4762297,0 78.4854725,17.4762321,0 78.4854750,17.4760515,0 78.4852868,17.4760491,0 78.4852843,17.4762297,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E47</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4613001,17.1983292,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4612513,17.1984640,0 78.4614392,17.1984664,0 78.4614416,17.1982858,0 78.4612537,17.1982834,0 78.4612513,17.1984640,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E48</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.6903304,17.3032508,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.6901888,17.3032944,0 78.6903768,17.3032965,0 78.6903791,17.3031159,0 78.6901911,17.3031137,0 78.6901888,17.3032944,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E49</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3369019,17.6192891,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3367600,17.6193324,0 78.3369483,17.6193349,0 78.3369510,17.6191543,0 78.3367626,17.6191518,0 78.3367600,17.6193324,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E50</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.5848276,17.1584780,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.5846849,17.1586118,0 78.5848728,17.1586140,0 78.5848751,17.1584334,0 78.5846872,17.1584312,0 78.5846849,17.1586118,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E51</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.2768344,17.7494120,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.2767866,17.7494565,0 78.2769751,17.7494591,0 78.2769778,17.7492786,0 78.2767894,17.7492759,0 78.2767866,17.7494565,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E52</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3718782,17.7334602,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3718291,17.7335950,0 78.3720175,17.7335975,0 78.3720202,17.7334169,0 78.3718317,17.7334144,0 78.3718291,17.7335950,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E53</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.1080109,17.6464053,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.1078690,17.6464483,0 78.1080573,17.6464511,0 78.1080601,17.6462706,0 78.1078718,17.6462678,0 78.1078690,17.6464483,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E54</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3848015,17.2323931,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3846586,17.2325267,0 78.3848465,17.2325291,0 78.3848491,17.2323485,0 78.3846612,17.2323461,0 78.3846586,17.2325267,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E55</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.0777518,17.5545817,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.0777040,17.5546262,0 78.0778923,17.5546290,0 78.0778952,17.5544484,0 78.0777069,17.5544456,0 78.0777040,17.5546262,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E56</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3265645,17.3409041,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3265155,17.3410389,0 78.3267036,17.3410415,0 78.3267062,17.3408609,0 78.3265182,17.3408584,0 78.3265155,17.3410389,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E57</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3638243,17.3591001,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3636814,17.3592337,0 78.3638694,17.3592362,0 78.3638720,17.3590556,0 78.3636839,17.3590531,0 78.3636814,17.3592337,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E58</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.3951439,17.5442939,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.3950949,17.5444287,0 78.3952831,17.5444312,0 78.3952857,17.5442506,0 78.3950975,17.5442481,0 78.3950949,17.5444287,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E59</name><description>Period 2020 -> 2023. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2020 and 2023. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.9002278,17.2454819,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.9001793,17.2456169,0 78.9003673,17.2456188,0 78.9003693,17.2454382,0 78.9001813,17.2454362,0 78.9001793,17.2456169,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+  <Placemark><name>E60</name><description>Period 2017 -> 2020. In Google Earth Pro use the clock (historical imagery) and compare the images nearest to 2017 and 2020. Square = one 20 m map cell.</description><styleUrl>#c</styleUrl>
+    <MultiGeometry><Point><coordinates>78.4097992,17.2729075,0</coordinates></Point>
+    <Polygon><outerBoundaryIs><LinearRing><coordinates>78.4096576,17.2729508,0 78.4098455,17.2729532,0 78.4098481,17.2727726,0 78.4096601,17.2727702,0 78.4096576,17.2729508,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+    </MultiGeometry></Placemark>
+</Document></kml>

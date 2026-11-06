@@ -1,0 +1,6 @@
+AC 50: rows that add up exactly 70.0%; plausible total but not adding up 134
+AC 50: 460 booths read, max booth no. 460, missing 0: []; total votes 233,136; suspicious rows 4: [1, 29, 405, 415]
+AC 51: rows that add up exactly 72.8%; plausible total but not adding up 114
+AC 51: 441 booths read, max booth no. 441, missing 0: []; total votes 247,105; suspicious rows 6: [144, 187, 376, 411, 412, 433]
+AC 52: rows that add up exactly 68.2%; plausible total but not adding up 183
+AC 52: 578 booths read, max booth no. 580, missing 2: [6, 99]; total votes 277,645; suspicious rows 1: [149]

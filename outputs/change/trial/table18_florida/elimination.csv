@@ -1,0 +1,21 @@
+step,dropped,label,t,coef
+1,res_pct,Residential,-0.006575646571166949,-3.099163575133844e-05
+2,ln_jobs_5km,Ln(workers within ~5 km),-0.04521991566776327,-0.006587166389916906
+3,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),0.13590818364923607,0.020466331318221134
+4,in_ghmc,Inside GHMC (village values are city-wide averages),0.3264237576467033,0.08111007822113775
+5,veh4_pct,Households with a four-wheeler (%),-0.20999084783534291,-0.004443639108928787
+6,ln_votes,"Ln(votes polled per km2, 2018 booths)",-0.36516442695357954,-0.02862803192535676
+7,ln_d_lake,Ln(km to a lake >= 2 ha),-0.45065828380541534,-0.03557260229610883
+8,it_pct_5km,Software / IT services (% of jobs within ~5 km),-0.5898731427728615,-0.007345054916600461
+9,ln_viirs,Ln(night lights within 1 km),-0.348530057794434,-0.3148596644236337
+10,elev_100m,Elevation (100 m),-0.8069678849089448,-0.27158954716103945
+11,ln_jobdens_vill,Ln(workers per km2 in the village / town),0.9644539063327365,0.03667415427320578
+12,ln_d_cbd,Ln(km to the old CBD),1.0213091692270704,0.3141738470537309
+13,ln_wp,Ln(WorldPop people per km2),0.9155545130212885,0.0914802137194069
+14,ln_popdens_vill,Ln(people per km2 in the village / town),-1.1141957363026853,-0.04649622227952225
+15,lit_pct,Literacy rate (% of people aged 7+),0.9031516876118595,0.006761258389454987
+16,ln_d_orr,Ln(km to the nearest ORR interchange),-1.281359876745574,-0.11552168923713838
+17,agri_pct,Agricultural workers (% of workers),1.2454715702641046,0.003150517265852242
+18,nonres_pct,Non-residential,1.315293010907667,0.004279429800815283
+19,veh23_pct,Households with a two- or three-wheeler (%),1.5918471781665389,0.004661522813642527
+20,ln_d_metro,Ln(km to the nearest open metro station),-1.8837461596742966,-0.22446182584082758

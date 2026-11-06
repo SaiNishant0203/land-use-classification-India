@@ -21,6 +21,17 @@ data/processed/lu/*
 !data/processed/lu/LABELLING_GUIDE.md
 !data/processed/lu/label_stats.csv
 !data/processed/lu/handlabelled_ethan.csv
+# change-model trial: the 20,000-cell samples (enough to refit every model), OCR'd booth votes, eyeball form
+# (eyeball_key.csv stays out so the check stays blind)
+!data/processed/change/
+data/processed/change/*
+!data/processed/change/trial_cells_full.parquet
+!data/processed/change/trial_cells_census.parquet
+!data/processed/change/form20_2018.csv
+!data/processed/change/form20_2018_check.txt
+!data/processed/change/EYEBALL_GUIDE.md
+!data/processed/change/eyeball_form.csv
+!data/processed/change/eyeball_points.kml
 
 # LaTeX build files
 *.aux
