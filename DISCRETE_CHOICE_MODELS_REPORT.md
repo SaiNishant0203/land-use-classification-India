@@ -176,17 +176,20 @@ gives 0.35–0.37% (8,048 and 8,363 cells).
 
 Each cell *i* has a latent utility for development:
 
-$$U_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_K x_{Ki} + \varepsilon_i,\qquad
-P(y_i = 1) = \frac{1}{1 + e^{-(\beta_0 + \sum_k \beta_k x_{ki})}}$$
+```
+U_i = b0 + b1·x1_i + ... + bK·xK_i + e_i
 
-with $\varepsilon_i$ logistic. Estimated by maximum likelihood (statsmodels). Reading the coefficients:
+P(change_i = 1) = 1 / (1 + exp(-(b0 + b1·x1_i + ... + bK·xK_i)))
+```
+
+with the error e_i logistic. Estimated by maximum likelihood (statsmodels). Reading the coefficients:
 
 | kind of factor | odds ratio |
 |---|---|
-| yes/no dummy | $e^{\beta}$ |
-| ln(km + 0.1) distance | twice as far: $2^{\beta}$; half as far: $2^{-\beta}$ |
-| a % share | +10 points: $e^{10\beta}$ |
-| a 0–1 index (land-use mix) | +0.1: $e^{0.1\beta}$ |
+| yes/no dummy | exp(β) |
+| ln(km + 0.1) distance | twice as far: 2^β; half as far: 2^(−β) |
+| a % share | +10 points: exp(10·β) |
+| a 0–1 index (land-use mix) | +0.1: exp(0.1·β) |
 
 Distances are logged so that every doubling has the same effect. A negative distance coefficient means
 **closer → more development**.
@@ -195,7 +198,9 @@ Distances are logged so that every doubling has the same effect. A negative dist
 With outcome-stratified sampling the slopes are consistent (Manski & Lerman 1977); only the constant is
 biased. It is corrected with
 
-$$\hat\beta_0^{\,c} = \hat\beta_0 - \ln\!\left[\frac{1-\tau}{\tau}\cdot\frac{\bar y}{1-\bar y}\right]$$
+```
+b0_corrected = b0_fitted - ln[ ((1 - τ) / τ) × (ȳ / (1 - ȳ)) ]
+```
 
 where τ is the true change rate and ȳ the sample rate (trial τ = 0.405%, ȳ = 15.4%, a shift of about 3.8;
 HMDA strict τ = 0.242%). Predicted probabilities are then on the real scale.
@@ -242,7 +247,7 @@ are taken as they existed at the start year.
 |---|---|---|---|---|---|
 | land at the start | tree cover (vs open) | final map class at t₀ | maps | ✔ | ✔ |
 | neighbourhood | residential / non-res / water / tree share within 1 km | % of the 1 km window at t₀ (base open) | maps | ✔ | ✔ |
-| | land-use mix | entropy of the 5 class shares in 1 km, $-\sum s_k \ln s_k/\ln 5$ (0–1) | maps | ✔ | ✔ |
+| | land-use mix | entropy of the 5 class shares s_k in 1 km: −Σ s_k·ln(s_k) / ln(5), from 0 (one class) to 1 (all equal) | maps | ✔ | ✔ |
 | | distance to the dense city | ln km to the nearest cell with 1 km built share ≥ 40% | maps | ✔ | ✔ |
 | | night lights | ln VIIRS within 1 km | VIIRS | ✔ | ✔ |
 | access | airport, HITEC City / Financial District, old CBD (Abids), nearest ORR interchange, nearest open metro station, nearest major road | ln(km + 0.1); network as at t₀ | OSM, metro dates | ✔ | ✔ |
