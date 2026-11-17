@@ -6,6 +6,12 @@ what each band and column means, and how to use it. It covers:
 1. the **data in this repository** (enough to train and test the model), and
 2. the **raster zip shared separately** (needed for maps, new features and the product audit).
 
+It is about the 10 m land-use model. The later work documents its own data:
+- the **change model** (Nov 2026): `outputs/change/README.md` and `scripts/change/README.md`. Its samples
+  are in `data/processed/change/` (section 10 below);
+- the **master-plan zoning layer**: `scripts/masterplan/README.md`;
+- the **20 m model**: `scripts/lu20/README.md`.
+
 For the method and results, read `README.md`. For the scripts, read `scripts/lu/README.md`.
 
 **Contents**
@@ -19,6 +25,7 @@ For the method and results, read `README.md`. For the scripts, read `scripts/lu/
 7. What you can run with what you have
 8. Things to watch out for
 9. Sources and licences
+10. Change-model and master-plan files
 
 ---
 
@@ -573,3 +580,23 @@ d = px.Prox(years=("2023",)).at(s.x.values, s.y.values)    # DataFrame of d_* co
 | JRC Global Surface Water, GHS-BUILT-C | European Commission JRC | free with attribution |
 | WRI urban land use, Global Industrial Land, GULU, EULUC-Globe | the respective authors | check each product's terms before redistributing |
 | NRSC SIS-DP | Bhuvan, NRSC / ISRO | check Bhuvan terms |
+
+---
+
+## 10. Change-model and master-plan files
+
+In the repository (listed as exceptions in `.gitignore`, since `data/processed` is otherwise ignored):
+
+| file | content |
+|---|---|
+| `data/processed/change/trial_cells_full.parquet`, `trial_cells_census.parquet` | trial sample (3 constituencies, 19,813 cells): outcome `y`, `period`, every candidate factor; `_census` adds Economic Census, Census 2011 and SECC factors |
+| `data/processed/change/hmda_cells_full.parquet`, `hmda_cells_census.parquet` | all of HMDA, strict change rule (120,000 cells) |
+| `data/processed/change/hmda_persist_cells_full.parquet`, `hmda_persist_cells_census.parquet` | all of HMDA, persistence change rule |
+| `data/processed/change/form20_2018.csv` | votes polled per booth, 2018 assembly election, ACs 50–52 (OCR) |
+| `data/processed/change/eyeball_points.kml`, `eyeball_form.csv`, `EYEBALL_GUIDE.md` | the 60-cell eyeball check (the answer key stays out of git so the check stays blind) |
+| `data/processed/masterplan/mp2031_zones_20m.tif` | HMDA Master Plan 2031 zones on the 20 m grid (EPSG:32644). Codes: 1 residential, 2 peri-urban, 3 commercial, 4 manufacturing, 5 public / semi-public, 6 multiple use, 7 conservation, 8 protected green, 9 GO 111, 10 water, 11 special reservations, 12 settlements, 0 not covered |
+| `data/processed/masterplan/mp2031_zones.png`, `zone_shares.csv` | picture of the layer, and the area share of each zone |
+| `data/processed/masterplan/georef.csv`, `georef_roads.csv` | the fit of each scanned sheet (first by mandal outline, then by roads) |
+
+How each factor was made is in `scripts/change/README.md`; the zone codes and the digitising method are in
+`scripts/masterplan/README.md`.

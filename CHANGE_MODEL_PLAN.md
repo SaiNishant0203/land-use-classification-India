@@ -3,6 +3,17 @@
 **Date:** 2 November 2026
 **Basis:** Prof. Eluru's reference report (UCF/FDOT *Final Report*, §6–7: Figure 12 framework and Table 18 binary logit), our 20 m year maps (`outputs/lu20/maps/`), and the earlier 10 m choice models (`CHOICE_MODEL_RESULTS.md`).
 
+> **Status on 17 November 2026.** This is the plan as written on 2 November. What has changed since
+> (details in `outputs/change/README.md`):
+> - **Region:** after the 3-constituency trial, the model was run on **all of HMDA** with every factor
+>   retested (Prof.'s note of 11 Nov). Booth votes stay a trial-only factor.
+> - **Outcome (§2):** the two-source rule below (map + Open Buildings) turned out to keep only about 1 in 7
+>   real changes (0.23% of open land per 3 years). A persistence rule (built in the map in both of the last
+>   two years) gives about 1.4%. Which one is final waits on the eyeball check (`EYEBALL_CHECK_HOWTO.md`).
+> - **New factors:** HMDA Master Plan 2031 zoning, read from the 30 scanned sheets
+>   (`scripts/masterplan/`), and bus stops. Added fit is now reported along with t-values, because with
+>   120,000 cells almost every factor passes |t| ≥ 1.96.
+
 ---
 
 ## 1. What the reference model does, and our version of it

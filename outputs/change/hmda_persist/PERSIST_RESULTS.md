@@ -1,6 +1,6 @@
 # Change model, all of HMDA, with the persistence outcome (11 November 2026)
 
-**Not for sharing yet.** This run answers "what if change is counted from our map's persistence instead of
+**Provisional.** This run answers "what if change is counted from our map's persistence instead of
 needing Open Buildings too?" (results log #53, #54). It doesn't settle which outcome is right; the 60-cell
 eyeball check does.
 
@@ -168,10 +168,11 @@ again the weakest.
    - mostly noise or rock → use the middle outcome.
 2. Then rerun once with the chosen outcome. That takes about 20 minutes.
 3. **The factors stay the weak point under every outcome:** beyond "near existing development", the model
-   needs real supply and policy data. That means master-plan zoning (the 30 district maps on OpenCity,
-   JPEG only), layout approvals and land values.
+   needs real supply and policy data. That means master-plan zoning, layout approvals and land values.
+   **Zoning is done (12 Nov):** `zoning/ZONING.md`; residential × 1.44, manufacturing × 1.80, protected land
+   × 0.71 against conservation under this rule. Bus stops: `bus_stops/BUS_STOPS.md`.
 
 **Files:**
-- results: `outputs/change/hmda_persist/{table18_census,table18_florida,table18,consistency,full,added_value}/`
+- results: `outputs/change/hmda_persist/{table18_census,table18_florida,table18,consistency,full,added_value,bus_stops,zoning}/`
 - data: `data/processed/change/hmda_persist_cells*.parquet`
 - run: `OUTCOME=persist` on every script in `scripts/change/`

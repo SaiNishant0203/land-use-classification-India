@@ -36,9 +36,17 @@ Classes (fixed, transport-oriented):
 | feature analysis: SHAP legend, redundancy, reduced sets | `15_feature_analysis.py` | main | `outputs/lu/features/`, written up in `FEATURES.md` |
 | proximity distances at any point | `20_proximity.py` | main | `Prox().at(x, y)` |
 | do proximity features help the classifier? | `16_proximity_features.py` | main | `outputs/lu/proximity_features/` |
+| transition dataset, 2017 → 2023 (development from Open Buildings, function from the physical model) | `21_transition_data.py` | main | transition table for 22 |
+| transition / choice models: binary logit, MNL, LightGBM + SHAP, context classes | `22_choice_models.py <y0> <y1>` | main | `outputs/lu/choice_<y0>_<y1>/` (`REPORT.md`) |
+| NRSC SIS-DP 1:10K land use rasterised onto the tile grid (Bhuvan WMS) | `23_sisdp_raster.py` | main | `data/raw/lu/sisdp/` |
+| are the proximity effects stable across 2017–20 and 2020–23? | `24_period_compare.py` | main | `outputs/lu/choice_periods/` |
+| latent segmentation logit of development | `25_latent_segmentation.py` | main | `outputs/lu/choice_latent/` |
 
 Chains: `run_overnight.sh` runs downloads → labels → samples → BEN → 06 → 09 → 07, and
-`final_rerun.sh` runs EULUC and then re-runs 06 and 07 once everything exists. Logs are in
+`final_rerun.sh` runs EULUC and then re-runs 06 and 07 once everything exists. `run_choice_overnight.sh`
+runs 20 → 21 → 22 (with a dry run first), and `run_periods.sh` / `run_periods_rest.sh` run the per-period
+models and 24. The results of 21–25 are written up in `CHOICE_MODEL_RESULTS.md`; the later change model
+that follows Table 18 of the UCF/FDOT report is in `scripts/change/`. Logs are in
 `outputs/lu/logs/`, with a timeline in `overnight.log`.
 
 ## Rules that keep the comparison honest

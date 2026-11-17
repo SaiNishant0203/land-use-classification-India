@@ -1,5 +1,8 @@
 # Land-Use Transition (Choice) Models, HMDA 2017 → 2023: First Results
 
+> **Earlier work (October 2026).** These 10 m models came before the meeting of early November. The change
+> model that follows Table 18 of the UCF/FDOT report, on our 20 m maps, is in `outputs/change/README.md`.
+
 **Run:** overnight, 2–3 October 2026
 
 **Code:**

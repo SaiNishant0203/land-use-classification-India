@@ -1,6 +1,6 @@
 # Land-use change model: all of HMDA (11 November 2026)
 
-> **Not for sharing yet (later the same day).**
+> **Provisional (later the same day).**
 > - **The outcome is too strict.** It needs both our map and Open Buildings, and that keeps only about 1 in
 >   7 real changes. A check on the yearly maps shows that 80% of the map's new building stays built through
 >   2023, at about 0.55% of open land a year (results log #53).
@@ -330,6 +330,8 @@ The top decile is over-predicted by about 14%; deciles 8–9 are under-predicted
   - `table18_florida/` and `table18/` are the variants.
   - `consistency/` has the subregion tables.
   - `full/` has the 25-factor model and the tests.
+  - `added_value/` (how much each group adds), `bus_stops/` and `zoning/` (master-plan zoning) came after
+    this write-up; their findings are in `outputs/change/README.md`.
 - **Data:** `data/processed/change/hmda_cells.parquet`, `hmda_cells_full.parquet` (with terrain),
   `hmda_cells_census.parquet`; logs `hmda_build.log`, `hmda_terrain.log`, `hmda_census.log`, `m_*.log`.
 - **Rerun:**
@@ -344,6 +346,9 @@ REGION=hmda python scripts/change/06_table18.py florida
 REGION=hmda python scripts/change/06_table18.py
 REGION=hmda python scripts/change/08_consistency.py
 REGION=hmda python scripts/change/05_full_logit.py
+REGION=hmda python scripts/change/09_added_value.py
+REGION=hmda python scripts/change/10_bus_stops.py
+REGION=hmda python scripts/change/11_zoning.py
 ```
 
 - **Run times:**

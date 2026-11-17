@@ -2,6 +2,7 @@
 
 **Purpose:** decide what counts as "change" in the change model (CHANGE_MODEL_PLAN.md §2).
 **Code:** `scripts/change/00_eyeball_sample.py`
+**Fuller step-by-step version, with the decision list:** `EYEBALL_CHECK_HOWTO.md` at the repo root.
 
 ## Files
 | file | use |

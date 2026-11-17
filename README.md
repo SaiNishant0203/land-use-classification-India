@@ -1,9 +1,30 @@
 # Land-Use Classification for Hyderabad (HMDA): Progress Update
 
 **Project:** Land use and transportation planning in Hyderabad
-**Status as of:** September 2026
+**Status as of:** September 2026 for sections 1–13; the overview below is from 17 November 2026
 **Scope of this update:** the pixel-level land-use model (LightGBM): its inputs, design and
 outputs, how it was tested, and how it compares with existing land-use products
+
+---
+
+## 0. Where the project is now (17 November 2026)
+
+This README is the September write-up of the first 10 m model. The work has moved on; each stream has its
+own README:
+
+| stream | when | start here |
+|---|---|---|
+| 10 m pixel model, 2023, and the audit of existing products | Aug–Sep | this file, `DATA.md`, `FEATURES.md`, `scripts/lu/README.md` |
+| earlier transition / choice models at 10 m (binary logit, MNL, latent segmentation) | Oct | `CHOICE_MODEL_RESULTS.md`, `outputs/lu/choice*/REPORT.md` |
+| 20 m production model with year-dated OSM labels; final maps for every year 2017–2023 | Oct–Nov | `scripts/lu20/README.md`, `outputs/lu20/RESULTS.md` |
+| **land-use change model (discrete choice, Table 18 of the UCF/FDOT report)**: trial, then all of HMDA | Nov | **`outputs/change/README.md`**, `scripts/change/README.md`, `CHANGE_MODEL_PLAN.md` |
+| HMDA Master Plan 2031 zoning on the 20 m grid | Nov | `scripts/masterplan/README.md` |
+
+**Change model in short:** a binary logit of open land being built on in 3 years, 2017→2020 and
+2020→2023, on 120,000 sampled 20 m cells across HMDA (ρ² about 0.24, cross-validated AUC 0.84). Development
+follows existing development, major roads, the old CBD and the ORR interchanges, and avoids trees, lake beds,
+steep and restricted land. Master-plan zoning matters (residential × 1.76, manufacturing × 3.0, protected
+land × 0.67 against conservation). How change is counted is still being settled by an eyeball check.
 
 ---
 
