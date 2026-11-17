@@ -32,7 +32,9 @@ Factors, all measured at the start year of the period (CHANGE_MODEL_PLAN.md §4)
   1 km window; WorldPop people per km2 (1 km window); start class trees vs open; AC.
 
 Usage: python 02_trial_data.py            (env SHIFT=<n> for the alignment sensitivity)
+       REGION=hmda python 02_trial_data.py   (all of HMDA: no booth votes, larger sample, district per cell)
 Output: data/processed/change/trial_cells.parquet (one row per sampled cell and period)
+        data/processed/change/hmda_cells.parquet (REGION=hmda)
 """
 import os, sys, json, time
 from pathlib import Path
@@ -59,11 +61,18 @@ ROADS = ["motorway", "trunk", "primary", "secondary", "tertiary", "unclassified"
 N_PER_PERIOD, CAP_1, BLOCK = 10000, 4000, 10          # BLOCK cells = 200 m
 SHIFT = int(os.environ.get("SHIFT", "0"))
 SEED = 20261105
+REGION = os.environ.get("REGION", "trial")     # trial: ACs 50-52 with booth votes; hmda: all of HMDA, no votes
+HMDA = REGION == "hmda"
+OUTCOME = os.environ.get("OUTCOME", "both")   # both: map + Open Buildings agree (#45); persist: map built in t1-1 and t1 (#53)
+PERSIST = OUTCOME == "persist"
+TAG = ("hmda" if HMDA else "trial") + ("_persist" if PERSIST else "")
+if HMDA:
+    N_PER_PERIOD, CAP_1 = 60000, 30000       # HMDA is 6.6 x the trial area
 CELL = 20
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
 
 
-def booths():
+def booths(need_votes=True):
     """2017 polling stations (all Telangana) and 2018 votes placed on them."""
     h = ["State", "District", "AC", "Latitude", "Longitude", "PSNumber", "PSName", "WebURL"]
     r = pd.read_csv(ROOT / "data/raw/voter/rudkin/telangana.csv", header=None, names=h, engine="python", on_bad_lines="skip")
@@ -71,6 +80,9 @@ def booths():
     r = r.drop_duplicates(["ac", "PSNumber"]).dropna(subset=["Latitude", "Longitude"])
     r = r[(r.Latitude.between(15, 20)) & (r.Longitude.between(77, 82))]
     r["x"], r["y"] = Transformer.from_crs(4326, 32644, always_xy=True).transform(r.Longitude.values, r.Latitude.values)
+    r = r.reset_index(drop=True)
+    if not need_votes:
+        return r, None
     v = pd.read_csv(CH / "form20_2018.csv")
     out = []
     for ac in ACS:
@@ -97,14 +109,17 @@ def kde(bx, by, w, X, Y, sigma):
 
 
 def main():
-    allb, vb = booths()
+    allb, vb = booths(need_votes=not HMDA)
     meta = json.loads((G / "grid_2020" / "meta.json").read_text())
     X0, Y1 = meta["minx"], meta["maxy"]
-    reg = allb[allb.ac.isin(ACS)]
-    pad = 6000
-    c0 = int((reg.x.min() - pad - X0) // CELL); c1 = int((reg.x.max() + pad - X0) // CELL)
-    r0 = int((Y1 - reg.y.max() - pad) // CELL); r1 = int((Y1 - reg.y.min() + pad) // CELL)
-    c0, r0 = max(c0, 0), max(r0, 0); c1, r1 = min(c1, meta["nx"]), min(r1, meta["ny"])
+    if HMDA:
+        r0, r1, c0, c1 = 0, meta["ny"], 0, meta["nx"]
+    else:
+        reg = allb[allb.ac.isin(ACS)]
+        pad = 6000
+        c0 = int((reg.x.min() - pad - X0) // CELL); c1 = int((reg.x.max() + pad - X0) // CELL)
+        r0 = int((Y1 - reg.y.max() - pad) // CELL); r1 = int((Y1 - reg.y.min() + pad) // CELL)
+        c0, r0 = max(c0, 0), max(r0, 0); c1, r1 = min(c1, meta["nx"]), min(r1, meta["ny"])
     ny, nx = r1 - r0, c1 - c0
     tr = from_origin(X0 + c0 * CELL, Y1 - r0 * CELL, CELL, CELL)
     cx = X0 + (np.arange(c0, c1) + 0.5) * CELL; cy = Y1 - (np.arange(r0, r1) + 0.5) * CELL
@@ -112,20 +127,28 @@ def main():
     log(f"window rows {r0}-{r1}, cols {c0}-{c1} ({ny} x {nx} cells)")
 
     # region: nearest 2017 station is in one of the ACs, inside HMDA
-    _, k = cKDTree(np.c_[allb.x, allb.y]).query(np.c_[XX.ravel(), YY.ravel()])
-    ac_of = allb.ac.values[k].reshape(ny, nx)
+    _, k = cKDTree(np.c_[allb.x, allb.y]).query(np.c_[XX.ravel(), YY.ravel()], workers=8)
+    kk = k.reshape(ny, nx); del k
+    ac_of = allb.ac.values[kk]
     aoi = gpd.read_file(ROOT / "data/processed/aoi_utm44n.gpkg").to_crs(32644)
     inside = rasterize(((g, 1) for g in aoi.geometry), (ny, nx), transform=tr, dtype="uint8").astype(bool)
-    region = np.isin(ac_of, list(ACS)) & inside
-    log(f"region {region.sum():,} cells = {region.sum() * CELL ** 2 / 1e6:.0f} km2; "
-        + ", ".join(f"{ACS[a]} {(ac_of[region] == a).sum() * CELL ** 2 / 1e6:.0f} km2" for a in ACS))
+    if HMDA:
+        region = inside
+        log(f"region {region.sum():,} cells = {region.sum() * CELL ** 2 / 1e6:.0f} km2 (all of HMDA)")
+    else:
+        region = np.isin(ac_of, list(ACS)) & inside
+        log(f"region {region.sum():,} cells = {region.sum() * CELL ** 2 / 1e6:.0f} km2; "
+            + ", ".join(f"{ACS[a]} {(ac_of[region] == a).sum() * CELL ** 2 / 1e6:.0f} km2" for a in ACS))
 
     def rd(y):
         with rasterio.open(MAPS / f"landuse_{y}_20m.tif") as s:
             return s.read(1, window=((r0, r1), (c0, c1)))
 
     def cov(y):
-        return np.array(np.load(G / f"grid_{y}" / "mean.npy", mmap_mode="r")[7, r0:r1, c0:c1], dtype=np.float32)
+        a = np.array(np.load(G / f"grid_{y}" / "mean.npy", mmap_mode="r")[7, r0:r1, c0:c1], dtype=np.float32)
+        # outside HMDA the grid is NaN, and uniform_filter carries a NaN along the whole row: 0 there (HMDA run only,
+        # the trial window has no NaN rows, so the trial is unchanged)
+        return np.nan_to_num(a, nan=0.0) if HMDA else a
 
     P = px.Prox(years=("2017", "2020"))
     wp = {}
@@ -139,8 +162,14 @@ def main():
         ma, mb, ca, cb = rd(a), rd(b), cov(a), cov(b)
         c3a, c3b = uniform_filter(ca, 3), uniform_filter(cb, 3)
         und = region & np.isin(ma, [4, 5]) & (ca < 0.05)
-        y1 = und & np.isin(mb, [1, 2]) & (cb >= 0.20) & (c3b - c3a >= 0.10)
-        y0 = und & np.isin(mb, [4, 5]) & (cb < 0.05) & (c3b - c3a < 0.02)
+        if PERSIST:     # built in the last two years of the period; unchanged = undeveloped in both, and no
+                        # new building in Open Buildings either (#53)
+            mp = rd(b - 1)
+            y1 = und & np.isin(mp, [1, 2]) & np.isin(mb, [1, 2])
+            y0 = und & np.isin(mp, [4, 5]) & np.isin(mb, [4, 5]) & ~((cb >= 0.20) & (c3b - c3a >= 0.10))
+        else:
+            y1 = und & np.isin(mb, [1, 2]) & (cb >= 0.20) & (c3b - c3a >= 0.10)
+            y0 = und & np.isin(mb, [4, 5]) & (cb < 0.05) & (c3b - c3a < 0.02)
         log(f"{a}->{b}: undeveloped at start {und.sum():,}; confirmed change {y1.sum():,} ({y1.sum() / und.sum():.2%}); "
             f"still undeveloped {y0.sum():,}; sources disagree, left out {(und & ~y0 & ~y1).sum():,}")
 
@@ -160,6 +189,7 @@ def main():
         X, Y = cx[cc], cy[rr]
         d = pd.DataFrame({"period": f"{a}-{b}", "t0": a, "x": X, "y": Y, "change": lab, "w": w,
                           "ac": ac_of[rr, cc], "trees_t0": (ma[rr, cc] == 4).astype(int)})
+        d["district"] = allb.District.str.strip().values[kk[rr, cc]]     # pre-2016 district of the nearest station
         d["tile"] = ((X - X0) // 4000).astype(int) * 1000 + ((Y1 - Y) // 4000).astype(int)
 
         dist = P.at(X, Y)
@@ -180,15 +210,16 @@ def main():
 
         wr = ((Y1 - Y) // 100).astype(int); wc = ((X - X0) // 100).astype(int)
         d["worldpop_1km"] = wp[a][wr, wc]
-        # votes come from the three ACs only, so the density is too low near the region edge
-        out_b = allb[~allb.ac.isin(ACS)]
-        d["d_edge"] = cKDTree(np.c_[out_b.x, out_b.y]).query(np.c_[X, Y])[0] / 1000
-        for sg in (1000, 2000):
-            d[f"votes_kde{sg // 1000}km"] = kde(vb.x.values, vb.y.values, vb.votes.values, X, Y, sg)
+        if not HMDA:        # booth votes exist for the three trial ACs only
+            # votes come from the three ACs only, so the density is too low near the region edge
+            out_b = allb[~allb.ac.isin(ACS)]
+            d["d_edge"] = cKDTree(np.c_[out_b.x, out_b.y]).query(np.c_[X, Y])[0] / 1000
+            for sg in (1000, 2000):
+                d[f"votes_kde{sg // 1000}km"] = kde(vb.x.values, vb.y.values, vb.votes.values, X, Y, sg)
         rows.append(d)
         log(f"  sample: {n1:,} changers, {n0:,} non-changers")
     out = pd.concat(rows, ignore_index=True)
-    fn = CH / ("trial_cells.parquet" if SHIFT == 0 else f"trial_cells_shift{SHIFT}.parquet")
+    fn = CH / (f"{TAG}_cells.parquet" if SHIFT == 0 else f"{TAG}_cells_shift{SHIFT}.parquet")
     out.to_parquet(fn)
     log(f"wrote {fn} ({len(out):,} rows)")
 

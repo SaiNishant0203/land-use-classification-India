@@ -24,9 +24,11 @@ the period, except the two marked as checks.
                    the outcome). 2020 -> 2023 period only.
 
 Usage: python 04_more_factors.py
-Output: data/processed/change/trial_cells_full.parquet
+       REGION=hmda SKIP_EE=1 python 04_more_factors.py   (all of HMDA, terrain left out)
+       REGION=hmda python 04_more_factors.py terrain     (add terrain to the existing output only)
+Output: data/processed/change/trial_cells_full.parquet (hmda_cells_full.parquet with REGION=hmda)
 """
-import sys, json, time
+import os, sys, json, time
 from pathlib import Path
 import numpy as np, pandas as pd, geopandas as gpd, rasterio, pyogrio
 from rasterio.features import rasterize
@@ -44,6 +46,12 @@ MAJOR = ["motorway", "trunk", "primary", "secondary", "motorway_link", "trunk_li
 MINOR = ["tertiary", "tertiary_link", "unclassified", "residential", "living_street"]
 CELL, PAD = 20, 6000
 log = lambda *a: print(time.strftime("%H:%M:%S"), *a, flush=True)
+REGION = os.environ.get("REGION", "trial")     # trial: ACs 50-52 with booth votes; hmda: all of HMDA, no votes
+HMDA = REGION == "hmda"
+OUTCOME = os.environ.get("OUTCOME", "both")   # both: map + Open Buildings agree (#45); persist: map built in t1-1 and t1 (#53)
+PERSIST = OUTCOME == "persist"
+TAG = ("hmda" if HMDA else "trial") + ("_persist" if PERSIST else "")
+PFX = TAG
 
 
 def window(d, meta):
@@ -56,7 +64,7 @@ def window(d, meta):
 def osm_polys(snap, bbox):
     """Restricted land and the two GO 111 lakes from one OSM snapshot, cached (reading multipolygons
     from the India file takes minutes)."""
-    fn = CH / f"osm_constraints_{snap.split('.')[0]}.gpkg"
+    fn = CH / f"osm_constraints_{snap.split('.')[0]}{'_hmda' if HMDA else ''}.gpkg"     # cache per region (bbox)
     if fn.exists():
         return gpd.read_file(fn)
     w = ("military IS NOT NULL OR landuse IN ('military','forest') OR boundary='protected_area' "
@@ -90,7 +98,12 @@ def ee_terrain(d):
 
 
 def main():
-    d = pd.read_parquet(CH / "trial_cells.parquet").reset_index(drop=True)
+    if "terrain" in sys.argv:       # add terrain to an output written with SKIP_EE=1
+        fn = CH / f"{PFX}_cells_full.parquet"; d = pd.read_parquet(fn)
+        d[["elev_m", "slope_deg", "relief_m"]] = ee_terrain(d); d.to_parquet(fn)
+        log(f"terrain added to {fn}"); print(d[["elev_m", "slope_deg", "relief_m"]].describe().T.round(3).to_string())
+        return
+    d = pd.read_parquet(CH / f"{PFX}_cells.parquet").reset_index(drop=True)
     meta = json.loads((G / "grid_2020" / "meta.json").read_text())
     X0, Y1 = meta["minx"], meta["maxy"]
     r0, r1, c0, c1 = window(d, meta); ny, nx = r1 - r0, c1 - c0
@@ -105,7 +118,8 @@ def main():
             return s.read(1, window=((r0, r1), (c0, c1)))
 
     def grid(y, b):
-        return np.array(np.load(G / f"grid_{y}" / "mean.npy", mmap_mode="r")[b, r0:r1, c0:c1], dtype=np.float32)
+        a = np.array(np.load(G / f"grid_{y}" / "mean.npy", mmap_mode="r")[b, r0:r1, c0:c1], dtype=np.float32)
+        return np.nan_to_num(a, nan=0.0) if HMDA else a      # NaN outside HMDA (see 02_trial_data.py)
 
     def raster(gs):
         return rasterize(((g, 1) for g in gs), (ny, nx), transform=tr, dtype="uint8") if len(gs) else np.zeros((ny, nx), "uint8")
@@ -163,12 +177,16 @@ def main():
             m17, m20 = rd(2017), ma
             c17, c20 = grid(2017, 7), grid(2020, 7)
             und = np.isin(m17, [4, 5]) & (c17 < 0.05)
-            y1 = und & np.isin(m20, [1, 2]) & (c20 >= 0.20) & (uniform_filter(c20, 3) - uniform_filter(c17, 3) >= 0.10)
+            if PERSIST:
+                y1 = und & np.isin(rd(2019), [1, 2]) & np.isin(m20, [1, 2])
+            else:
+                y1 = und & np.isin(m20, [1, 2]) & (c20 >= 0.20) & (uniform_filter(c20, 3) - uniform_filter(c17, 3) >= 0.10)
             cols["chg_prev_1km"][m] = uniform_filter(y1.astype(np.float32), 51, mode="constant")[i_r, i_c]
     for k, v in cols.items():
         d[k] = v
-    d[["elev_m", "slope_deg", "relief_m"]] = ee_terrain(d)
-    fn = CH / "trial_cells_full.parquet"; d.to_parquet(fn)
+    if not os.environ.get("SKIP_EE"):
+        d[["elev_m", "slope_deg", "relief_m"]] = ee_terrain(d)
+    fn = CH / f"{PFX}_cells_full.parquet"; d.to_parquet(fn)
     log(f"wrote {fn}"); print(d.drop(columns=["period"]).describe().T.round(3).to_string())
 
 

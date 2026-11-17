@@ -1,0 +1,13 @@
+step,kind,vars,rho2,AUC,rho2_loss,AUC_loss
+period and district dummies,nested,"dist_medak, dist_nalgonda, dist_mahabubnagar, dist_hyderabad, p2020",0.029119119783990066,0.5967434672362432,,
++ distance to the dense city,nested,ln_d_urban,0.18639835093899504,0.7750953554793998,,
+"+ land use within 1 km, from our map (shares, mix)",nested,"res_pct, nonres_pct, water_pct, trees_pct, lu_mix_1km, ln_viirs",0.27503125774525483,0.8432551779650908,,
+"+ accessibility (CBD, HITEC, airport, ORR, metro, major road, road km)",nested,"ln_d_cbd, ln_d_airport, ln_d_orr, ln_d_major_road, road_10km",0.28473589908820673,0.8464843141801714,,
+"+ supply constraints (terrain, lakes, restricted, GO 111)",nested,"slope_deg, relief_m, ln_d_lake, near_lake",0.29000718503574785,0.8488269228127949,,
+"+ jobs and census (EC 2013, Census 2011, SECC, WorldPop)",nested,"large_pct_5km, ln_wp",0.29219206726068725,0.84886148883837,,
+final without distance to the dense city,drop-one,ln_d_urban,0.29120297026331,0.8491592805158159,0.000989096997377259,-0.0002977916774459244
+"final without land use within 1 km, from our map (shares, mix)",drop-one,"res_pct, nonres_pct, water_pct, trees_pct, lu_mix_1km, ln_viirs",0.22064949516917898,0.8048984715155478,0.07154257209150827,0.04396301732282215
+"final without accessibility (CBD, HITEC, airport, ORR, metro, major road, road km)",drop-one,"ln_d_cbd, ln_d_airport, ln_d_orr, ln_d_major_road, road_10km",0.2847006675592808,0.8465535834547661,0.007491399701406443,0.0023079053836039254
+"final without supply constraints (terrain, lakes, restricted, GO 111)",drop-one,"slope_deg, relief_m, ln_d_lake, near_lake",0.2870805192267587,0.8465363784353036,0.005111548033928548,0.002325110403066377
+"final without jobs and census (EC 2013, Census 2011, SECC, WorldPop)",drop-one,"large_pct_5km, ln_wp",0.29000718503574785,0.8488269228127949,0.0021848822249393995,3.4566025575055725e-05
+final without distance to the dense city AND our-map land use,drop-one,,0.211812506736342,0.8017018835813122,0.08037956052434525,0.04715960525705776

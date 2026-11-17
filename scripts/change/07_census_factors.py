@@ -26,9 +26,10 @@ Variables per 20 m trial cell
     manuf_share_5km       share in manufacturing
     large_share_5km       share in establishments with 100 or more workers
 
-Usage: python 07_census_factors.py
+Usage: python 07_census_factors.py        (REGION=hmda: hmda_cells_full -> hmda_cells_census)
 Output: data/processed/change/trial_cells_census.parquet, data/processed/change/shrid_hmda_census.gpkg
 """
+import os
 from pathlib import Path
 import numpy as np, pandas as pd, geopandas as gpd
 from rasterio.features import rasterize
@@ -40,6 +41,12 @@ CH = ROOT / "data" / "processed" / "change"
 U = ROOT / "data" / "raw" / "shrug" / "unz"
 IT = ["582", "620", "631", "639"]
 RES, SIGMA_KM, PAD = 100, 2.5, 15000
+REGION = os.environ.get("REGION", "trial")     # trial: ACs 50-52 with booth votes; hmda: all of HMDA, no votes
+HMDA = REGION == "hmda"
+OUTCOME = os.environ.get("OUTCOME", "both")   # both: map + Open Buildings agree (#45); persist: map built in t1-1 and t1 (#53)
+PERSIST = OUTCOME == "persist"
+TAG = ("hmda" if HMDA else "trial") + ("_persist" if PERSIST else "")
+PFX = TAG
 
 
 def ec13_by_shrid():
@@ -100,7 +107,7 @@ def main():
           f"missing PCA {poly.pop11.isna().sum()}, missing SECC {poly.veh4_share.isna().sum()}")
     poly.to_file(CH / "shrid_hmda_census.gpkg")
 
-    d = pd.read_parquet(CH / "trial_cells_full.parquet")
+    d = pd.read_parquet(CH / f"{PFX}_cells_full.parquet")
     pts = gpd.GeoDataFrame(d, geometry=gpd.points_from_xy(d.x, d.y), crs=32644)
     cols = ["jobdens_vill", "popdens_vill", "scst_share", "lit_rate", "agri_share", "veh23_share", "veh4_share", "in_ghmc", "shrid2"]
     j = gpd.sjoin(pts, poly[cols + ["geometry"]], how="left", predicate="within").drop(columns=["index_right", "geometry"])
@@ -125,7 +132,7 @@ def main():
     j["jobs_5km"] = sm["emp"][r, c]; j["pop_5km"] = sm["pop11"][r, c]
     for v, k in (("emp_it", "it_share_5km"), ("emp_manuf", "manuf_share_5km"), ("emp_large", "large_share_5km")):
         j[k] = sm[v][r, c] / np.maximum(sm["emp"][r, c], 1)
-    j.to_parquet(CH / "trial_cells_census.parquet")
+    j.to_parquet(CH / f"{PFX}_cells_census.parquet")
     print(j[["jobdens_vill", "popdens_vill", "jobs_5km", "pop_5km", "it_share_5km", "manuf_share_5km", "large_share_5km",
              "scst_share", "lit_rate", "agri_share", "veh23_share", "veh4_share", "in_ghmc"]].describe().T.round(3).to_string())
     print(j[["change", "jobs_5km", "jobdens_vill", "pop_5km", "veh4_share", "agri_share", "built_1km", "d_jobs"]]

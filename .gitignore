@@ -32,6 +32,19 @@ data/processed/change/*
 !data/processed/change/EYEBALL_GUIDE.md
 !data/processed/change/eyeball_form.csv
 !data/processed/change/eyeball_points.kml
+# change model on all of HMDA: the 120,000-cell samples under both change rules (enough to refit every model)
+!data/processed/change/hmda_cells_full.parquet
+!data/processed/change/hmda_cells_census.parquet
+!data/processed/change/hmda_persist_cells_full.parquet
+!data/processed/change/hmda_persist_cells_census.parquet
+# HMDA Master Plan 2031 zoning on the 20 m grid, and the sheet fits
+!data/processed/masterplan/
+data/processed/masterplan/*
+!data/processed/masterplan/mp2031_zones_20m.tif
+!data/processed/masterplan/mp2031_zones.png
+!data/processed/masterplan/zone_shares.csv
+!data/processed/masterplan/georef.csv
+!data/processed/masterplan/georef_roads.csv
 
 # LaTeX build files
 *.aux

@@ -1,0 +1,19 @@
+step,dropped,label,t,coef
+1,ln_jobdens_vill,Ln(workers per km2 in the village / town),-0.25943448791377643,-0.007739946136508679
+2,ln_d_jobs,Ln(km to HITEC City / Financial District),0.2381261159053861,0.02239191505566354
+3,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),0.4705592904315464,0.0487203818880997
+4,veh4_pct,Households with a four-wheeler (%),-0.41459178052310075,-0.007333771616116683
+5,nonres_pct,Non-residential,0.49579730959083174,0.0011387687322104002
+6,ln_d_metro,Ln(km to the nearest open metro station),0.5889408287924145,0.04525772713873334
+7,ln_jobs_5km,Ln(workers within ~5 km),0.5586558674574909,0.034826227146089545
+8,lit_pct,Literacy rate (% of people aged 7+),0.6689106311655645,0.003258433331500767
+9,veh23_pct,Households with a two- or three-wheeler (%),0.8067530319707191,0.0014620605537311831
+10,ln_viirs,Ln(night lights within 1 km),-0.9464697406187516,-0.5649447461576851
+11,ln_wp,Ln(WorldPop people per km2),0.9369389840752429,0.05099177992494581
+12,scst_pct,SC / ST (% of people),-1.1462070814103416,-0.002302372262361151
+13,ln_popdens_vill,Ln(people per km2 in the village / town),-1.08613113947498,-0.031075748940892406
+14,ln_d_airport,Ln(km to the airport),-1.4510040369757249,-0.10499067906430652
+15,agri_pct,Agricultural workers (% of workers),-1.6328944658653326,-0.0025590685413255125
+16,in_ghmc,Inside GHMC (village values are city-wide averages),-1.5553672934825682,-0.15513839849917632
+17,elev_100m,Elevation (100 m),1.805943731060066,0.14026445088561607
+18,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),-1.5527802875027852,-0.00372454610037515

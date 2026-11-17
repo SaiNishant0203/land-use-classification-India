@@ -1,0 +1,9 @@
+step,dropped,label,t,coef
+1,ln_d_metro,Ln(km to the nearest open metro station),0.23167512459577566,0.018034684289223547
+2,ln_d_airport,Ln(km to the airport),0.5643008413030741,0.04470082906820585
+3,ln_d_jobs,Ln(km to HITEC City / Financial District),-0.8993367507624088,-0.07643258602282117
+4,ln_wp,Ln(WorldPop people per km2),1.0584275149917584,0.0641673657314307
+5,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),1.662856900749001,0.1435818824774849
+6,road_10km,Road mileage in the 4 km x 4 km window (10 km),1.3439003500446,0.010373475490368468
+7,ln_viirs,Ln(night lights within 1 km),-1.0468750609878292,-0.5887279491115327
+8,elev_100m,Elevation (100 m),1.5488862510653272,0.11395268605578236

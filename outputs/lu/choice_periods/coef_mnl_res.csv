@@ -1,0 +1,12 @@
+,2017->2020,2020->2023,2017->2023
+const,-7.603***,-7.622***,-6.429***
+dist. to HITEC City / Financial District,-0.155*,-0.044,-0.127
+dist. to old CBD (Abids),-0.526***,-0.407***,-0.583***
+dist. to airport,0.156,0.237*,0.271**
+dist. to ORR interchange,-0.451***,-0.453***,-0.424***
+dist. to major road (start-year network),0.188*,0.013,0.070
+building cover within 610 m (start),0.231***,0.314***,0.206***
+building cover within 150 m (start),0.147***,0.092**,0.143***
+NDVI within 150 m (start),-0.856***,-0.945***,-0.580***
+night lights within 610 m (start),-0.179**,-0.230**,-0.183**
+start class = forest/trees,-0.917*,-0.896,-0.676**

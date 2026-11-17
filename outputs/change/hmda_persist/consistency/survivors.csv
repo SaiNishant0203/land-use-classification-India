@@ -1,0 +1,241 @@
+region,var,label,kept,est,t
+HMDA,trees_t0,Tree cover (vs open land),False,,
+HMDA,res_pct,Residential,True,0.02480280361543927,11.903457159241679
+HMDA,nonres_pct,Non-residential,True,0.02196708038788048,11.124296374501291
+HMDA,water_pct,Water,True,-0.058079869257791863,-8.552518963846355
+HMDA,trees_pct,Trees,True,-0.04396677004988247,-13.316777478805434
+HMDA,lu_mix_1km,"Land-use mix (entropy, 0-1)",True,5.089340176891986,25.561087733552817
+HMDA,ln_d_urban,"Ln(km to the dense city, 1 km built share >= 40%)",True,0.14067479937563598,6.619113236910802
+HMDA,ln_viirs,Ln(night lights within 1 km),True,-4.055217813371157,-8.080221045148772
+HMDA,ln_d_airport,Ln(km to the airport),True,-0.12201306346552321,-2.46689781610497
+HMDA,ln_d_jobs,Ln(km to HITEC City / Financial District),False,,
+HMDA,ln_d_cbd,Ln(km to the old CBD),True,-0.5521910918205144,-4.352725312541958
+HMDA,ln_d_orr,Ln(km to the nearest ORR interchange),True,-0.11124758672228176,-3.8497087173756084
+HMDA,ln_d_metro,Ln(km to the nearest open metro station),False,,
+HMDA,ln_d_major_road,Ln(km to the nearest major road),True,-0.1680180356361494,-9.794499285106964
+HMDA,road_10km,Road mileage in the 4 km x 4 km window (10 km),True,-0.029733042578602438,-5.161051098897507
+HMDA,slope_deg,Slope (degrees),True,0.08511360501093347,11.054422028996228
+HMDA,relief_m,Relief within 150 m (m),True,-0.09408752691300384,-9.80448580360891
+HMDA,elev_100m,Elevation (100 m),False,,
+HMDA,ln_d_lake,Ln(km to a lake >= 2 ha),True,0.046974642750036454,2.080288696358206
+HMDA,near_lake,Within 100 m of a lake,True,-0.8515287245106584,-14.993846083461042
+HMDA,restricted,"Military, forest, protected or airport land",False,,
+HMDA,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),False,,
+HMDA,ln_wp,Ln(WorldPop people per km2),True,0.2751789321481541,7.23381556476975
+HMDA,ln_jobs_5km,Ln(workers within ~5 km),False,,
+HMDA,ln_jobdens_vill,Ln(workers per km2 in the village / town),False,,
+HMDA,it_pct_5km,Software / IT services (% of jobs within ~5 km),False,,
+HMDA,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),False,,
+HMDA,large_pct_5km,Establishments with 100+ workers (% of jobs within ~5 km),True,0.004258022127941867,3.2735370706792457
+HMDA,ln_popdens_vill,Ln(people per km2 in the village / town),False,,
+HMDA,scst_pct,SC / ST (% of people),False,,
+HMDA,lit_pct,Literacy rate (% of people aged 7+),False,,
+HMDA,agri_pct,Agricultural workers (% of workers),False,,
+HMDA,veh23_pct,Households with a two- or three-wheeler (%),False,,
+HMDA,veh4_pct,Households with a four-wheeler (%),False,,
+HMDA,in_ghmc,Inside GHMC (village values are city-wide averages),False,,
+HMDA,dist_medak,Medak,True,0.28548809152737536,5.685034637135108
+HMDA,dist_nalgonda,Nalgonda,True,0.22425486319937837,3.5932070218917684
+HMDA,dist_mahabubnagar,Mahabubnagar,True,0.3427897682095712,3.6957920672854283
+HMDA,dist_hyderabad,Hyderabad,True,-0.20207673724337938,-1.335255232740653
+HMDA,p2020,2020-2023,True,0.1541526964820126,6.865728712407483
+trial ACs 50-52,trees_t0,Tree cover (vs open land),False,,
+trial ACs 50-52,res_pct,Residential,True,0.015296754981464529,5.40777644838912
+trial ACs 50-52,nonres_pct,Non-residential,True,0.015528806129956501,5.474384033158494
+trial ACs 50-52,water_pct,Water,True,-0.022407852656961595,-2.1869410924860726
+trial ACs 50-52,trees_pct,Trees,True,-0.032941311148692774,-6.207191279197776
+trial ACs 50-52,lu_mix_1km,"Land-use mix (entropy, 0-1)",True,3.7273824574649432,10.473932452772033
+trial ACs 50-52,ln_d_urban,"Ln(km to the dense city, 1 km built share >= 40%)",False,,
+trial ACs 50-52,ln_viirs,Ln(night lights within 1 km),True,-2.30371537969076,-2.924855500961102
+trial ACs 50-52,ln_d_airport,Ln(km to the airport),True,-0.41944224621039566,-5.249759115190029
+trial ACs 50-52,ln_d_jobs,Ln(km to HITEC City / Financial District),True,-0.1415573900427488,-2.097261377016953
+trial ACs 50-52,ln_d_cbd,Ln(km to the old CBD),False,,
+trial ACs 50-52,ln_d_orr,Ln(km to the nearest ORR interchange),False,,
+trial ACs 50-52,ln_d_metro,Ln(km to the nearest open metro station),False,,
+trial ACs 50-52,ln_d_major_road,Ln(km to the nearest major road),True,-0.13402444521251294,-2.958352172113191
+trial ACs 50-52,road_10km,Road mileage in the 4 km x 4 km window (10 km),False,,
+trial ACs 50-52,slope_deg,Slope (degrees),True,0.04432870439235763,2.7455599873019483
+trial ACs 50-52,relief_m,Relief within 150 m (m),False,,
+trial ACs 50-52,elev_100m,Elevation (100 m),False,,
+trial ACs 50-52,ln_d_lake,Ln(km to a lake >= 2 ha),False,,
+trial ACs 50-52,near_lake,Within 100 m of a lake,True,-0.9090019201640449,-8.272846299149725
+trial ACs 50-52,restricted,"Military, forest, protected or airport land",True,-0.7146590625218348,-3.665608402322112
+trial ACs 50-52,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),False,,
+trial ACs 50-52,ln_wp,Ln(WorldPop people per km2),True,0.3599892431005066,4.025689660752789
+trial ACs 50-52,ln_jobs_5km,Ln(workers within ~5 km),True,-0.16462429778539242,-2.5022428553103677
+trial ACs 50-52,ln_jobdens_vill,Ln(workers per km2 in the village / town),False,,
+trial ACs 50-52,it_pct_5km,Software / IT services (% of jobs within ~5 km),True,0.018060627550519792,2.4579446375279965
+trial ACs 50-52,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),False,,
+trial ACs 50-52,large_pct_5km,Establishments with 100+ workers (% of jobs within ~5 km),False,,
+trial ACs 50-52,ln_popdens_vill,Ln(people per km2 in the village / town),False,,
+trial ACs 50-52,scst_pct,SC / ST (% of people),False,,
+trial ACs 50-52,lit_pct,Literacy rate (% of people aged 7+),False,,
+trial ACs 50-52,agri_pct,Agricultural workers (% of workers),True,0.003677419279410155,2.217328416803466
+trial ACs 50-52,veh23_pct,Households with a two- or three-wheeler (%),True,0.006904444288915055,2.6451120856063275
+trial ACs 50-52,veh4_pct,Households with a four-wheeler (%),False,,
+trial ACs 50-52,in_ghmc,Inside GHMC (village values are city-wide averages),False,,
+trial ACs 50-52,dist_medak,Medak,False,,
+trial ACs 50-52,dist_nalgonda,Nalgonda,False,,
+trial ACs 50-52,dist_mahabubnagar,Mahabubnagar,False,,
+trial ACs 50-52,dist_hyderabad,Hyderabad,False,,
+trial ACs 50-52,p2020,2020-2023,True,0.1510443656511438,3.112869155158303
+rest of HMDA,trees_t0,Tree cover (vs open land),True,0.1038686847823103,2.7372715712791487
+rest of HMDA,res_pct,Residential,True,0.02650822129635318,11.098528135941242
+rest of HMDA,nonres_pct,Non-residential,True,0.02417376427300975,11.32961526969298
+rest of HMDA,water_pct,Water,True,-0.06963832314856164,-9.172296576168085
+rest of HMDA,trees_pct,Trees,True,-0.04915881974650019,-12.303808159460262
+rest of HMDA,lu_mix_1km,"Land-use mix (entropy, 0-1)",True,5.364691436062902,24.5310007453249
+rest of HMDA,ln_d_urban,"Ln(km to the dense city, 1 km built share >= 40%)",True,0.17256385339952238,7.555993816029936
+rest of HMDA,ln_viirs,Ln(night lights within 1 km),True,-4.976455509078951,-7.155864213969083
+rest of HMDA,ln_d_airport,Ln(km to the airport),False,,
+rest of HMDA,ln_d_jobs,Ln(km to HITEC City / Financial District),True,-0.19162006616506727,-3.088589892500643
+rest of HMDA,ln_d_cbd,Ln(km to the old CBD),True,-0.9938787793260204,-5.9812375172049626
+rest of HMDA,ln_d_orr,Ln(km to the nearest ORR interchange),True,-0.07816952811826397,-2.296673553140962
+rest of HMDA,ln_d_metro,Ln(km to the nearest open metro station),True,0.24094290416493877,2.9527693494865908
+rest of HMDA,ln_d_major_road,Ln(km to the nearest major road),True,-0.17024666057957336,-9.209134749838894
+rest of HMDA,road_10km,Road mileage in the 4 km x 4 km window (10 km),True,-0.029050071301860374,-4.463794528416439
+rest of HMDA,slope_deg,Slope (degrees),True,0.08968535408750268,10.560141290920198
+rest of HMDA,relief_m,Relief within 150 m (m),True,-0.10089697416089075,-9.404780392458239
+rest of HMDA,elev_100m,Elevation (100 m),False,,
+rest of HMDA,ln_d_lake,Ln(km to a lake >= 2 ha),True,0.047515559770696485,1.997147777819144
+rest of HMDA,near_lake,Within 100 m of a lake,True,-0.8467568688277958,-13.161821489739916
+rest of HMDA,restricted,"Military, forest, protected or airport land",False,,
+rest of HMDA,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),False,,
+rest of HMDA,ln_wp,Ln(WorldPop people per km2),True,0.25314704707401875,6.2693775615637914
+rest of HMDA,ln_jobs_5km,Ln(workers within ~5 km),False,,
+rest of HMDA,ln_jobdens_vill,Ln(workers per km2 in the village / town),False,,
+rest of HMDA,it_pct_5km,Software / IT services (% of jobs within ~5 km),False,,
+rest of HMDA,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),False,,
+rest of HMDA,large_pct_5km,Establishments with 100+ workers (% of jobs within ~5 km),True,0.0028194656195823474,2.1424222494123835
+rest of HMDA,ln_popdens_vill,Ln(people per km2 in the village / town),False,,
+rest of HMDA,scst_pct,SC / ST (% of people),False,,
+rest of HMDA,lit_pct,Literacy rate (% of people aged 7+),False,,
+rest of HMDA,agri_pct,Agricultural workers (% of workers),True,-0.001818132775389537,-2.0170520308799134
+rest of HMDA,veh23_pct,Households with a two- or three-wheeler (%),False,,
+rest of HMDA,veh4_pct,Households with a four-wheeler (%),False,,
+rest of HMDA,in_ghmc,Inside GHMC (village values are city-wide averages),False,,
+rest of HMDA,dist_medak,Medak,True,0.28810918386118234,5.232915119294463
+rest of HMDA,dist_nalgonda,Nalgonda,True,0.22032040526885546,3.430301698504937
+rest of HMDA,dist_mahabubnagar,Mahabubnagar,True,0.3749775607520119,3.9682784216677054
+rest of HMDA,dist_hyderabad,Hyderabad,True,-0.368983138856521,-1.9151726499830986
+rest of HMDA,p2020,2020-2023,True,0.17175284750621303,6.913773103397257
+CBD < 20 km,trees_t0,Tree cover (vs open land),True,-0.31953657604393865,-6.172475345874814
+CBD < 20 km,res_pct,Residential,True,0.019429891058264218,11.263387795945807
+CBD < 20 km,nonres_pct,Non-residential,True,0.022475444319791257,14.001466716547634
+CBD < 20 km,water_pct,Water,True,-0.014084318944521976,-2.1410941953779026
+CBD < 20 km,trees_pct,Trees,True,-0.00945391539968339,-3.6250640734419095
+CBD < 20 km,lu_mix_1km,"Land-use mix (entropy, 0-1)",True,1.8671955104750195,9.56508651054661
+CBD < 20 km,ln_d_urban,"Ln(km to the dense city, 1 km built share >= 40%)",False,,
+CBD < 20 km,ln_viirs,Ln(night lights within 1 km),True,-0.8760210005005071,-2.3148553034060813
+CBD < 20 km,ln_d_airport,Ln(km to the airport),True,-0.13020397042968532,-2.7408693793720995
+CBD < 20 km,ln_d_jobs,Ln(km to HITEC City / Financial District),False,,
+CBD < 20 km,ln_d_cbd,Ln(km to the old CBD),False,,
+CBD < 20 km,ln_d_orr,Ln(km to the nearest ORR interchange),True,0.08627057737877995,2.0440505056920086
+CBD < 20 km,ln_d_metro,Ln(km to the nearest open metro station),False,,
+CBD < 20 km,ln_d_major_road,Ln(km to the nearest major road),True,-0.08529741904714375,-2.9233680032681275
+CBD < 20 km,road_10km,Road mileage in the 4 km x 4 km window (10 km),False,,
+CBD < 20 km,slope_deg,Slope (degrees),True,0.054876376756749314,5.0587808428574155
+CBD < 20 km,relief_m,Relief within 150 m (m),True,-0.04973461936329608,-3.6018704638014536
+CBD < 20 km,elev_100m,Elevation (100 m),False,,
+CBD < 20 km,ln_d_lake,Ln(km to a lake >= 2 ha),False,,
+CBD < 20 km,near_lake,Within 100 m of a lake,True,-0.7640944384636037,-9.939393746707557
+CBD < 20 km,restricted,"Military, forest, protected or airport land",True,-0.36880122012596844,-3.3748106204777457
+CBD < 20 km,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),False,,
+CBD < 20 km,ln_wp,Ln(WorldPop people per km2),False,,
+CBD < 20 km,ln_jobs_5km,Ln(workers within ~5 km),True,-0.11335782812195133,-3.6934700377696594
+CBD < 20 km,ln_jobdens_vill,Ln(workers per km2 in the village / town),False,,
+CBD < 20 km,it_pct_5km,Software / IT services (% of jobs within ~5 km),True,0.009242623129625992,2.2258852406264
+CBD < 20 km,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),False,,
+CBD < 20 km,large_pct_5km,Establishments with 100+ workers (% of jobs within ~5 km),True,0.013562093044384079,3.0354219059234993
+CBD < 20 km,ln_popdens_vill,Ln(people per km2 in the village / town),False,,
+CBD < 20 km,scst_pct,SC / ST (% of people),False,,
+CBD < 20 km,lit_pct,Literacy rate (% of people aged 7+),True,0.007625769733110242,2.7793806153469096
+CBD < 20 km,agri_pct,Agricultural workers (% of workers),False,,
+CBD < 20 km,veh23_pct,Households with a two- or three-wheeler (%),False,,
+CBD < 20 km,veh4_pct,Households with a four-wheeler (%),True,-0.02440641476663182,-2.9161705994373226
+CBD < 20 km,in_ghmc,Inside GHMC (village values are city-wide averages),False,,
+CBD < 20 km,dist_medak,Medak,False,,
+CBD < 20 km,dist_nalgonda,Nalgonda,False,,
+CBD < 20 km,dist_mahabubnagar,Mahabubnagar,False,,
+CBD < 20 km,dist_hyderabad,Hyderabad,True,0.20250640341178477,2.9819420632853584
+CBD < 20 km,p2020,2020-2023,True,0.06093747374347745,1.5183586400114537
+CBD 20-35 km,trees_t0,Tree cover (vs open land),True,0.09968007698864882,2.1808443829409034
+CBD 20-35 km,res_pct,Residential,True,0.008360898696192639,2.1198009572626044
+CBD 20-35 km,nonres_pct,Non-residential,True,0.010221209103233365,3.4060656802793146
+CBD 20-35 km,water_pct,Water,True,-0.08942018794082818,-9.479004388273426
+CBD 20-35 km,trees_pct,Trees,True,-0.06533833050969785,-14.512088480802989
+CBD 20-35 km,lu_mix_1km,"Land-use mix (entropy, 0-1)",True,6.163344880858969,21.476712557311522
+CBD 20-35 km,ln_d_urban,"Ln(km to the dense city, 1 km built share >= 40%)",True,0.11188181429521936,3.687974197090794
+CBD 20-35 km,ln_viirs,Ln(night lights within 1 km),False,,
+CBD 20-35 km,ln_d_airport,Ln(km to the airport),True,0.15736922498029635,2.1501562866244965
+CBD 20-35 km,ln_d_jobs,Ln(km to HITEC City / Financial District),False,,
+CBD 20-35 km,ln_d_cbd,Ln(km to the old CBD),True,-1.7442697388279362,-6.619759195532144
+CBD 20-35 km,ln_d_orr,Ln(km to the nearest ORR interchange),False,,
+CBD 20-35 km,ln_d_metro,Ln(km to the nearest open metro station),False,,
+CBD 20-35 km,ln_d_major_road,Ln(km to the nearest major road),True,-0.18737218271556766,-7.032489074097327
+CBD 20-35 km,road_10km,Road mileage in the 4 km x 4 km window (10 km),True,-0.029340345203100696,-3.2698791045134565
+CBD 20-35 km,slope_deg,Slope (degrees),True,0.07426993022017694,6.174935153250032
+CBD 20-35 km,relief_m,Relief within 150 m (m),True,-0.06385729251367953,-5.0662956889829935
+CBD 20-35 km,elev_100m,Elevation (100 m),True,0.2786582253236742,4.10406730755994
+CBD 20-35 km,ln_d_lake,Ln(km to a lake >= 2 ha),True,0.07926755702160629,2.273153986171135
+CBD 20-35 km,near_lake,Within 100 m of a lake,True,-0.7595727146576586,-8.171142862986583
+CBD 20-35 km,restricted,"Military, forest, protected or airport land",True,0.6205139415569988,2.3238357614915692
+CBD 20-35 km,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),False,,
+CBD 20-35 km,ln_wp,Ln(WorldPop people per km2),False,,
+CBD 20-35 km,ln_jobs_5km,Ln(workers within ~5 km),False,,
+CBD 20-35 km,ln_jobdens_vill,Ln(workers per km2 in the village / town),False,,
+CBD 20-35 km,it_pct_5km,Software / IT services (% of jobs within ~5 km),True,-0.012965234990910183,-1.9648346105002057
+CBD 20-35 km,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),True,-0.006510475237377476,-3.2326708934229824
+CBD 20-35 km,large_pct_5km,Establishments with 100+ workers (% of jobs within ~5 km),True,0.0051655803482742535,2.8460029361411285
+CBD 20-35 km,ln_popdens_vill,Ln(people per km2 in the village / town),False,,
+CBD 20-35 km,scst_pct,SC / ST (% of people),False,,
+CBD 20-35 km,lit_pct,Literacy rate (% of people aged 7+),False,,
+CBD 20-35 km,agri_pct,Agricultural workers (% of workers),True,-0.0023085128051335557,-2.053248472856665
+CBD 20-35 km,veh23_pct,Households with a two- or three-wheeler (%),False,,
+CBD 20-35 km,veh4_pct,Households with a four-wheeler (%),False,,
+CBD 20-35 km,in_ghmc,Inside GHMC (village values are city-wide averages),False,,
+CBD 20-35 km,dist_medak,Medak,True,0.36818321417645433,4.802293036204952
+CBD 20-35 km,dist_nalgonda,Nalgonda,True,0.2564811173006546,2.281666164390162
+CBD 20-35 km,dist_mahabubnagar,Mahabubnagar,True,0.5053453249108883,2.997733894278403
+CBD 20-35 km,dist_hyderabad,Hyderabad,False,,
+CBD 20-35 km,p2020,2020-2023,True,0.21157373990184133,6.309982451110025
+CBD >= 35 km,trees_t0,Tree cover (vs open land),True,0.38896300072793893,7.0148877236582745
+CBD >= 35 km,res_pct,Residential,True,0.031035167480615408,4.2661283728816795
+CBD >= 35 km,nonres_pct,Non-residential,True,0.026189226936089986,3.9695879799242384
+CBD >= 35 km,water_pct,Water,True,-0.12514373632500853,-7.988819183344515
+CBD >= 35 km,trees_pct,Trees,True,-0.09342991484439998,-7.516536865260223
+CBD >= 35 km,lu_mix_1km,"Land-use mix (entropy, 0-1)",True,7.790555199421744,14.130165676657898
+CBD >= 35 km,ln_d_urban,"Ln(km to the dense city, 1 km built share >= 40%)",True,0.2700656362254054,7.153023830214981
+CBD >= 35 km,ln_viirs,Ln(night lights within 1 km),False,,
+CBD >= 35 km,ln_d_airport,Ln(km to the airport),False,,
+CBD >= 35 km,ln_d_jobs,Ln(km to HITEC City / Financial District),True,-0.6542469708790952,-4.690671791476322
+CBD >= 35 km,ln_d_cbd,Ln(km to the old CBD),False,,
+CBD >= 35 km,ln_d_orr,Ln(km to the nearest ORR interchange),False,,
+CBD >= 35 km,ln_d_metro,Ln(km to the nearest open metro station),False,,
+CBD >= 35 km,ln_d_major_road,Ln(km to the nearest major road),True,-0.20340466468041532,-7.525028864611313
+CBD >= 35 km,road_10km,Road mileage in the 4 km x 4 km window (10 km),True,-0.069440409548067,-2.5583080725574243
+CBD >= 35 km,slope_deg,Slope (degrees),True,0.1325451573186706,9.108760839202194
+CBD >= 35 km,relief_m,Relief within 150 m (m),True,-0.1301449847344601,-6.9186409910859625
+CBD >= 35 km,elev_100m,Elevation (100 m),True,0.3778252787633077,6.638928274703324
+CBD >= 35 km,ln_d_lake,Ln(km to a lake >= 2 ha),False,,
+CBD >= 35 km,near_lake,Within 100 m of a lake,True,-1.1527979885262054,-11.246562530676963
+CBD >= 35 km,restricted,"Military, forest, protected or airport land",False,,
+CBD >= 35 km,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),False,,
+CBD >= 35 km,ln_wp,Ln(WorldPop people per km2),True,0.17298486859561168,2.481995574163717
+CBD >= 35 km,ln_jobs_5km,Ln(workers within ~5 km),True,0.17216796431952938,3.1938253795833718
+CBD >= 35 km,ln_jobdens_vill,Ln(workers per km2 in the village / town),False,,
+CBD >= 35 km,it_pct_5km,Software / IT services (% of jobs within ~5 km),True,0.33489668643604886,2.214264549947913
+CBD >= 35 km,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),False,,
+CBD >= 35 km,large_pct_5km,Establishments with 100+ workers (% of jobs within ~5 km),False,,
+CBD >= 35 km,ln_popdens_vill,Ln(people per km2 in the village / town),False,,
+CBD >= 35 km,scst_pct,SC / ST (% of people),True,0.0071075744184545655,4.78849265805749
+CBD >= 35 km,lit_pct,Literacy rate (% of people aged 7+),False,,
+CBD >= 35 km,agri_pct,Agricultural workers (% of workers),False,,
+CBD >= 35 km,veh23_pct,Households with a two- or three-wheeler (%),True,-0.0031318764628500925,-2.1463565364748574
+CBD >= 35 km,veh4_pct,Households with a four-wheeler (%),False,,
+CBD >= 35 km,in_ghmc,Inside GHMC (village values are city-wide averages),False,,
+CBD >= 35 km,dist_medak,Medak,True,0.5276812139601376,6.176674001157225
+CBD >= 35 km,dist_nalgonda,Nalgonda,True,1.0692198286382817,8.154188246383931
+CBD >= 35 km,dist_mahabubnagar,Mahabubnagar,True,0.3332561880263792,3.0703442162828027
+CBD >= 35 km,dist_hyderabad,Hyderabad,False,,
+CBD >= 35 km,p2020,2020-2023,True,0.1342670726944124,2.9761968739223894

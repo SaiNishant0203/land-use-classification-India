@@ -1,0 +1,15 @@
+step,kind,vars,rho2,AUC,rho2_loss,AUC_loss
+period and district dummies,nested,"dist_medak, dist_nalgonda, dist_mahabubnagar, dist_hyderabad, p2020",0.02549859530932741,0.5946270961925524,,
++ distance to the dense city,nested,ln_d_urban,0.17053354863870895,0.7961440085802673,,
+"+ land use within 1 km, from our map (shares, mix)",nested,"res_pct, nonres_pct, water_pct, trees_pct, lu_mix_1km",0.19887099379737117,0.8183734936424545,,
++ tree cover on the cell,nested,trees_t0,0.2083754594253252,0.8230532821182343,,
+"+ accessibility (CBD, HITEC, airport, ORR, metro, major road, road km)",nested,"ln_d_cbd, ln_d_orr, ln_d_major_road",0.22352667342978993,0.8354414567240565,,
+"+ supply constraints (terrain, lakes, restricted, GO 111)",nested,"slope_deg, relief_m, elev_100m, ln_d_lake, near_lake, restricted",0.23334871891020825,0.8396245382258418,,
+"+ jobs and census (EC 2013, Census 2011, SECC, WorldPop)",nested,"it_pct_5km, manuf_pct_5km, large_pct_5km",0.23603102740647097,0.8406516327701852,,
+final without distance to the dense city,drop-one,ln_d_urban,0.23374853225004966,0.8392978789736827,0.002282495156421316,0.0013537537965024882
+"final without land use within 1 km, from our map (shares, mix)",drop-one,"res_pct, nonres_pct, water_pct, trees_pct, lu_mix_1km",0.22060611140656228,0.8287412985143908,0.015424915999908695,0.011910334255794353
+final without tree cover on the cell,drop-one,trees_t0,0.2273734649999659,0.8365319246640215,0.00865756240650506,0.004119708106163689
+"final without accessibility (CBD, HITEC, airport, ORR, metro, major road, road km)",drop-one,"ln_d_cbd, ln_d_orr, ln_d_major_road",0.2238349118836268,0.8308610947080359,0.012196115522844164,0.009790538062149245
+"final without supply constraints (terrain, lakes, restricted, GO 111)",drop-one,"slope_deg, relief_m, elev_100m, ln_d_lake, near_lake, restricted",0.2256826568979079,0.8359240759451402,0.010348370508563076,0.004727556825044998
+"final without jobs and census (EC 2013, Census 2011, SECC, WorldPop)",drop-one,"it_pct_5km, manuf_pct_5km, large_pct_5km",0.23334871891020825,0.8396245382258418,0.0026823084962627197,0.0010270945443433543
+final without distance to the dense city AND our-map land use,drop-one,,0.19350390512860816,0.8122486633949375,0.04252712227786282,0.028402969375247666

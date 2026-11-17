@@ -1,0 +1,11 @@
+,"high (n=99,818, nonres=415)"
+const,-6.279***
+dist. to HITEC City / Financial District,-0.066
+dist. to old CBD (Abids),0.003
+dist. to airport,0.003
+dist. to ORR interchange,-0.203**
+dist. to major road (start-year network),-0.108*
+building cover within 150 m (start),0.151***
+NDVI within 150 m (start),-0.605***
+night lights within 610 m (start),0.108***
+start class = forest/trees,0.312

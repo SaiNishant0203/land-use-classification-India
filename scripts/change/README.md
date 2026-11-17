@@ -19,8 +19,14 @@ This is a **trial on 3 assembly constituencies** (Maheshwaram, Rajendranagar, Se
 | 5 | `05_full_logit.py` | full model and the tests (group Wald, cross-validated AUC, AME, VIF, Chow, temporal transfer, Moran's I, calibration, causal-direction checks) | `outputs/change/trial/full/` (`FULL_MODEL_RESULTS.md`) |
 | 6 | `06_table18.py [census\|florida]` | Table 18-style final model: backward elimination to \|t\| ≥ 1.96, per-period columns, fit statistics | `outputs/change/trial/table18*/` |
 | 7 | `07_census_factors.py` | Economic Census 2013 jobs, Census 2011 people, SECC vehicle ownership, linked to villages and attached to the cells | `trial_cells_census.parquet` |
+| 8 | `08_consistency.py` | HMDA only: the final specification refitted, and the elimination rerun, in subregions (trial ACs, rest of HMDA, rings around the CBD) | `outputs/change/hmda/consistency/` |
 
-Run order: 2 → 4 → 7 → 3, 5, 6. Steps 3, 5 and 6 take a minute or two each. Step 4 takes about 15 minutes,
+**All of HMDA (11 Nov):** every script takes `REGION=hmda` (default `trial`, which reproduces the trial exactly).
+Booth votes are left out (they exist for ACs 50–52 only); AC dummies become old-district dummies; 60,000 cells per
+period. Order: `02`, `04` with `SKIP_EE=1`, `04 terrain` (Earth Engine), `07`, then `06 census` (main), `06 florida`,
+`06`, `08`, `05`. Results: `outputs/change/hmda/HMDA_RESULTS.md`.
+
+Run order (trial): 2 → 4 → 7 → 3, 5, 6. Steps 3, 5 and 6 take a minute or two each. Step 4 takes about 15 minutes,
 because reading the OSM files dominates. Step 7 takes about 10 minutes, because reading the SHRUG CSVs dominates.
 
 **Shortcut:** `data/processed/change/trial_cells_full.parquet` and `trial_cells_census.parquet` are in the

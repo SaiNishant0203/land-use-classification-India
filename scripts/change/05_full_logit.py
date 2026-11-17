@@ -34,7 +34,7 @@ Usage: python 05_full_logit.py
 Output: outputs/change/trial/full/  (coefs.csv, groups.csv, effects.csv, vif.csv, checks.csv,
         calibration.csv, results.pkl)
 """
-import warnings
+import os, warnings
 from pathlib import Path
 import numpy as np, pandas as pd, statsmodels.api as sm
 from scipy.stats import chi2
@@ -45,7 +45,16 @@ from sklearn.model_selection import GroupKFold
 warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parents[2]
 CH = ROOT / "data" / "processed" / "change"
-OUT = ROOT / "outputs" / "change" / "trial" / "full"; OUT.mkdir(parents=True, exist_ok=True)
+REGION = os.environ.get("REGION", "trial")     # trial: ACs 50-52 with booth votes; hmda: all of HMDA, no votes
+HMDA = REGION == "hmda"
+OUTCOME = os.environ.get("OUTCOME", "both")   # both: map + Open Buildings agree (#45); persist: map built in t1-1 and t1 (#53)
+PERSIST = OUTCOME == "persist"
+TAG = ("hmda" if HMDA else "trial") + ("_persist" if PERSIST else "")
+OUT = ROOT / "outputs" / "change" / TAG.replace("trial_persist", "trial/persist") / "full"; OUT.mkdir(parents=True, exist_ok=True)
+# HMDA: pre-2016 district of the nearest 2017 polling station (base Rangareddy), in place of the AC dummies
+DISTRICTS = {"dist_medak": "Medak", "dist_nalgonda": "Nalgonda", "dist_mahabubnagar": "Mahabubnagar",
+             "dist_hyderabad": "Hyderabad"}
+FE = list(DISTRICTS) if HMDA else ["ac51", "ac52"]
 RNG = np.random.default_rng(20261105)
 
 GROUPS = {
@@ -53,10 +62,10 @@ GROUPS = {
     "access": ["ln_d_airport", "ln_d_orr", "ln_d_metro", "ln_d_jobs", "ln_d_cbd", "ln_d_major_road", "major_km", "minor_km"],
     "nbhd": ["res_1km", "nonres_1km", "water_1km", "trees_1km", "lu_mix_1km", "ln_d_urban", "ln_viirs"],
     "constr": ["slope_deg", "relief_m", "elev_100m", "ln_d_lake", "near_lake", "restricted", "go111"],
-    "people": ["ln_votes", "ln_wp"],
+    "people": ["ln_wp"] if HMDA else ["ln_votes", "ln_wp"],
 }
 GNAME = {"start": "land at the start", "access": "access (distances, roads)", "nbhd": "neighbourhood (land use nearby)",
-         "constr": "supply constraints (terrain, lakes, restricted land)", "people": "people (votes, WorldPop)"}
+         "constr": "supply constraints (terrain, lakes, restricted land)", "people": "people (WorldPop)" if HMDA else "people (votes, WorldPop)"}
 LABEL = {
     "trees_t0": "start class trees (vs open)", "ln_d_airport": "ln km to airport", "ln_d_orr": "ln km to ORR interchange",
     "ln_d_metro": "ln km to open metro station", "ln_d_jobs": "ln km to HITEC City / Financial District",
@@ -70,7 +79,8 @@ LABEL = {
     "go111": "GO 111 zone (10 km of Osman/Himayat Sagar)", "ln_votes": "ln votes per km2 (2018 booths)",
     "ln_wp": "ln WorldPop per km2", "ac51": "AC Rajendranagar", "ac52": "AC Serilingampally", "p2020": "period 2020-23",
     "road_gain": "road km added in 4 x 4 km during the period (/100)", "chg_prev_1km": "share of 1 km developed in 2017-20",
-    "go111_x_p2020": "GO 111 zone x 2020-23 (after the 2022 repeal)"}
+    "go111_x_p2020": "GO 111 zone x 2020-23 (after the 2022 repeal)",
+    **{k: f"district {v} (vs Rangareddy)" for k, v in DISTRICTS.items()}}
 
 
 def prep(d):
@@ -80,14 +90,21 @@ def prep(d):
     d["major_km"] = d.major_km_4km / 10; d["minor_km"] = d.minor_km_4km / 100
     d["road_gain"] = d.road_gain_4km / 100
     d["ln_viirs"] = np.log1p(d.viirs_1km.clip(lower=0)); d["elev_100m"] = d.elev_m / 100
-    d["ln_votes"] = np.log1p(d.votes_kde1km); d["ln_wp"] = np.log1p(d.worldpop_1km)
-    d["p2020"] = (d.t0 == 2020).astype(int); d["ac51"] = (d.ac == 51).astype(int); d["ac52"] = (d.ac == 52).astype(int)
+    d["ln_wp"] = np.log1p(d.worldpop_1km)
+    if "votes_kde1km" in d:
+        d["ln_votes"] = np.log1p(d.votes_kde1km)
+    d["p2020"] = (d.t0 == 2020).astype(int)
+    if HMDA:
+        for k, v in DISTRICTS.items():
+            d[k] = (d.district == v).astype(int)
+    else:
+        d["ac51"] = (d.ac == 51).astype(int); d["ac52"] = (d.ac == 52).astype(int)
     d["go111_x_p2020"] = d.go111 * d.p2020
     return d
 
 
 def full(pooled=True):
-    return sum(GROUPS.values(), []) + ["ac51", "ac52"] + (["p2020"] if pooled else [])
+    return sum(GROUPS.values(), []) + FE + (["p2020"] if pooled else [])
 
 
 def fit(d, xs):
@@ -133,7 +150,7 @@ def morans_i(d, resid, k=8, nperm=199):
 
 
 def main():
-    d = prep(pd.read_parquet(CH / "trial_cells_full.parquet"))
+    d = prep(pd.read_parquet(CH / f"{TAG}_cells_full.parquet"))
     n_all = len(d); d = d.dropna(subset=full(True)).reset_index(drop=True)
     print(f"{n_all - len(d)} cells without night lights / terrain (grid edge) dropped; {len(d):,} left")
     sets = {"2017-2020": d[d.t0 == 2017], "2020-2023": d[d.t0 == 2020], "pooled": d}

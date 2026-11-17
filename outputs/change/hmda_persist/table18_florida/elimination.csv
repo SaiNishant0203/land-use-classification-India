@@ -1,0 +1,15 @@
+step,dropped,label,t,coef
+1,it_pct_5km,Software / IT services (% of jobs within ~5 km),0.0315324454583785,0.00013714326909311246
+2,lit_pct,Literacy rate (% of people aged 7+),-0.0695609827567656,-0.00022257430065439302
+3,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),-0.11718202216618855,-0.0102230790998491
+4,veh4_pct,Households with a four-wheeler (%),-0.27792109017971317,-0.005365340876038872
+5,veh23_pct,Households with a two- or three-wheeler (%),0.46906701516434934,0.0004381687874575989
+6,restricted,"Military, forest, protected or airport land",-0.5864993316242456,-0.08251001020279353
+7,agri_pct,Agricultural workers (% of workers),0.8729456121132999,0.0009045414045367184
+8,ln_d_metro,Ln(km to the nearest open metro station),0.9977918854088507,0.06396180740970334
+9,scst_pct,SC / ST (% of people),1.0003512986125553,0.001090013831803693
+10,manuf_pct_5km,Manufacturing (% of jobs within ~5 km),-1.3521266736616615,-0.0019568684165742604
+11,ln_d_orr,Ln(km to the nearest ORR interchange),-1.3764789209815997,-0.04517386815086387
+12,ln_d_lake,Ln(km to a lake >= 2 ha),1.2619232181459736,0.027265283614177377
+13,trees_t0,Tree cover (vs open land),1.7546520203206972,0.06342846102905972
+14,in_ghmc,Inside GHMC (village values are city-wide averages),-1.7941446971084156,-0.1649418677931524

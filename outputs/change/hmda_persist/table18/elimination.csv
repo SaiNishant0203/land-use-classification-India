@@ -1,0 +1,8 @@
+step,dropped,label,t,coef
+1,ln_d_metro,Ln(km to the nearest open metro station),0.43397869777885256,0.031405332512420954
+2,go111,GO 111 zone (within 10 km of Osman / Himayat Sagar),-0.36965189109634633,-0.030423339343140437
+3,restricted,"Military, forest, protected or airport land",-0.6110735553142118,-0.08760976737010638
+4,ln_d_jobs,Ln(km to HITEC City / Financial District),-0.805275789637223,-0.03785706203088759
+5,elev_100m,Elevation (100 m),1.1508838405538626,0.047748224555872174
+6,trees_t0,Tree cover (vs open land),1.5606360441160276,0.0563273656028429
+7,ln_d_airport,Ln(km to the airport),-1.7767690665022597,-0.08847880750451244

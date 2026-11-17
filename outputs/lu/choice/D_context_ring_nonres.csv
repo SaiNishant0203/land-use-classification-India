@@ -1,0 +1,12 @@
+,"core <10 km (n=3,245, nonres=52)","middle 10-25 km (n=48,244, nonres=494)","periphery >25 km (n=247,964, nonres=439)"
+const,-3.496,-5.626***,-6.635***
+dist. to HITEC City / Financial District,0.513,-0.017,-0.336*
+dist. to old CBD (Abids),0.354,-0.154,-0.082
+dist. to airport,-0.389,0.036,0.265
+dist. to ORR interchange,-0.744,-0.202**,-0.259
+dist. to major road (2017),0.048,-0.073,-0.223***
+dist. to metro station (open 2017),-0.197,0.01,0.431
+building cover within 150 m (2017),0.069,0.149***,0.247***
+NDVI within 150 m (2017),-0.467***,-0.421***,-0.734***
+night lights within 610 m (2017),-0.007,0.15***,0.594***
+start class = forest/trees,-0.204,-0.242,0.233

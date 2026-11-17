@@ -17,7 +17,7 @@ corrected constant over its standard error, since the correction is a known shif
 Usage: python 06_table18.py
 Output: outputs/change/trial/table18/  table18.csv, elimination.csv, fit.csv, TABLE18.md
 """
-import sys, warnings
+import os, sys, warnings
 from pathlib import Path
 import numpy as np, pandas as pd, statsmodels.api as sm
 from scipy.stats import chi2
@@ -34,9 +34,19 @@ CH = ROOT / "data" / "processed" / "change"
 FLORIDA = "florida" in sys.argv
 CENSUS = "census" in sys.argv or FLORIDA
 DROP = ["road_10km", "ln_d_urban"] if FLORIDA else []
-OUT = ROOT / "outputs" / "change" / "trial" / ("table18_florida" if FLORIDA else "table18_census" if CENSUS else "table18")
+REGION = os.environ.get("REGION", "trial")     # trial: ACs 50-52 with booth votes; hmda: all of HMDA, no votes
+HMDA = REGION == "hmda"
+OUTCOME = os.environ.get("OUTCOME", "both")   # both: map + Open Buildings agree (#45); persist: map built in t1-1 and t1 (#53)
+PERSIST = OUTCOME == "persist"
+TAG = ("hmda" if HMDA else "trial") + ("_persist" if PERSIST else "")
+OUT = ROOT / "outputs" / "change" / TAG.replace("trial_persist", "trial/persist") / ("table18_florida" if FLORIDA else "table18_census" if CENSUS else "table18")
 OUT.mkdir(parents=True, exist_ok=True)
-IN = CH / ("trial_cells_census.parquet" if CENSUS else "trial_cells_full.parquet")
+PFX = TAG
+IN = CH / (f"{PFX}_cells_census.parquet" if CENSUS else f"{PFX}_cells_full.parquet")
+# HMDA: pre-2016 district of the nearest 2017 polling station (base Rangareddy), in place of the AC dummies
+DISTRICTS = {"dist_medak": "Medak", "dist_nalgonda": "Nalgonda", "dist_mahabubnagar": "Mahabubnagar",
+             "dist_hyderabad": "Hyderabad"}
+FE = list(DISTRICTS) if HMDA else ["ac51", "ac52"]
 
 # (variable, label, header) in table order
 SPEC = [
@@ -62,7 +72,7 @@ SPEC = [
     ("near_lake", "Within 100 m of a lake", "Supply constraints"),
     ("restricted", "Military, forest, protected or airport land", "Supply constraints"),
     ("go111", "GO 111 zone (within 10 km of Osman / Himayat Sagar)", "Supply constraints"),
-    ("ln_votes", "Ln(votes polled per km2, 2018 booths)", "Population"),
+] + ([] if HMDA else [("ln_votes", "Ln(votes polled per km2, 2018 booths)", "Population")]) + [
     ("ln_wp", "Ln(WorldPop people per km2)", "Population"),
 ] + ([
     ("ln_jobs_5km", "Ln(workers within ~5 km)", "Jobs, Economic Census 2013"),
@@ -78,12 +88,14 @@ SPEC = [
     ("veh4_pct", "Households with a four-wheeler (%)", "Village / town, Census 2011 and SECC 2011-12"),
     ("in_ghmc", "Inside GHMC (village values are city-wide averages)", "Village / town, Census 2011 and SECC 2011-12"),
 ] if CENSUS else []) + [
+] + ([(k, v, "District (Base: Rangareddy)") for k, v in DISTRICTS.items()] if HMDA else [
     ("ac51", "Rajendranagar", "Assembly constituency (Base: Maheshwaram)"),
     ("ac52", "Serilingampally", "Assembly constituency (Base: Maheshwaram)"),
+]) + [
     ("p2020", "2020-2023", "Period (Base: 2017-2020)"),
 ]
 LAB = {v: l for v, l, _ in SPEC}; HEAD = {v: h for v, _, h in SPEC}
-FIXED = ["ac51", "ac52", "p2020"]
+FIXED = FE + ["p2020"]
 
 
 def prep(d):
@@ -94,8 +106,15 @@ def prep(d):
         d[f"{k}_pct"] = 100 * d[f"{k}_1km"]
     d["road_10km"] = (d.major_km_4km + d.minor_km_4km) / 10
     d["ln_viirs"] = np.log1p(d.viirs_1km.clip(lower=0)); d["elev_100m"] = d.elev_m / 100
-    d["ln_votes"] = np.log1p(d.votes_kde1km); d["ln_wp"] = np.log1p(d.worldpop_1km)
-    d["p2020"] = (d.t0 == 2020).astype(int); d["ac51"] = (d.ac == 51).astype(int); d["ac52"] = (d.ac == 52).astype(int)
+    d["ln_wp"] = np.log1p(d.worldpop_1km)
+    if "votes_kde1km" in d:
+        d["ln_votes"] = np.log1p(d.votes_kde1km)
+    d["p2020"] = (d.t0 == 2020).astype(int)
+    if HMDA:
+        for k, v in DISTRICTS.items():
+            d[k] = (d.district == v).astype(int)
+    else:
+        d["ac51"] = (d.ac == 51).astype(int); d["ac52"] = (d.ac == 52).astype(int)
     if CENSUS:
         d["ln_jobs_5km"] = np.log1p(d.jobs_5km); d["ln_jobdens_vill"] = np.log1p(d.jobdens_vill)
         d["ln_popdens_vill"] = np.log1p(d.popdens_vill)
