@@ -151,6 +151,7 @@ stop → odds × 1.12–1.16, AUC +0.001. They are today's stops, so some may ha
 
 | | |
 |---|---|
+| `DISCRETE_CHOICE_MODELS_REPORT.md` (repo root) | **everything in one file**: every model run since September, its inputs, method, full tables and tests |
 | `CHANGE_MODEL_PLAN.md` (repo root) | the original design (2 Nov): outcome, sampling, candidate factors |
 | `scripts/change/` | code, steps 0–11; `scripts/change/README.md` has the pipeline, switches and data sources |
 | `scripts/masterplan/` | master-plan zoning layer from the 30 scanned sheets |

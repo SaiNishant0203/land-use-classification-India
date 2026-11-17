@@ -20,6 +20,8 @@ own README:
 | **land-use change model (discrete choice, Table 18 of the UCF/FDOT report)**: trial, then all of HMDA | Nov | **`outputs/change/README.md`**, `scripts/change/README.md`, `CHANGE_MODEL_PLAN.md` |
 | HMDA Master Plan 2031 zoning on the 20 m grid | Nov | `scripts/masterplan/README.md` |
 
+**Every model run in one file:** `DISCRETE_CHOICE_MODELS_REPORT.md`.
+
 **Change model in short:** a binary logit of open land being built on in 3 years, 2017→2020 and
 2020→2023, on 120,000 sampled 20 m cells across HMDA (ρ² about 0.24, cross-validated AUC 0.84). Development
 follows existing development, major roads, the old CBD and the ORR interchanges, and avoids trees, lake beds,
