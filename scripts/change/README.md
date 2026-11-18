@@ -1,8 +1,10 @@
 # scripts/change: land-use change choice model
 
 Binary logit of **undeveloped → developed** for 20 m cells, following Table 18 of Prof. Eluru's reference
-report (UCF/FDOT *Final Report*, binary logit of land-use change). The design is in `CHANGE_MODEL_PLAN.md`
-at the repo root; the results are in `outputs/change/` (start with `outputs/change/README.md`).
+report (UCF/FDOT *Final Report*, binary logit of land-use change). The write-up is
+`DISCRETE_CHOICE_MODELS_REPORT.md` at the repo root; the original design is in
+`docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md`; the results are in `outputs/change/` (`outputs/change/README.md`
+says what is in each folder).
 
 - **Trial** (default): 3 assembly constituencies (Maheshwaram, Rajendranagar, Serilingampally; 1,164 km²),
   2017→2020 and 2020→2023, 20,000 sampled cells. Results in `outputs/change/trial/`.
@@ -16,9 +18,9 @@ at the repo root; the results are in `outputs/change/` (start with `outputs/chan
 | 0 | `00_eyeball_sample.py` | 60 cells to check the change definition by eye in Google Earth Pro | `data/processed/change/eyeball_*` |
 | 1 | `01_form20_ocr.py` | OCR of booth-wise votes from the scanned Form 20 result sheets (2018 assembly election) | `data/processed/change/form20_2018.csv` |
 | 2 | `02_trial_data.py` | region, outcome, choice-based sample (one cell per 200 m block per outcome), distances, road km, WorldPop, booth-vote kernel density | `trial_cells.parquet` |
-| 3 | `03_trial_logit.py` | first trial: base model ± votes / WorldPop | `outputs/change/trial/` (`TRIAL_RESULTS.md`) |
+| 3 | `03_trial_logit.py` | first trial: base model ± votes / WorldPop | `outputs/change/trial/` |
 | 4 | `04_more_factors.py` | the rest of the §5c factors: land use within 1 km, mix, dense-city distance, night lights, major/minor road km, terrain (Earth Engine), lakes, restricted land, GO 111 stand-in, contagion | `trial_cells_full.parquet` |
-| 5 | `05_full_logit.py` | full model and the tests (group Wald, cross-validated AUC, AME, VIF, Chow, temporal transfer, Moran's I, calibration, causal-direction checks) | `outputs/change/trial/full/` (`FULL_MODEL_RESULTS.md`) |
+| 5 | `05_full_logit.py` | full model and the tests (group Wald, cross-validated AUC, AME, VIF, Chow, temporal transfer, Moran's I, calibration, causal-direction checks) | `outputs/change/trial/full/` |
 | 6 | `06_table18.py [census\|florida]` | Table 18-style final model: backward elimination to \|t\| ≥ 1.96, per-period columns, fit statistics | `outputs/change/trial/table18*/` |
 | 7 | `07_census_factors.py` | Economic Census 2013 jobs, Census 2011 people, SECC vehicle ownership, linked to villages and attached to the cells | `trial_cells_census.parquet` |
 | 8 | `08_consistency.py` | HMDA only: the final specification refitted, and the elimination rerun, in subregions (trial ACs, rest of HMDA, rings around the CBD) | `<results>/consistency/` |
@@ -35,8 +37,8 @@ at the repo root; the results are in `outputs/change/` (start with `outputs/chan
 | `SKIP_EE` | `1` | step 4 skips the Earth Engine terrain; add it later with `04_more_factors.py terrain` |
 
 Order for all of HMDA: `02`, `04` with `SKIP_EE=1`, `04 terrain` (Earth Engine), `07`, then `06 census` (main),
-`06 florida`, `06`, `08`, `05`, `09`, `10`, `11`. Results: `outputs/change/hmda/HMDA_RESULTS.md` and
-`outputs/change/hmda_persist/PERSIST_RESULTS.md`. Run times: about 5 minutes for `02` and `04`, 14 minutes for
+`06 florida`, `06`, `08`, `05`, `09`, `10`, `11`. Results: `outputs/change/hmda/` and
+`outputs/change/hmda_persist/`, written up in `DISCRETE_CHOICE_MODELS_REPORT.md` §6–10. Run times: about 5 minutes for `02` and `04`, 14 minutes for
 terrain, under 2 minutes for all models and tests.
 
 Run order (trial): 2 → 4 → 7 → 3, 5, 6. Steps 3, 5 and 6 take a minute or two each. Step 4 takes about 15 minutes,

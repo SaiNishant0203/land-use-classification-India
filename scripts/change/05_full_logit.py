@@ -1,9 +1,9 @@
 """
 Full binary logit of land-use change on the 3-AC trial sample, with every factor of
-CHANGE_MODEL_PLAN.md §5c that we have (trial_cells_full.parquet from 04_more_factors.py), and the tests
+docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md §5c that we have (trial_cells_full.parquet from 04_more_factors.py), and the tests
 that say which factors matter and how far the associations can be read as causes.
 
-Factor groups (mechanisms, CHANGE_MODEL_PLAN.md §6):
+Factor groups (mechanisms, docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md §6):
   start      start class trees (vs open)
   access     ln distance to airport, ORR interchange, open metro station, HITEC/FD, old CBD, major road;
              major- and minor-road km in the 4 x 4 km window

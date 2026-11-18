@@ -1,5 +1,5 @@
 """
-Adds the rest of the CHANGE_MODEL_PLAN.md §5c factors to the trial sample (trial_cells.parquet from
+Adds the rest of the docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md §5c factors to the trial sample (trial_cells.parquet from
 02_trial_data.py), so the full model can be fitted. All factors are measured at the start year t0 of
 the period, except the two marked as checks.
 

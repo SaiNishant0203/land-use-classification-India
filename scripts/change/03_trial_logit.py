@@ -18,7 +18,7 @@ Checks: votes kernel 2 km instead of 1 km; cells more than 1.5 km from the regio
 alignment shifted (trial_cells_shift*.parquet if present).
 
 Usage: python 03_trial_logit.py
-Output: outputs/change/trial/TRIAL_RESULTS.md, coefs.csv, fit.csv, rates.csv
+Output: outputs/change/trial/  coefs.csv, fit.csv, checks.csv, rates.csv (write-up: docs/archive/trial/TRIAL_RESULTS.md)
 """
 import glob, warnings
 from pathlib import Path

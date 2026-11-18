@@ -1,7 +1,7 @@
 """
 Trial dataset for the land-use change choice model, 3 assembly constituencies (ACs) with
 booth-wise votes from Form 20 (2018 assembly election): 50 Maheshwaram, 51 Rajendranagar,
-52 Serilingampally. CHANGE_MODEL_PLAN.md has the design; this is the small trial of it.
+52 Serilingampally. docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md has the design; this is the small trial of it.
 
 Region: 20 m cells inside HMDA whose nearest 2017 polling station (all Telangana stations) is in one
 of the three ACs (a Voronoi stand-in for the AC boundaries).
@@ -13,7 +13,7 @@ Outcome, per period (2017->2020, 2020->2023), among cells undeveloped at the sta
   0 = still undeveloped by both sources (map trees/open, cover < 5%, gain < 0.02)
   cells where the two sources disagree are left out (counted in the log).
 
-Sample (choice-based, CHANGE_MODEL_PLAN.md §3): at most one cell per 200 m block for each outcome;
+Sample (choice-based, docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md §3): at most one cell per 200 m block for each outcome;
 all changers (cap CAP_1) plus non-changers up to N_PER_PERIOD cells per period. Sampling weights
 (population share / sample share) are stored for weighted estimation and the intercept correction.
 
@@ -25,7 +25,7 @@ run in geographic order, so this puts each 2018 booth at or near its locality. S
 alignment by a number of 2017 booths, for the sensitivity check. Surface: Gaussian kernel density of
 votes (votes per km2) with sigma 1 km and 2 km.
 
-Factors, all measured at the start year of the period (CHANGE_MODEL_PLAN.md §4):
+Factors, all measured at the start year of the period (docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md §4):
   distances (km) to airport, nearest ORR interchange, nearest open metro station, HITEC/Financial
   District, old CBD, nearest major road (20_proximity.py); all-road km in the 4 x 4 km window (OSM
   Geofabrik snapshot at the start year); built share (final map) and Open Buildings cover in the

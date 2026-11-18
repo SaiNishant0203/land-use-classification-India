@@ -45,7 +45,7 @@ Classes (fixed, transport-oriented):
 Chains: `run_overnight.sh` runs downloads → labels → samples → BEN → 06 → 09 → 07, and
 `final_rerun.sh` runs EULUC and then re-runs 06 and 07 once everything exists. `run_choice_overnight.sh`
 runs 20 → 21 → 22 (with a dry run first), and `run_periods.sh` / `run_periods_rest.sh` run the per-period
-models and 24. The results of 21–25 are written up in `CHOICE_MODEL_RESULTS.md`; the later change model
+models and 24. The results of 21–25 are written up in `DISCRETE_CHOICE_MODELS_REPORT.md` §17 (longer version: `docs/archive/CHOICE_MODEL_RESULTS_10m_Oct.md`); the later change model
 that follows Table 18 of the UCF/FDOT report is in `scripts/change/`. Logs are in
 `outputs/lu/logs/`, with a timeline in `overnight.log`.
 

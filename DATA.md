@@ -7,12 +7,12 @@ what each band and column means, and how to use it. It covers:
 2. the **raster zip shared separately** (needed for maps, new features and the product audit).
 
 It is about the 10 m land-use model. The later work documents its own data:
-- the **change model** (Nov 2026): `outputs/change/README.md` and `scripts/change/README.md`. Its samples
+- the **change model** (Nov 2026): `DISCRETE_CHOICE_MODELS_REPORT.md` and `scripts/change/README.md`. Its samples
   are in `data/processed/change/` (section 10 below);
 - the **master-plan zoning layer**: `scripts/masterplan/README.md`;
 - the **20 m model**: `scripts/lu20/README.md`.
 
-For the method and results, read `README.md`. For the scripts, read `scripts/lu/README.md`.
+For the method and results of the 10 m model, read `docs/CLASSIFIER_10M_SEP2026.md`; for the project as a whole, `README.md`. For the scripts, read `scripts/lu/README.md`.
 
 **Contents**
 
@@ -593,7 +593,7 @@ In the repository (listed as exceptions in `.gitignore`, since `data/processed` 
 | `data/processed/change/hmda_cells_full.parquet`, `hmda_cells_census.parquet` | all of HMDA, strict change rule (120,000 cells) |
 | `data/processed/change/hmda_persist_cells_full.parquet`, `hmda_persist_cells_census.parquet` | all of HMDA, persistence change rule |
 | `data/processed/change/form20_2018.csv` | votes polled per booth, 2018 assembly election, ACs 50–52 (OCR) |
-| `data/processed/change/eyeball_points.kml`, `eyeball_form.csv`, `EYEBALL_GUIDE.md` | the 60-cell eyeball check (the answer key stays out of git so the check stays blind) |
+| `data/processed/change/eyeball_points.kml`, `eyeball_form.csv` | the 60-cell eyeball check (the answer key stays out of git so the check stays blind; how to do it: `EYEBALL_CHECK_HOWTO.md`) |
 | `data/processed/masterplan/mp2031_zones_20m.tif` | HMDA Master Plan 2031 zones on the 20 m grid (EPSG:32644). Codes: 1 residential, 2 peri-urban, 3 commercial, 4 manufacturing, 5 public / semi-public, 6 multiple use, 7 conservation, 8 protected green, 9 GO 111, 10 water, 11 special reservations, 12 settlements, 0 not covered |
 | `data/processed/masterplan/mp2031_zones.png`, `zone_shares.csv` | picture of the layer, and the area share of each zone |
 | `data/processed/masterplan/georef.csv`, `georef_roads.csv` | the fit of each scanned sheet (first by mandal outline, then by roads) |

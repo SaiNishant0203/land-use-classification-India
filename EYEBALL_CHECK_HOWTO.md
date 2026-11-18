@@ -12,6 +12,9 @@ This check decides who is right, and so which change rule the model uses:
 You look at 60 small squares in old satellite images and write down what really happened in each one.
 The answer decides the final change model.
 
+Files: `data/processed/change/eyeball_points.kml` and `eyeball_form.csv`; the squares were drawn by
+`scripts/change/00_eyeball_sample.py` (the answer key stays out of git so the check stays blind).
+
 ---
 
 ## 1. Before you start (5 minutes)
@@ -108,7 +111,9 @@ The answer decides the final change model.
      - **10 "confirmed"** squares: both sources say built. These should mostly come out B, which checks your
        eye.
      - **10 "stable"** squares: both say nothing happened. These should mostly come out N.
-   - works out the share of map-only squares that are real change (B, C, L, R, S, Q) vs noise (N);
+   - works out the share of map-only squares that are real change (B, C, L, R, S, Q) vs noise (N). The
+     map-only squares were drawn half to-residential and half to-non-residential, but in the map itself
+     to-non-residential is about four times more common, so the scores are re-weighted for that;
    - chooses the change rule from that:
 
 | what you find in the map-only squares | what the model will use |

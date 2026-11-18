@@ -1,402 +1,62 @@
-# Land-Use Classification for Hyderabad (HMDA): Progress Update
+# Land use and land-use change in Hyderabad (HMDA)
 
-**Project:** Land use and transportation planning in Hyderabad
-**Status as of:** September 2026 for sections 1–13; the overview below is from 17 November 2026
-**Scope of this update:** the pixel-level land-use model (LightGBM): its inputs, design and
-outputs, how it was tested, and how it compares with existing land-use products
+Land use and transportation planning for the Hyderabad Metropolitan Development Authority area
+(7,649 km²). The project has two parts:
 
----
+1. **Land-use maps.** A LightGBM classifier on Sentinel-2, Open Buildings 2.5D and night lights labels
+   every 20 m cell of HMDA with one of five classes (residential, non-residential built, water, trees,
+   other open), for every year 2017–2023.
+2. **Land-use change model.** A binary logit (discrete-choice) model of which open land gets built on
+   within 3 years, following Table 18 of Prof. Eluru's reference report (UCF/FDOT). Built on the maps.
 
-## 0. Where the project is now (17 November 2026)
+## Where things stand (17 November 2026)
 
-This README is the September write-up of the first 10 m model. The work has moved on; each stream has its
-own README:
+- **Maps: final.** 20 m, 2017–2023, hand-label macro-F1 0.649 [0.583, 0.719]; non-residential F1 0.50.
+- **Change model: method final, change rule provisional.** 120,000 sampled 20 m cells across HMDA,
+  2017→2020 and 2020→2023; ρ² about 0.24 and cross-validated AUC 0.84 (strict rule). Development follows
+  existing development, major roads, the old CBD and the ORR interchanges, and avoids trees, lake edges,
+  steep and restricted land. Master Plan 2031 zoning matters in the planned direction.
+- **Open question:** how to count "change". The strict rule (map + Open Buildings) keeps only about 1 in 7
+  real changes; the persistence rule (built in the map two years running) gives a rate about 6× higher
+  and some odd signs. A 60-cell eyeball check (`EYEBALL_CHECK_HOWTO.md`) decides; until then every HMDA
+  table, including the zoning odds ratios, is provisional.
 
-| stream | when | start here |
-|---|---|---|
-| 10 m pixel model, 2023, and the audit of existing products | Aug–Sep | this file, `DATA.md`, `FEATURES.md`, `scripts/lu/README.md` |
-| earlier transition / choice models at 10 m (binary logit, MNL, latent segmentation) | Oct | `CHOICE_MODEL_RESULTS.md`, `outputs/lu/choice*/REPORT.md` |
-| 20 m production model with year-dated OSM labels; final maps for every year 2017–2023 | Oct–Nov | `scripts/lu20/README.md`, `outputs/lu20/RESULTS.md` |
-| **land-use change model (discrete choice, Table 18 of the UCF/FDOT report)**: trial, then all of HMDA | Nov | **`outputs/change/README.md`**, `scripts/change/README.md`, `CHANGE_MODEL_PLAN.md` |
-| HMDA Master Plan 2031 zoning on the 20 m grid | Nov | `scripts/masterplan/README.md` |
+## Read this first
 
-**Every model run in one file:** `DISCRETE_CHOICE_MODELS_REPORT.md`.
-
-**Change model in short:** a binary logit of open land being built on in 3 years, 2017→2020 and
-2020→2023, on 120,000 sampled 20 m cells across HMDA (ρ² about 0.24, cross-validated AUC 0.84). Development
-follows existing development, major roads, the old CBD and the ORR interchanges, and avoids trees, lake beds,
-steep and restricted land. Master-plan zoning matters (residential × 1.76, manufacturing × 3.0, protected
-land × 0.67 against conservation). How change is counted is still being settled by an eyeball check.
-
----
-
-## 1. Summary
-
-- We built a model that labels every 10 m pixel in the Hyderabad Metropolitan Development
-  Authority (HMDA) area with one of five land-use classes, using 2023 satellite and
-  building data.
-- **On an independent, hand-labelled test set, it scores macro-F1 0.62 (95% CI 0.55–0.69).**
-  - The best existing product scores 0.38 on the same test pixels.
-  - Nine existing global and research products were tested. All perform poorly on Hyderabad.
-- **Building shape and height, from Google Open Buildings 2.5D, are the most useful input.**
-  They help most with telling residential from non-residential buildings.
-- **Limitation:** non-residential land is still identified poorly (F1 0.41). Maps of
-  year-to-year class change are too noisy to use.
-- This motivates the next step: estimate **floor space and land-use shares per zone** instead
-  of relying on labels for individual pixels.
-
----
-
-## 2. What the model does
-
-**Input:** 181 numbers per 10 m pixel, derived from 2023 satellite and building data.
-
-**Output:** one of five classes per pixel.
-
-| code | class | why it matters for transport |
-|---|---|---|
-| 1 | Residential | trip productions (where trips start) |
-| 2 | Non-residential built (commercial, industrial, institutional) | trip attractions (where trips end) |
-| 3 | Water | not developable |
-| 4 | Forest / trees | not developable |
-| 5 | Other open (farmland, barren, vacant) | land available for development |
-
-The scheme is kept deliberately small. Transport planning mainly needs to know where people
-live and where activity happens.
-
----
-
-## 3. Pipeline overview
-
-```
-Satellite + building data (2023, Google Earth Engine)
-        │
-        ▼
-Feature engineering  →  181 features per pixel
-        │
-        ▼
-Training labels (OpenStreetMap + agreement between land-cover products)
-        │
-        ▼
-LightGBM classifier  ──►  Test A: spatial cross-validation (393k pixels)
-        │               ──►  Test B: 325 hand-labelled pixels (headline result)
-        ▼
-10 m land-use map of HMDA (2023)
-```
-
----
-
-## 4. Input data
-
-All inputs are from 2023. They are resampled to the same 10 m grid and downloaded in 4 km
-tiles.
-
-| source | resolution | what it provides | why it helps |
-|---|---|---|---|
-| **Sentinel-2** (7 bands: blue, green, red, red-edge, NIR, 2× SWIR) | 10–20 m | Surface reflectance. Uses the median of the year, with clouds removed using Cloud Score+. | Separates vegetation, water, concrete and bare soil |
-| **Google Open Buildings 2.5D Temporal** | 0.5 m, aggregated to 10 m | Building cover, mean height, maximum height, building count | Building form: a factory, an office tower and a house look different in size and height |
-| **VIIRS night lights** | ~500 m | Night-time brightness | Indicates the intensity of activity |
-| **AlphaEarth satellite embeddings** (Google) | 10 m | 64 learned values per pixel that summarise a year of multi-sensor data | A general-purpose "fingerprint" of each location |
-
-## 5. Feature engineering (76 raw bands → 181 features)
-
-1. **Spectral indices:**
-   - NDVI (vegetation)
-   - NDBI (built-up)
-   - MNDWI (water)
-   - BSI (bare soil)
-2. **Neighbourhood context.** A single pixel cannot show that it lies inside an industrial
-   estate, but its surroundings can. For windows of **70 m, 150 m, 310 m and 610 m**, we
-   compute:
-   - building cover, building count, **average building size (relative units)** and **average building
-     height**;
-   - average NDVI, NDBI, MNDWI and night lights;
-   - maximum building height (150 m and 310 m windows only).
-3. **Texture:** local variability of near-infrared reflectance and of building height.
-4. **AlphaEarth:** the 64 values at the pixel, plus their averages over 150 m.
-
-Tiles are processed together with their neighbours, so window-based features have no
-artefacts at tile edges.
-
----
-
-## 6. Training labels
-
-There is no official land-use map of Hyderabad at this resolution. Training labels were
-therefore built from open sources:
-
-- **Residential / non-residential:** OpenStreetMap.
-  - Residential: land-use polygons tagged residential, and buildings tagged as houses or
-    apartments.
-  - Non-residential: polygons tagged industrial, commercial, retail, education or civic, plus
-    offices, malls, schools, hospitals and other institutions.
-  - Non-residential is applied after residential. A school inside a residential colony is
-    therefore labelled non-residential.
-- **Water:** labelled only where at least two of three products agree (JRC Global Surface
-  Water, ESA WorldCover and Dynamic World).
-  - JRC alone misses reservoirs built after 2021 (e.g. Kondapochamma Sagar). Using it alone
-    made the model call those reservoirs residential.
-- **Forest and other open:** OpenStreetMap tags, or pixels where ESA WorldCover and Dynamic
-  World agree.
-- **No overlap with the test set:** every training pixel within 300 m of a hand-labelled test
-  pixel was removed.
-
-**Sampling:** up to 200 pixels per class per tile, across 556 tiles.
-
-| class | training pixels |
+| document | what it covers |
 |---|---|
-| Residential | 61,916 |
-| Non-residential | 37,646 |
-| Water | 71,334 |
-| Forest / trees | 111,002 |
-| Other open | 111,200 |
-| **Total** | **393,098** |
+| **`DISCRETE_CHOICE_MODELS_REPORT.md`** | **the main report**: the change model's data, method, final results, open questions, and every earlier run |
+| `EYEBALL_CHECK_HOWTO.md` | the pending check that settles the change rule |
+| `DATA.md` | every data file: how it was made, bands and columns, what runs with what |
+| `FEATURES.md` | the classifier's 181 features (10 m model) and the tests of reducing them |
+| `scripts/lu20/README.md`, `outputs/lu20/RESULTS.md` | the 20 m production classifier and its evaluation |
+| `scripts/change/README.md` | the change-model pipeline: scripts, switches (`REGION`, `OUTCOME`), raw data |
+| `scripts/masterplan/README.md` | digitising the Master Plan 2031 zoning from 30 scanned sheets |
+| `scripts/lu/README.md` | the original 10 m pipeline and the October 10 m transition models |
+| `docs/CLASSIFIER_10M_SEP2026.md` | the September write-up of the first 10 m classifier (the old README) |
+| `docs/archive/` | superseded plans and intermediate write-ups, kept for the record (see its README) |
 
----
+## Repository layout
 
-## 7. Model: LightGBM
-
-**LightGBM** is a gradient-boosted decision-tree model.
-- It builds a sequence of small decision trees. Each new tree corrects the errors of the
-  trees before it.
-- The final prediction combines all the trees.
-- It suits this problem because the data is tabular (one row per pixel). It trains quickly
-  on a CPU and shows which features it relies on.
-
-| setting | value | purpose |
-|---|---|---|
-| Number of trees | 400 | |
-| Learning rate | 0.05 | how much each tree changes the prediction |
-| Leaves per tree | 63 | model complexity |
-| Row sampling | 80% per tree | reduces overfitting |
-| Feature sampling | 60% per tree | reduces overfitting |
-| Class weighting | balanced | keeps rarer classes (non-residential) from being ignored |
-
-These are standard settings. No hyperparameter tuning has been done yet.
-
-**Most important features** (share of total gain):
-
-| rank | feature | share |
-|---|---|---|
-| 1 | SWIR reflectance (B11): concrete vs soil | 13% |
-| 2 | Vegetation (NDVI) within 70 m | 9% |
-| 3 | Building count within 150 m | 8% |
-| 4 | Building count within 70 m | 5% |
-| 5 | AlphaEarth dimension 42 | 4% |
-| 6 | Average building size within 310 m | 3% |
-
----
-
-## 8. How the model was tested
-
-Two independent tests were run.
-
-### Test A: spatial cross-validation (OpenStreetMap labels, 393k pixels)
-
-- **Purpose:** to compare feature sets and existing products on a large sample.
-- **Blocking:** HMDA was divided into **12 km blocks**. Each block is either entirely in
-  training or entirely in testing (5-fold GroupKFold).
-  - This prevents the model from scoring well simply by memorising a neighbourhood.
-- **Feature ablation:** the model was trained with different input groups, to measure what
-  each data source contributes.
-
-| features used | no. of features | macro-F1 | residential F1 | non-residential F1 |
-|---|---|---|---|---|
-| Sentinel-2 only | 25 | 0.829 | 0.82 | 0.58 |
-| + building morphology + night lights | 53 | 0.875 | 0.91 | 0.68 |
-| AlphaEarth embeddings only | 128 | 0.872 | 0.88 | 0.65 |
-| **All features** | **181** | **0.898** | **0.92** | **0.72** |
-
-**Caution:** these scores are optimistic.
-- OpenStreetMap labels come from well-mapped, clear-cut areas.
-- Their class mix does not match HMDA as a whole.
-
-### Test B: hand-labelled validation (headline result)
-
-- **Test set:** 325 pixels, stratified and randomly placed. Each was labelled by hand from
-  high-resolution imagery, following a written labelling guide. None of these pixels, or
-  anything within 300 m of them, was used in training.
-- **Scoring:** results are weighted by how common each class actually is across HMDA, using
-  the standard map-accuracy estimator of Olofsson et al. (2014).
-- **Confidence intervals:** 95% bootstrap intervals (500 resamples within strata).
-- **Label filter:** only labels marked as confident are used (313 of 325 pixels).
-
-**Why macro-F1 and not accuracy:** about 65% of HMDA is open land. A model that always
-predicts "open" would score about 65% accuracy while being useless. Macro-F1 gives each class
-equal weight.
-
----
-
-## 9. Results on the hand-labelled test set
-
-All models below are scored on the same pixels.
-
-| model / product | coverage of test pixels | macro-F1 [95% CI] |
-|---|---|---|
-| **Our model (LightGBM, 181 features)** | 100% | **0.62 [0.55–0.69]** |
-| Dynamic World 2023 (land cover) | 100% | 0.38 [0.33–0.45] |
-| SenCLIP, zero-shot (WACV 2025) | 89% | 0.35 [0.29–0.41] |
-| ESA WorldCover 2021 (land cover) | 100% | 0.34 [0.28–0.41] |
-| GHS-BUILT-C 2018 | 99% | 0.30 [0.26–0.34] |
-| BigEarthNet v2 ResNet-50 (Europe-trained) | 100% | 0.28 [0.24–0.33] |
-| WRI Intra-urban Land Use 2020 | 29% | 0.45 (on its own coverage only) |
-| EULUC-Globe 2024 (parcels) | 22% | 0.37 (on its own coverage only) |
-| GULU / PPUL-Net 2020 | 19% | 0.30 (on its own coverage only) |
-| Global Industrial Land 2023 | 41% | 0.19 (on its own coverage only) |
-
-With road pixels excluded, our model scores **0.63 [0.56–0.70]**.
-
-**Per-class results for our model:**
-
-| class | F1 |
+| folder | contents |
 |---|---|
-| Residential | 0.67 |
-| Non-residential | 0.41 |
-| Water | 0.72 |
-| Forest / trees | 0.46 |
-| Other open | 0.83 |
+| `scripts/lu/` | 10 m classifier (2023), product audit, 10 m transition / choice models |
+| `scripts/lu20/` | 20 m classifier with year-dated OSM labels; final maps 2017–2023 |
+| `scripts/change/` | change model: samples, factors, Table 18, tests, bus stops, zoning |
+| `scripts/masterplan/` | Master Plan 2031 georeferencing, classification, mosaic |
+| `data/processed/` | small processed data kept in git (training samples, hand labels, change-model samples, zoning layer); most of this folder is git-ignored |
+| `outputs/lu/`, `outputs/lu20/` | classifier results and the 10 m choice-model outputs |
+| `outputs/change/` | change-model tables and test results, one folder per run (see `outputs/change/README.md`) |
 
-**Observations about existing products:**
-- The parcel-level products (WRI, EULUC-Globe, GULU) cover only a small part of HMDA.
-- GHS-BUILT-C labels almost no land as non-residential. EULUC-Globe labels about half of built
-  land as non-residential. That is roughly a **tenfold disagreement**.
-- BigEarthNet was trained in Europe. It labels dense old-city housing in Hyderabad as
-  "industrial".
+The `.md` files inside `outputs/` (`TABLE18.md`, `ZONING.md`, `CONSISTENCY.md`, `ADDED_VALUE.md`,
+`BUS_STOPS.md`, `REPORT.md`, `RESULTS.md`) are written by the scripts and are overwritten on a rerun.
 
-### Comparison with a deep-learning model
+## Running
 
-A U-Net was trained on the same labels and the same spatial split for comparison. It is a
-convolutional network with a ResNet-34 encoder.
+- **Change model:** the model-ready samples are in git (`data/processed/change/*.parquet`), so every model
+  and test reruns in a couple of minutes with no raw data. Commands for every run are in §17 of the report.
+- **Classifier:** see `DATA.md` §1 (quick start) and §7 (what runs with what). The raster tiles (~8 GB)
+  are shared separately as a zip; unzip into the repository root.
 
-| model | macro-F1 (spatial CV) | macro-F1 (hand labels) |
-|---|---|---|
-| **LightGBM** | **0.877** | **0.62** |
-| U-Net (ResNet-34) | 0.845 | 0.50* |
-
-\*The U-Net was run only on part of HMDA, so its hand-label score covers just 78 of the test
-pixels.
-
-Engineered building features outperform learned image features in this setting.
-
----
-
-## 10. Output
-
-- **Land-use map:** a 10 m map of all of HMDA for 2023, with a class and a confidence value
-  for every pixel. Files: `outputs/lu/landuse_hmda_2023_10m.tif` and `.png`.
-- **Trained model:** `data/processed/lu/model_all_2023.pkl`
-- **Estimated composition of HMDA, 2023:**
-
-| class | share |
-|---|---|
-| Residential | 10.5% |
-| Non-residential built | 8.4% |
-| Water | 2.9% |
-| Forest / trees | 13.5% |
-| Other open | 64.7% |
-
----
-
-## 11. Limitations
-
-1. **The drop from 0.90 (Test A) to 0.62 (Test B) is expected.** The OpenStreetMap test uses
-   easy, well-mapped areas. The hand-labelled test reflects real conditions, so 0.62 is the
-   figure to report.
-2. **Non-residential land remains difficult (F1 0.41).** Only about 30% of pixels the model
-   labels non-residential are actually non-residential. The errors have three main causes:
-   - **Label definitions disagree.** Open ground inside campuses and industrial compounds is
-     "non-residential" in OpenStreetMap, but open or forest in the hand labels.
-   - **Function is often invisible from above:** shops under homes, home businesses, and mixed
-     commercial frontage.
-   - **Buildings are small relative to the pixels:** a typical building is only 1.5–2
-     Sentinel-2 pixels wide.
-3. **Class change over time is not reliable.** The same model was run on 2017 and 2023 data
-   for two 2 × 2 km areas:
-
-   | area | real change on the ground | pixels "changing" class 2017 → 2023 |
-   |---|---|---|
-   | Lingampally | little | 24% |
-   | Gachibowli / Financial District | construction boom | 32% |
-
-   Most of this apparent change is model noise. In contrast, **building height and volume
-   behave correctly** in the same windows:
-   - Lingampally stays stable.
-   - Mean building height in Gachibowli / Financial District rises from 19 m to 27 m, and
-     building volume grows about 90%.
-4. **Not yet done:** hyperparameter tuning. The test set is also small (325 pixels), which is
-   why the confidence intervals are wide.
-
----
-
-## 12. Next steps
-
-Pixel-level labels are not accurate enough to be used directly for transport planning. The
-next phase shifts to **zone-level estimates**:
-
-1. **Floor space per zone per year (2016–2023)**, from building footprint × height in
-   Open Buildings 2.5D Temporal. This is physically measured and stable over time.
-2. **Residential / non-residential share per zone**, from the model's class probabilities.
-   - The shares will be bias-corrected with the hand-labelled confusion matrix.
-   - Each estimate will come with an uncertainty range.
-3. **Non-image data** for what imagery cannot show: population (WorldPop, GHS-POP), night
-   lights, points of interest, and potentially building-permission records.
-4. **Conversion to travel demand:** trip productions from residential floor space and
-   population; trip attractions from non-residential floor space.
-5. **A transport question to be decided.** There are two options:
-   - demand–supply mismatch: where demand grew faster than transport capacity;
-   - an econometric model of intensification as a function of accessibility.
-
-**Open decisions:**
-- the zone system: grid, GHMC wards, or Comprehensive Mobility Plan traffic analysis zones;
-- which transport question to pursue.
-
----
-
-## 13. Data and how to run
-
-**`DATA.md` is the full data guide**: how every layer was made, what each band and column
-means, code examples, and which scripts run with which data.
-
-### In this repository (starter data)
-
-| file | what it is |
-|---|---|
-| `data/processed/lu/samples_parts/samples_part1.parquet`, `samples_part2.parquet` | the 393,098 labelled training pixels × 181 features, split because GitHub limits files to 100 MB |
-| `data/processed/lu/validation_points.gpkg`, `validation_key.csv`, `validation_strata.csv` | the 325 hand-labelled test pixels, their strata and weights |
-| `data/processed/lu/validation_features.parquet` | the 181 features at the test pixels |
-| `data/processed/lu/oof_predictions.parquet` | out-of-fold predictions from the spatial cross-validation |
-| `data/processed/lu/model_all_2023.pkl` | the trained LightGBM model |
-| `data/processed/lu/sisdp_at_validation.json` | NRSC SIS-DP 1:10K class at each test pixel |
-| `data/processed/lu/prox/` | major roads (2023), ORR interchanges and metro stations, for the proximity distances |
-| `data/processed/aoi_utm44n.gpkg` | the HMDA boundary |
-
-After cloning, rebuild the training table once:
-
-```
-cd scripts/lu
-python 00_join_samples.py
-```
-
-This is enough to retrain the model and rerun the spatial cross-validation and product audit
-(`06_train_eval.py`), the feature analysis (`15_feature_analysis.py`, written up in
-`FEATURES.md`) and the proximity-feature test (`16_proximity_features.py`, summarised in
-`DATA.md` section 3.9).
-
-### Not in this repository (shared separately as a zip)
-
-The raster tiles are too large for GitHub (about 8 GB). Unzip them into the repository root, so
-that their `data/...` paths line up. They are needed for:
-
-| folder | size | needed for |
-|---|---|---|
-| `data/raw/lu/feat_2023/` (incl. `tiles.json`) | 7.3 GB | the HMDA map (`09`), recomputing features (`05`, `15`) |
-| `data/raw/lu/prod/`, `lab/`, `pred_2023/`, `ben/`, `senclip/`, `unet_2023/`, `euluc/*.tif` | ~95 MB | hand-label evaluation of all products (`07`) and relabelling (`04`) |
-| `data/raw/lu/gulu/IND.tif` | 164 MB | GULU in the audit (`05`, `07`) |
-| `data/raw/lu/feat_2017/`, `feat_2020/` | 0.6 GB | the change test (`13`) |
-
-Everything can also be rebuilt from scratch with the download scripts (`03*`). This needs a
-Google Earth Engine account and takes about one night.
-
-### Python packages
-
-`numpy pandas pyarrow geopandas rasterio scipy scikit-learn lightgbm matplotlib pyproj shapely requests earthengine-api`
+Python packages: `numpy pandas pyarrow geopandas rasterio scipy scikit-learn lightgbm statsmodels
+matplotlib pyproj shapely requests earthengine-api`

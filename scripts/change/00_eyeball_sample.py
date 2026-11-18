@@ -1,5 +1,5 @@
 """
-Eyeball check of the change definition (CHANGE_MODEL_PLAN.md §2), 60 pixels to look at in
+Eyeball check of the change definition (docs/archive/CHANGE_MODEL_PLAN_2026-11-02.md §2), 60 pixels to look at in
 Google Earth Pro historical imagery.
 
 Question: when the 20 m year map says undeveloped -> built but Open Buildings shows no new
